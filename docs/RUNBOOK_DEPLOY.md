@@ -11,7 +11,7 @@ will throw on every login otherwise.
 
 You should have:
 
-- Repo: `https://github.com/durga710/health-evv-platform` on `main`,
+- Repo: `https://github.com/blackhole2100/health-evv-platform` on `main`,
   green `./scripts/check.sh`.
 - A Postgres 14+ instance the API can write to (Neon, Supabase, RDS, Crunchy,
   etc.). If you have not provisioned one yet, do that now.
@@ -28,7 +28,7 @@ You should have:
 
 ## 1. Rotate every secret that was in the old repo
 
-The old repo (`durga710/health-evv`) had `.env` and `.env.production`
+The old repo (`blackhole2100/health-evv`) had `.env` and `.env.production`
 committed in history. Treat every value as compromised. In each upstream
 console, rotate / regenerate:
 
@@ -50,7 +50,7 @@ that leaked.
 
 ## 2. Connect Vercel to the new repo
 
-1. Vercel dashboard → New Project → Import `durga710/health-evv-platform`.
+1. Vercel dashboard → New Project → Import `blackhole2100/health-evv-platform`.
 2. Framework preset: `Other` (we use `vercel.json`).
 3. Root Directory: leave blank — the new repo's tree is flat at the root.
 4. Build & Output Settings: defer to `vercel.json`.
@@ -82,7 +82,7 @@ trigger on `evv_visits`, the append-only trigger on `audit_events`, and
 all CHECK constraints.
 
 ```bash
-git clone https://github.com/durga710/health-evv-platform
+git clone https://github.com/blackhole2100/health-evv-platform
 cd health-evv-platform
 npm install
 DATABASE_URL='<PROD_URL>' npm run db:migrate
@@ -166,7 +166,7 @@ TestFlight first; promote when smoke tests pass.
 
 Only after steps 1–8 pass:
 
-1. GitHub → `durga710/health-evv` → Settings → scroll to bottom →
+1. GitHub → `blackhole2100/health-evv` → Settings → scroll to bottom →
    **Delete this repository**. Type the repo name to confirm.
 2. Anyone with a clone of the old repo retains the leaked secrets in
    their local history — but those values were rotated in step 1, so

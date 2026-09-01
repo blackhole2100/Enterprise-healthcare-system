@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/durga710/health-evv-platform/actions/workflows/ci.yml"><img src="https://github.com/durga710/health-evv-platform/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://github.com/blackhole2100/health-evv-platform/actions/workflows/ci.yml"><img src="https://github.com/blackhole2100/health-evv-platform/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/license-proprietary-red" alt="License: Proprietary" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB" alt="React" />
@@ -104,7 +104,7 @@ Shipping to production? Follow [`docs/RUNBOOK_DEPLOY.md`](docs/RUNBOOK_DEPLOY.md
 ## Security
 
 Please **do not** open public issues for vulnerabilities. Report via a
-[private security advisory](https://github.com/durga710/health-evv-platform/security/advisories/new)
+[private security advisory](https://github.com/blackhole2100/health-evv-platform/security/advisories/new)
 or email `durga@healthevv.com` with the subject `[SECURITY]`. See [`SECURITY.md`](SECURITY.md).
 
 ## License

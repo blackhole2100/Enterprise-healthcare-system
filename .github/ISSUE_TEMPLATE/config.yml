@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/durga710/health-evv-platform/security/advisories/new
+    url: https://github.com/blackhole2100/health-evv-platform/security/advisories/new
     about: Report security issues privately. Do NOT use public issues.
   - name: HIPAA / compliance concern
     url: mailto:durga@healthevv.com

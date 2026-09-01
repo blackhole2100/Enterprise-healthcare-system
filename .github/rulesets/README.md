@@ -1,6 +1,6 @@
 # GitHub repo hardening — rulesets
 
-These JSON files are the canonical branch and tag protection rules for `github.com/durga710/health-evv-platform`. They protect the `main` branch from accidental or malicious destruction, enforce code review, and gate merges on CI signal.
+These JSON files are the canonical branch and tag protection rules for `github.com/blackhole2100/health-evv-platform`. They protect the `main` branch from accidental or malicious destruction, enforce code review, and gate merges on CI signal.
 
 ## What's protected
 
@@ -34,28 +34,28 @@ gh api \
   --method POST \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  /repos/durga710/health-evv-platform/rulesets \
+  /repos/blackhole2100/health-evv-platform/rulesets \
   --input .github/rulesets/main-branch-protection.json
 
 gh api \
   --method POST \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  /repos/durga710/health-evv-platform/rulesets \
+  /repos/blackhole2100/health-evv-platform/rulesets \
   --input .github/rulesets/tags-protection.json
 ```
 
 To list/inspect existing rulesets:
 
 ```bash
-gh api /repos/durga710/health-evv-platform/rulesets
+gh api /repos/blackhole2100/health-evv-platform/rulesets
 ```
 
 To update one in place (replace `RULESET_ID`):
 
 ```bash
 gh api --method PUT \
-  /repos/durga710/health-evv-platform/rulesets/RULESET_ID \
+  /repos/blackhole2100/health-evv-platform/rulesets/RULESET_ID \
   --input .github/rulesets/main-branch-protection.json
 ```
 
@@ -63,7 +63,7 @@ gh api --method PUT \
 
 If you prefer point-and-click:
 
-1. https://github.com/durga710/health-evv-platform/settings/rules → **New ruleset** → **New branch ruleset**
+1. https://github.com/blackhole2100/health-evv-platform/settings/rules → **New ruleset** → **New branch ruleset**
 2. Name: `main branch protection`
 3. Enforcement status: **Active**
 4. Target branches: **Include default branch**

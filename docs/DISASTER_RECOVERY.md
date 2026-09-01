@@ -28,7 +28,7 @@ data-loss, corruption, or compute-layer outage event. It fulfills HIPAA
 | Push + auth | Firebase | project `healthevv` |
 | Transactional email | Resend | sending domain `send.healthevv.com` |
 
-Code lives in GitHub: `github.com/durga710/health-evv-platform`. Vercel
+Code lives in GitHub: `github.com/blackhole2100/health-evv-platform`. Vercel
 deploys on push to `main`. Vercel installs with `npm ci` and builds the
 web/app dependency graph through `vercel.json`:
 `npx turbo build --filter=@health/web... --filter=@health/app...`.

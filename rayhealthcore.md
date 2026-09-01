@@ -2,7 +2,7 @@
 
 **Authored by Durga Ghimeray**
 
-Repository: `https://github.com/durga710/health-evv-platform`
+Repository: `https://github.com/blackhole2100/health-evv-platform`
 Product: **HealthEVV™**
 Founder / Author: **Durga Ghimeray**
 

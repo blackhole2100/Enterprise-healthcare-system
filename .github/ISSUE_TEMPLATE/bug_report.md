@@ -3,7 +3,7 @@ name: Bug report
 about: Something is broken in production or staging
 title: 'bug: '
 labels: bug
-assignees: durga710
+assignees: blackhole2100
 ---
 
 ## What's broken

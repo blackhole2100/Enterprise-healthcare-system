@@ -14,7 +14,7 @@ Status: **proposal** · Author: platform · Last updated: 2026-06-29
 
 From a direct read of both codebases:
 
-| Capability | HealthEVV (this repo) | RayVerify (`durga710/RayVerify`) |
+| Capability | HealthEVV (this repo) | RayVerify (`blackhole2100/RayVerify`) |
 |---|---|---|
 | Stack | Express · Knex · React/Vite · Capacitor · Vercel | NestJS · Prisma · Next.js · Terraform/AWS |
 | GPS geofence | ✅ live (`core/security/geofence.ts`, Haversine) | consumes a radius anchor |

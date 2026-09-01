@@ -7,25 +7,25 @@
 # owner here before it can merge.
 
 # Default owner for anything not otherwise matched
-*                                       @durga710
+*                                       @blackhole2100
 
 # Backend / API surface — security-sensitive paths get explicit ownership
-/packages/app/src/routes/               @durga710
-/packages/app/src/middleware/           @durga710
-/packages/app/src/security/             @durga710
-/packages/app/src/services/             @durga710
+/packages/app/src/routes/               @blackhole2100
+/packages/app/src/middleware/           @blackhole2100
+/packages/app/src/security/             @blackhole2100
+/packages/app/src/services/             @blackhole2100
 
 # Core domain + repositories — the shared contract everything builds on
-/packages/core/src/domain/              @durga710
-/packages/core/src/repositories/        @durga710
-/packages/core/src/migrations/          @durga710
+/packages/core/src/domain/              @blackhole2100
+/packages/core/src/repositories/        @blackhole2100
+/packages/core/src/migrations/          @blackhole2100
 
 # Web admin UI — auth + agency-settings pages are particularly sensitive
-/packages/web/src/features/auth/        @durga710
-/packages/web/src/features/agency/      @durga710
+/packages/web/src/features/auth/        @blackhole2100
+/packages/web/src/features/agency/      @blackhole2100
 
 # Compliance + legal — owner signs off on anything that touches HIPAA posture
-/docs/compliance/                       @durga710
-/SECURITY.md                            @durga710
-/.github/                               @durga710
-/scripts/security-surface-scan.ts       @durga710
+/docs/compliance/                       @blackhole2100
+/SECURITY.md                            @blackhole2100
+/.github/                               @blackhole2100
+/scripts/security-surface-scan.ts       @blackhole2100
