@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const API_BASE =
   (import.meta as unknown as { env?: { VITE_API_URL?: string } }).env?.VITE_API_URL ?? '/api';
 
-const SESSION_KEY = 'rayhealth_support_session';
+const SESSION_KEY = 'health_support_session';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -13,7 +13,7 @@ interface ChatMessage {
 const greeting: ChatMessage = {
   role: 'assistant',
   content:
-    "Hi. I'm RayHealthAssist. I can answer questions about EVV, scheduling, pricing, and what ships at launch. What brings you here today?"
+    "Hi. I'm HealthAssist. I can answer questions about EVV, scheduling, pricing, and what ships at launch. What brings you here today?"
 };
 
 export function SupportChat() {
@@ -117,7 +117,7 @@ export function SupportChat() {
       {open && (
         <div
           role="dialog"
-          aria-label="RayHealth support chat"
+          aria-label="Health support chat"
           style={{
             position: 'fixed',
             right: '1.5rem',
@@ -143,7 +143,7 @@ export function SupportChat() {
               gap: '0.5rem'
             }}
           >
-            <span style={{ fontSize: '1rem', fontWeight: 800 }}>RayHealthAssist</span>
+            <span style={{ fontSize: '1rem', fontWeight: 800 }}>HealthAssist</span>
             <span style={{ fontSize: '0.7rem', opacity: 0.7, marginLeft: 'auto' }}>
               answers about pricing & EVV
             </span>
@@ -183,7 +183,7 @@ export function SupportChat() {
             ))}
             {busy && (
               <div style={{ alignSelf: 'flex-start', color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>
-                RayHealthAssist is typing…
+                HealthAssist is typing…
               </div>
             )}
             {error && (

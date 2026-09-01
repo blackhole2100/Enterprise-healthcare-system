@@ -104,7 +104,7 @@ export function CaregiverLayout() {
     <div className="admin-shell">
       <aside className="admin-sidebar" aria-label="Primary">
         <Link to="/portal" className="admin-sidebar__brand">
-          RayHealth
+          Health
           <span className="admin-sidebar__evv-badge">EVV</span>
         </Link>
 

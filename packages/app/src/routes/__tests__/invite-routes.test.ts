@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { SESv2Client } from '@aws-sdk/client-sesv2';
 import { createApp } from '../../app.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';

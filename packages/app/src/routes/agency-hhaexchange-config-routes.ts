@@ -23,7 +23,7 @@ import {
   hhaexchangeServiceMappingSchema,
   isSafeOutboundUrl,
   type PartialHhaexchangeConfig,
-} from '@rayhealth/core'
+} from '@health/core'
 import { requireCapability } from '../middleware/require-capability.js'
 
 const router = Router()

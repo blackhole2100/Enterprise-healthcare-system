@@ -26,7 +26,7 @@ import {
   type AppRole,
   type Caregiver,
   type LearningCourse,
-} from '@rayhealth/core'
+} from '@health/core'
 
 const MAX_CAREGIVERS = 50
 

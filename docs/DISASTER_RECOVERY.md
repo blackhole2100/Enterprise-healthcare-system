@@ -1,13 +1,13 @@
-# RayHealth EVV — Disaster Recovery Runbook
+# Health EVV — Disaster Recovery Runbook
 
 **Authored by Durga Ghimeray**
 
 **Version:** 1.0
 **Effective:** 2026-05-09
-**Owner:** RayHealth EVV Security Officer
+**Owner:** Health EVV Security Officer
 **Review cadence:** Annually + after any material architecture change
 
-This runbook is the procedure for restoring `rayhealthevv.com` after a
+This runbook is the procedure for restoring `healthevv.com` after a
 data-loss, corruption, or compute-layer outage event. It fulfills HIPAA
 §164.308(a)(7) (Contingency Plan) and is referenced by
 `INCIDENT_RESPONSE.md` §8.
@@ -21,17 +21,17 @@ data-loss, corruption, or compute-layer outage event. It fulfills HIPAA
 
 | Layer | Vendor | Identifier |
 |---|---|---|
-| DNS + edge TLS | Cloudflare | zone `rayhealthevv.com` |
-| Compute (web app + API + serverless) | Vercel | project `rayhealth-evv-platform-app` (id `prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG`) |
+| DNS + edge TLS | Cloudflare | zone `healthevv.com` |
+| Compute (web app + API + serverless) | Vercel | project `health-evv-platform-app` (id `prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG`) |
 | Postgres database | Neon | project `late-art-87716813`, default branch + read-write compute |
 | AI inference | AWS Bedrock | model `us.anthropic.claude-haiku-4-5-20251001-v1:0`, region `us-east-1` |
-| Push + auth | Firebase | project `rayhealthevv` |
-| Transactional email | Resend | sending domain `send.rayhealthevv.com` |
+| Push + auth | Firebase | project `healthevv` |
+| Transactional email | Resend | sending domain `send.healthevv.com` |
 
-Code lives in GitHub: `github.com/durga710/rayhealth-evv-platform`. Vercel
+Code lives in GitHub: `github.com/durga710/health-evv-platform`. Vercel
 deploys on push to `main`. Vercel installs with `npm ci` and builds the
 web/app dependency graph through `vercel.json`:
-`npx turbo build --filter=@rayhealth/web... --filter=@rayhealth/app...`.
+`npx turbo build --filter=@health/web... --filter=@health/app...`.
 
 ---
 
@@ -62,7 +62,7 @@ curl -sH "Authorization: Bearer $VERCEL_TOKEN" \
 
 # Promote a prior deployment to production
 curl -sH "Authorization: Bearer $VERCEL_TOKEN" -H "Content-Type: application/json" \
-  -X POST -d "{\"name\":\"rayhealth-evv-platform-app\",\"deploymentId\":\"<known-good-uid>\",\"target\":\"production\"}" \
+  -X POST -d "{\"name\":\"health-evv-platform-app\",\"deploymentId\":\"<known-good-uid>\",\"target\":\"production\"}" \
   https://api.vercel.com/v13/deployments
 ```
 
@@ -72,7 +72,7 @@ deploy → ⋯ → "Promote to Production".
 Verify after rollback:
 
 ```bash
-curl -s https://rayhealthevv.com/api/health   # expect {"ok":true,"ts":...}
+curl -s https://healthevv.com/api/health   # expect {"ok":true,"ts":...}
 node scripts/verify-audit-triggers.mjs        # expect ✓ all checks passed
 ```
 
@@ -124,7 +124,7 @@ If Cloudflare is the cause:
 
 1. Verify origin reachability bypassing Cloudflare:
    ```bash
-   curl -s -H "Host: rayhealthevv.com" https://rayhealth-evv-platform-app.vercel.app/api/health
+   curl -s -H "Host: healthevv.com" https://health-evv-platform-app.vercel.app/api/health
    ```
    If this returns 200, the origin is fine and the issue is DNS/edge.
 2. **Switch nameservers** at the registrar to Vercel's nameservers.
@@ -167,9 +167,9 @@ becomes a Neon support escalation.
 ```bash
 curl -sH "Authorization: Bearer $VERCEL_TOKEN" \
   "https://api.vercel.com/v9/projects/prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG/env?decrypt=true" \
-  > rayhealth-env-$(date +%Y%m%d).json
+  > health-env-$(date +%Y%m%d).json
 # Encrypt and store in 1Password / Bitwarden vault. NEVER commit.
-gpg -e -r security@rayhealthevv.com rayhealth-env-*.json && rm rayhealth-env-*.json
+gpg -e -r security@healthevv.com health-env-*.json && rm health-env-*.json
 ```
 
 ---
@@ -178,8 +178,8 @@ gpg -e -r security@rayhealthevv.com rayhealth-env-*.json && rm rayhealth-env-*.j
 
 After any recovery action:
 
-- [ ] `curl https://rayhealthevv.com/api/health` returns `{"ok":true}`
-- [ ] `curl -X POST https://rayhealthevv.com/api/auth/mobile/login` with
+- [ ] `curl https://healthevv.com/api/health` returns `{"ok":true}`
+- [ ] `curl -X POST https://healthevv.com/api/auth/mobile/login` with
       a valid caregiver returns a JWT
 - [ ] `node scripts/verify-audit-triggers.mjs` exits 0 (all configured hot-audit, archived-audit, and EVV checks pass)
 - [ ] `audit_events` row count is reasonable (not zero — that would mean

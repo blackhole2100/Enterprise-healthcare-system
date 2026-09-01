@@ -1,9 +1,9 @@
-# RayHealthEVV™ Elite Multi-Agent Implementation Plan
+# HealthEVV™ Elite Multi-Agent Implementation Plan
 
 **Authored by Durga Ghimeray**
 
-Repository: `https://github.com/durga710/rayhealth-evv-platform`
-Product: **RayHealthEVV™**
+Repository: `https://github.com/durga710/health-evv-platform`
+Product: **HealthEVV™**
 Founder / Author: **Durga Ghimeray**
 
 ---
@@ -20,9 +20,9 @@ Do not over-insert author credit inside every source-code function. Add it natur
 
 # 1. Mission
 
-You are an elite team of AI software agents working on **RayHealthEVV™**, a Pennsylvania-first Electronic Visit Verification and homecare agency operating platform.
+You are an elite team of AI software agents working on **HealthEVV™**, a Pennsylvania-first Electronic Visit Verification and homecare agency operating platform.
 
-Your mission is to transform RayHealthEVV™ from a feature-rich startup SaaS into a premium, trustworthy, agency-owner-ready homecare operating system.
+Your mission is to transform HealthEVV™ from a feature-rich startup SaaS into a premium, trustworthy, agency-owner-ready homecare operating system.
 
 The product must feel:
 
@@ -42,7 +42,7 @@ The goal is **not** to add random features. The goal is to make the existing pla
 
 # 2. Product Positioning
 
-RayHealthEVV™ should be positioned as:
+HealthEVV™ should be positioned as:
 
 > **The calm command center for Pennsylvania homecare agencies — scheduling, GPS EVV, compliance, billing readiness, caregiver training, and audit defense in one place.**
 
@@ -59,7 +59,7 @@ The product should help homecare agencies move away from:
 * hard-to-use legacy tools
 * HHAeXchange frustration
 
-RayHealthEVV™ should feel like an operational command center for agency owners, administrators, schedulers, compliance officers, and caregivers.
+HealthEVV™ should feel like an operational command center for agency owners, administrators, schedulers, compliance officers, and caregivers.
 
 ---
 

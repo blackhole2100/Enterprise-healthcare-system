@@ -15,7 +15,7 @@ import {
   type Client,
   type Caregiver,
   type EvvVisit,
-} from '@rayhealth/core';
+} from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 import { submitAgencyVisits } from '../services/aggregator-submission-service.js';
@@ -113,7 +113,7 @@ router.get('/visits.csv', requireCapability('billing.read'), async (req, res) =>
     }
 
     const body = lines.join('\n') + '\n';
-    const filename = `rayhealth-visits-${req.auth.agencyId.slice(0, 8)}-${new Date()
+    const filename = `health-visits-${req.auth.agencyId.slice(0, 8)}-${new Date()
       .toISOString()
       .slice(0, 10)}.csv`;
     res.setHeader('content-type', 'text/csv; charset=utf-8');
@@ -267,7 +267,7 @@ router.get('/sandata.csv', requireCapability('billing.read'), async (req, res) =
     }
 
     const body = lines.join('\n') + '\n';
-    const filename = `rayhealth-sandata-${req.auth.agencyId.slice(0, 8)}-${new Date()
+    const filename = `health-sandata-${req.auth.agencyId.slice(0, 8)}-${new Date()
       .toISOString()
       .slice(0, 10)}.csv`;
     res.setHeader('content-type', 'text/csv; charset=utf-8');
@@ -395,7 +395,7 @@ router.post('/sandata/reconcile', requireCapability('billing.write'), async (req
 /**
  * GET /exports/hhaexchange.csv?from=YYYY-MM-DD&to=YYYY-MM-DD
  *
- * RayHealth HHAeXchange mapping preview, for agencies whose state routes
+ * Health HHAeXchange mapping preview, for agencies whose state routes
  * EVV through HHAeXchange instead of Sandata. Unlike the Sandata skeleton this
  * uses the config-driven builder (services/hhaexchange-mapping.ts): the
  * agency's HHAeXchange config supplies AgencyTaxID / ProviderID, the caregiver
@@ -484,11 +484,11 @@ router.get('/hhaexchange.csv', requireCapability('billing.read'), async (req, re
 
     const { rows: csvRows, skipped } = buildHhaexchangeExport(visits, config);
     const body = toHhaexchangeCsv(csvRows);
-    const filename = `rayhealth-hhaexchange-${req.auth.agencyId.slice(0, 8)}-${new Date()
+    const filename = `health-hhaexchange-${req.auth.agencyId.slice(0, 8)}-${new Date()
       .toISOString()
       .slice(0, 10)}.csv`;
     res.setHeader('content-type', 'text/csv; charset=utf-8');
-    res.setHeader('X-RayHealth-Artifact-Status', 'mapping-preview-not-hhax-v5');
+    res.setHeader('X-Health-Artifact-Status', 'mapping-preview-not-hhax-v5');
     res.setHeader('content-disposition', `attachment; filename="${filename}"`);
     res.setHeader('X-Skipped', String(skipped.length));
     res.send(body);

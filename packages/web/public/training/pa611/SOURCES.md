@@ -1,6 +1,6 @@
 # PA 611 module illustration sources
 
-Modules 1 through 6 are original AI-generated illustrations created for RayHealth.
+Modules 1 through 6 are original AI-generated illustrations created for Health.
 
 Modules 7 and 8 are stock photos from Pexels, used under the Pexels license (free for commercial use, no attribution required):
 

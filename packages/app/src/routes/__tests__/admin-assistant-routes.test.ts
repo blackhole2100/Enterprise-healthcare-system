@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { generateText } from 'ai';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 
 vi.mock('ai', () => ({

@@ -4,7 +4,7 @@ import { SupportChat } from '../../support/SupportChat.js';
 import { BrandLogo } from '../../../components/brand/BrandLogo.js';
 
 /**
- * Shared chrome + design system for the RayHealth marketing site,
+ * Shared chrome + design system for the Health marketing site,
  * matching the emerald editorial LandingPage. Self-contained (no Tailwind).
  * Marketing content pages render <SiteLayout> and use the `mk-*` classes
  * documented in SITE_CSS below.
@@ -213,7 +213,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       <style dangerouslySetInnerHTML={{ __html: SITE_CSS }} />
       <nav className="mk-nav">
         <div className="mk-navin">
-          <Link to="/" aria-label="RayHealthEVV home"><BrandLogo height={34} /></Link>
+          <Link to="/" aria-label="HealthEVV home"><BrandLogo height={34} /></Link>
           <div className="mk-navmid">
             <Link to="/solutions/scheduling">Scheduling</Link>
             <Link to="/solutions/electronic-visit-verification">EVV</Link>
@@ -264,7 +264,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
           <div className="mk-footcol"><h4>Company</h4>{NAV.company.map((l) => <Link key={l.label} to={l.to}>{l.label}</Link>)}</div>
         </div>
         <div className="mk-footbar">
-          <span>© {new Date().getFullYear()} RayHealthEVV™ · Built in Pennsylvania</span>
+          <span>© {new Date().getFullYear()} HealthEVV™ · Built in Pennsylvania</span>
           <span>HIPAA-aware infrastructure · 21st Century Cures Act aligned</span>
         </div>
       </footer>

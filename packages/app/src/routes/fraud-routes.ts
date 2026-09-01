@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { EvvRepository, FraudContextBuilder, scoreVisit } from '@rayhealth/core';
+import { EvvRepository, FraudContextBuilder, scoreVisit } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 

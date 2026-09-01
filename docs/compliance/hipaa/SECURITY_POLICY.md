@@ -1,11 +1,11 @@
-# RayHealth EVV — Information Security Policy
+# Health EVV — Information Security Policy
 
 **Version:** 1.1
 **Effective:** 2026-07-12
-**Owner:** RayHealth EVV (Founder / Privacy Officer)
+**Owner:** Health EVV (Founder / Privacy Officer)
 **Review cadence:** Annually, or within 30 days of any material architecture change
 
-This policy describes how RayHealth EVV protects the confidentiality, integrity,
+This policy describes how Health EVV protects the confidentiality, integrity,
 and availability of electronic Protected Health Information (ePHI) it stores
 and processes on behalf of home-care agencies. It is written to satisfy the
 HIPAA Security Rule (45 CFR §§164.302–164.318) and the documentation
@@ -14,9 +14,9 @@ requirement of §164.316.
 It is a living document — when the architecture changes, this policy must be
 updated within 30 days. Each section cites the controlling HIPAA section.
 
-> **Authorship note.** This policy was ported from a predecessor RayHealth
+> **Authorship note.** This policy was ported from a predecessor Health
 > codebase on 2026-05-08 and adapted to match what the current
-> `rayhealth-evv` repository (production deploy `rayhealth-evv-platform-app`,
+> `health-evv` repository (production deploy `health-evv-platform-app`,
 > Neon project `late-art-87716813`) actually ships. Where the prior version
 > referenced controls that do not yet exist in this repo, those references
 > have been removed or marked as roadmap items. See §12 review log.
@@ -25,7 +25,7 @@ updated within 30 days. Each section cites the controlling HIPAA section.
 
 ## 1. Scope
 
-**Covered Information:** Electronic PHI handled by the RayHealth EVV platform,
+**Covered Information:** Electronic PHI handled by the Health EVV platform,
 including but not limited to:
 
 - Caregiver and client demographics (name, contact info, date of birth)
@@ -36,10 +36,10 @@ including but not limited to:
 - Family communication content (when the family portal goes live)
 - Billing data tied to specific clients
 
-**Covered Systems:** Production deployment at `rayhealthevv.com` and all
+**Covered Systems:** Production deployment at `healthevv.com` and all
 subprocessors listed in §10.
 
-**Covered People:** All persons with credentialed access to RayHealth EVV
+**Covered People:** All persons with credentialed access to Health EVV
 production systems, including the founder, any contracted developers, and any
 authorized agency administrators.
 
@@ -53,8 +53,8 @@ demo/sandbox environments containing only synthetic data.
 
 Until headcount supports separate Security and Privacy Officers:
 
-- **Privacy Officer:** Founder of RayHealth EVV
-- **Security Officer:** Founder of RayHealth EVV
+- **Privacy Officer:** Founder of Health EVV
+- **Security Officer:** Founder of Health EVV
 - **Workforce members with PHI access:** documented in
   [WORKFORCE_ACCESS.md](./WORKFORCE_ACCESS.md)
 
@@ -131,7 +131,7 @@ Selected architectural risks (the dated register is authoritative):
   `audit_events_archive_block_mutation_trg`. The triggers and functions are
   defined idempotently in
   `packages/core/src/migrations/schema.ts`.
-- RayHealth uses a seven-year audit-log policy floor. HIPAA-required policies,
+- Health uses a seven-year audit-log policy floor. HIPAA-required policies,
   procedures, and related documentation are retained at least six years under
   45 CFR §164.316(b)(2).
 - The trigger can be re-verified at any time by running
@@ -147,7 +147,7 @@ Selected architectural risks (the dated register is authoritative):
 ### 4.3 Integrity (§164.312(c))
 
 - Database transactions enforce atomicity.
-- TLS 1.2+ in transit (HSTS enforced on `rayhealthevv.com`).
+- TLS 1.2+ in transit (HSTS enforced on `healthevv.com`).
 - Append-only audit trail (§4.2) makes after-the-fact tampering detectable.
 - `evv_visits` is immutable by trigger
   (`evv_visits_enforce_immutability_trg`) — corrections must be recorded in
@@ -260,7 +260,7 @@ for the current list.
 
 See [DATA_RETENTION.md](./DATA_RETENTION.md). Summary:
 
-- **Audit logs (`audit_events` and archive):** retained 7 years by RayHealth
+- **Audit logs (`audit_events` and archive):** retained 7 years by Health
   policy; this operational period is distinct from HIPAA's six-year
   documentation-retention rule
 - **Core PHI-bearing operational records:** 7-year default platform floor,
@@ -272,7 +272,7 @@ See [DATA_RETENTION.md](./DATA_RETENTION.md). Summary:
 
 ## 7. Mobile Device Security
 
-The RayHealth EVV mobile app runs on caregiver devices.
+The Health EVV mobile app runs on caregiver devices.
 
 - Credentials, cached schedules, and queued EVV punches use Expo SecureStore.
   The EVV store requests `AFTER_FIRST_UNLOCK_THIS_DEVICE_ONLY` accessibility;
@@ -290,7 +290,7 @@ The RayHealth EVV mobile app runs on caregiver devices.
 - Caregivers must report lost/stolen devices immediately. An authorized
   operator can revoke the corresponding `mobile_sessions` row; a dedicated
   agency self-service device-management UI is not claimed as shipped.
-- RayHealth relies on the device lock unless an agency adds managed-device
+- Health relies on the device lock unless an agency adds managed-device
   controls; unmanaged caregiver devices are a shared-responsibility risk.
 
 ---
@@ -369,7 +369,7 @@ All documents are retained for at least 6 years per §164.316(b)(2).
 | Date | Reviewer | Change |
 |---|---|---|
 | 2026-05-07 | Founder (predecessor repo) | Initial policy authored |
-| 2026-05-08 | Founder + assistant | Ported into `rayhealth-evv-clean`; replaced predecessor-only references (`audit_revisions`, `auth_events`, `PermissionService`, `AuditService.logEvent()`, `password_reset_tokens`) with controls actually shipped here; updated trigger names (`audit_events_block_mutation_trg`, `evv_visits_enforce_immutability_trg`); updated subprocessor IDs (Vercel `rayhealth-evv-platform-app`, Neon `late-art-87716813`); added cell-cipher AES-256-GCM as a verified field-level encryption control; documented that mobile offline PHI cache does not yet exist |
+| 2026-05-08 | Founder + assistant | Ported into `health-evv-clean`; replaced predecessor-only references (`audit_revisions`, `auth_events`, `PermissionService`, `AuditService.logEvent()`, `password_reset_tokens`) with controls actually shipped here; updated trigger names (`audit_events_block_mutation_trg`, `evv_visits_enforce_immutability_trg`); updated subprocessor IDs (Vercel `health-evv-platform-app`, Neon `late-art-87716813`); added cell-cipher AES-256-GCM as a verified field-level encryption control; documented that mobile offline PHI cache does not yet exist |
 | 2026-05-09 | Founder + assistant | AWS access key rotated (old key had been exposed in a chat session) on Vercel project `prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG`. Local `BedrockRuntimeClient` smoke confirmed the new key has `bedrock:InvokeModel` permission; production `/api/support/chat` returned a clean Claude Haiku 4.5 response post-redeploy. Old key deactivation in IAM is a pending founder action; this row will be amended once that confirmation is in. Nightly `verify-audit-triggers.yml` GitHub Actions workflow added — runs the §5.6 verifier every 03:17 UTC so audit-trigger regressions surface within 24h instead of at the next annual review. Key material/IDs are intentionally not recorded in this document — see secret manager / IAM console for current credentials. |
 | 2026-06-30 | Security audit | Removed two AWS IAM access key IDs that had been recorded in plaintext in this row (the original rotation entry above). Both were committed to git history and must be treated as compromised: rotate the active key in IAM immediately, and never record access key IDs in this file going forward — reference the secret manager or an incident ticket instead. |
 | 2026-07-12 | Engineering-assisted control review | Corrected mobile architecture/offline storage; implemented and documented revocable JWT sessions; extended append-only protection and verification to archived audit evidence; added risk, evidence, and workforce registers; corrected retention attribution and the Bedrock model. Production and signed operational evidence remain explicitly pending. |

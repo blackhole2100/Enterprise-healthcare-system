@@ -2,7 +2,7 @@
  * Caregiver reminder email. HTML + plain-text.
  *
  * Sent when an admin/coordinator confirms a copilot `send_reminder` action.
- * The body is the human-authored reminder message (escaped); RayHealth only
+ * The body is the human-authored reminder message (escaped); Health only
  * wraps it in branded chrome. No PHI is added by the template.
  */
 
@@ -30,7 +30,7 @@ function escapeHtml(value: string): string {
 }
 
 export function renderReminderEmail(fields: ReminderEmailFields): ReminderEmailPayload {
-  const support = fields.supportEmail?.trim() || 'support@rayhealthevv.com';
+  const support = fields.supportEmail?.trim() || 'support@healthevv.com';
   const agency = fields.agencyName?.trim() || 'Your agency';
   const safeName = escapeHtml(fields.caregiverName);
   const safeAgency = escapeHtml(agency);
@@ -45,7 +45,7 @@ export function renderReminderEmail(fields: ReminderEmailFields): ReminderEmailP
     '',
     fields.message,
     '',
-    `,  ${agency} (via RayHealth EVV)`,
+    `,  ${agency} (via Health EVV)`,
     '',
     `Questions? Reach us at ${support}.`,
   ].join('\n');
@@ -64,7 +64,7 @@ export function renderReminderEmail(fields: ReminderEmailFields): ReminderEmailP
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(12,93,102,0.10);">
         <tr>
           <td style="background-color:#0c5d66;padding:32px 32px 28px;color:#ffffff;">
-            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">RayHealth EVV</div>
+            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">Health EVV</div>
             <div style="margin-top:6px;font-size:13px;color:#ee6c2c;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;">Reminder from ${safeAgency}</div>
           </td>
         </tr>
@@ -76,7 +76,7 @@ export function renderReminderEmail(fields: ReminderEmailFields): ReminderEmailP
         </tr>
         <tr>
           <td style="background-color:#f8fafc;padding:20px 32px;border-top:1px solid #e2e8f0;font-size:12px;line-height:1.55;color:#64748b;">
-            Sent by ${safeAgency} via RayHealth EVV.
+            Sent by ${safeAgency} via Health EVV.
             <br /><br />
             Questions? Reach us at <a href="mailto:${safeSupport}" style="color:#0c5d66;">${safeSupport}</a>.
           </td>

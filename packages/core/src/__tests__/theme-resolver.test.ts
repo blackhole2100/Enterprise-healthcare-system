@@ -23,7 +23,7 @@ const SIDEBAR: Rgb = { r: 15, g: 23, b: 42 };
  * the hues an onboarding home-care agency is most likely to hand us.
  */
 const ADVERSARIAL = [
-  '#107480', // RayHealth teal, the incumbent
+  '#107480', // Health teal, the incumbent
   '#FFFFFF', // pure white
   '#000000', // pure black
   '#808080', // mid grey: 3.95:1 vs white, 4.4:1 vs black. Fails both.

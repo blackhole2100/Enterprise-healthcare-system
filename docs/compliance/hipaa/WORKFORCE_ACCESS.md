@@ -1,4 +1,4 @@
-# RayHealth EVV — Workforce Access Register
+# Health EVV — Workforce Access Register
 
 **Version:** 1.0
 **Effective:** 2026-07-12
@@ -7,8 +7,8 @@
 
 This is the Git-safe index for workforce access. Keep names, personal contact
 details, console exports, recovery codes, and credentials in the private
-compliance vault. Agencies manage their own workforce inside RayHealth; this
-register covers RayHealth personnel and contractors with platform-level access.
+compliance vault. Agencies manage their own workforce inside Health; this
+register covers Health personnel and contractors with platform-level access.
 
 ## Current roles
 
@@ -16,7 +16,7 @@ register covers RayHealth personnel and contractors with platform-level access.
 |---|---|---|---|---|---|---|
 | WA-001 | Founder; Privacy and Security Officer | GitHub administration; production deployment, database, AWS, Google/Firebase, email, DNS, and compliance-vault administration | 2026-05-09 | — | Pending first signed quarterly review | Pending |
 
-No additional RayHealth workforce member or contractor is documented as
+No additional Health workforce member or contractor is documented as
 authorized for production ePHI access. Add a row and complete the joiner process
 before granting access.
 

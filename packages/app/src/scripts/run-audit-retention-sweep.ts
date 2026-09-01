@@ -10,7 +10,7 @@
  * any failure. Output is a single line of JSON for log-parser friendliness.
  */
 
-import { createDb, runAuditRetentionSweep } from '@rayhealth/core'
+import { createDb, runAuditRetentionSweep } from '@health/core'
 
 async function main(): Promise<void> {
   if (!process.env.DATABASE_URL) {

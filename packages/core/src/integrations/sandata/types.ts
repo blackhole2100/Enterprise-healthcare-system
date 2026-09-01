@@ -1,5 +1,5 @@
 /**
- * RayHealth EVV → Sandata Alt EVV Integration, type definitions.
+ * Health EVV → Sandata Alt EVV Integration, type definitions.
  *
  * Ported from the Sandata Open EVV / Alt EVV REST API reference (PA Alt EVV
  * Technical Specification v1.4). Field names below are CASE SENSITIVE and must
@@ -18,7 +18,7 @@ export enum SandataEntityType {
   VISIT = 'VISIT',
 }
 
-/** Status of a record as tracked locally in RayHealth. */
+/** Status of a record as tracked locally in Health. */
 export enum SandataRecordStatus {
   PENDING = 'PENDING', // not yet transmitted
   RECEIVED = 'RECEIVED', // POSTed, UUID returned, awaiting /status
@@ -43,7 +43,7 @@ export interface SandataClient {
   PayerID?: string;
   PayerProgram?: string;
 
-  /** RayHealth internal client ID, reused as the link key on visits. */
+  /** Health internal client ID, reused as the link key on visits. */
   ClientCustomID: string;
 
   /** Member / Medicaid identifier. */
@@ -71,7 +71,7 @@ export interface SandataClientAddress {
   ClientCity: string;
   ClientState: string; // 2-char
   ClientZip: string; // 5 or 9 digit
-  /** REQUIRED if program uses GPS validation. RayHealth must geocode. */
+  /** REQUIRED if program uses GPS validation. Health must geocode. */
   ClientLatitude?: number;
   ClientLongitude?: number;
 }
@@ -79,7 +79,7 @@ export interface SandataClientAddress {
 // ── EMPLOYEE entity (CMS element #5, individual providing service) ──────────
 
 export interface SandataEmployee {
-  /** RayHealth internal caregiver ID, reused as the link key on visits. */
+  /** Health internal caregiver ID, reused as the link key on visits. */
   EmployeeCustomID: string;
 
   /** Identifier or Medicaid ID for the caregiver. */
@@ -97,7 +97,7 @@ export interface SandataEmployee {
 // ── VISIT entity (CMS elements #1 service, #3 date, #4 location, #6 time) ─────
 
 export interface SandataVisit {
-  /** RayHealth unique visit key (sequence-tracked). */
+  /** Health unique visit key (sequence-tracked). */
   VisitOtherID: string;
 
   /** MUST reference an already-accepted Client. */

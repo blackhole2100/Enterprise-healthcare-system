@@ -1,6 +1,6 @@
 /**
  * Assembles a `VisitFeatureContext` for the pure fraud engine from data
- * RayHealthEVV already stores. This is the one place that touches the database;
+ * HealthEVV already stores. This is the one place that touches the database;
  * the detectors themselves stay pure. Everything is tenant-scoped by agency via
  * the `users.agency_id` join (visits carry no agency column of their own).
  */

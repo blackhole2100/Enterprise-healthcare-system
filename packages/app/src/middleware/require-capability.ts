@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import { hasCapability, type Capability } from '@rayhealth/core';
+import { hasCapability, type Capability } from '@health/core';
 
 export function requireCapability(capability: Capability) {
   return (req: Request, res: Response, next: NextFunction): void => {

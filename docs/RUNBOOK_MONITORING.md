@@ -1,4 +1,4 @@
-# RayHealth EVV - Production Monitoring Runbook
+# Health EVV - Production Monitoring Runbook
 
 **Authored by Durga Ghimeray**
 
@@ -15,7 +15,7 @@ This runbook documents the production monitoring signal that exists in this repo
 | Audit pipeline freshness | `GET /api/health/audit` | HTTP 200, `status=ok`, `stale`, or `empty`; `stale`/`empty` raise warnings |
 | Scheduled smoke | `.github/workflows/production-smoke.yml` | Runs every 15 minutes and on manual dispatch |
 
-The workflow defaults to `https://rayhealthevv.com`. To test another production origin, set the repository variable `RAYHEALTH_PROD_ORIGIN`.
+The workflow defaults to `https://healthevv.com`. To test another production origin, set the repository variable `Health_PROD_ORIGIN`.
 
 ## Alert Path
 
@@ -27,9 +27,9 @@ GitHub Actions failures are the first automated alert. Repository maintainers sh
 2. Manually re-run the failed probe:
 
    ```bash
-   curl -i https://rayhealthevv.com/api/health
-   curl -i https://rayhealthevv.com/api/health/db
-   curl -i https://rayhealthevv.com/api/health/audit
+   curl -i https://healthevv.com/api/health
+   curl -i https://healthevv.com/api/health/db
+   curl -i https://healthevv.com/api/health/audit
    ```
 
 3. If `/api/health` fails, check Vercel deployment status and recent deploys.

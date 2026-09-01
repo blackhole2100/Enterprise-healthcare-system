@@ -1,5 +1,5 @@
 /**
- * Global Vitest setup for @rayhealth/web (jsdom).
+ * Global Vitest setup for @health/web (jsdom).
  *
  * jsdom does not implement IntersectionObserver / ResizeObserver / matchMedia.
  * framer-motion's `whileInView` relies on IntersectionObserver, so without a

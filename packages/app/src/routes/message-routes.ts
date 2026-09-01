@@ -16,7 +16,7 @@
 import { Router, type Request, type Response } from 'express';
 import type { Knex } from 'knex';
 import { z } from 'zod';
-import { MessageRepository } from '@rayhealth/core';
+import { MessageRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 import { notifyCaregivers } from '../services/notification-service.js';
@@ -152,7 +152,7 @@ router.post('/staff', requireCapability('staff.write'), async (req: Request, res
       caregiverIds: [parsed.data.caregiverId],
       category: 'scheduleChanges',
       title: 'New message',
-      body: 'Your agency sent you a message. Open RayHealth to read it.',
+      body: 'Your agency sent you a message. Open Health to read it.',
       data: { kind: 'message.received', threadId: thread.id },
     });
 

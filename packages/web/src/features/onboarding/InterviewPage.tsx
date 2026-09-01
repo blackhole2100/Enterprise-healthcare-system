@@ -183,7 +183,7 @@ export function InterviewPage() {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <span style={{ fontWeight: 700, fontSize: '1rem', letterSpacing: '-0.01em' }}>
-            RayHealth
+            Health
           </span>
           <span
             style={{

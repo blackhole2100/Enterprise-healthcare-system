@@ -1,16 +1,16 @@
-# RayHealth EVV Operational Drill Templates
+# Health EVV Operational Drill Templates
 
 **Authored by Durga Ghimeray**
 
 **Effective:** 2026-07-08
-**Owner:** RayHealth EVV Privacy / Security Officer
+**Owner:** Health EVV Privacy / Security Officer
 **Status:** Drill templates only. Restore and incident-response exercises are
 not complete until the officer executes the drills, stores evidence in the
 private compliance vault, and records outcomes in the review log.
 
 ## Purpose
 
-This document gives RayHealth EVV repeatable templates for two operational
+This document gives Health EVV repeatable templates for two operational
 controls that must be exercised before real PHI onboarding:
 
 - disaster-recovery restore rehearsal
@@ -43,7 +43,7 @@ database architecture change.
 | Drill ID | `DR-YYYY-MM-DD-01` |
 | Date / time | `YYYY-MM-DD HH:MM UTC` |
 | Facilitator | `[Name]` |
-| Systems in scope | Neon project `late-art-87716813`, Vercel project `rayhealth-evv-platform-app`, synthetic tenant |
+| Systems in scope | Neon project `late-art-87716813`, Vercel project `health-evv-platform-app`, synthetic tenant |
 | Restore target | `[timestamp / branch / backup primitive]` |
 | Expected RTO | 4 hours |
 | Expected RPO | 5 minutes for Neon PITR scenario |

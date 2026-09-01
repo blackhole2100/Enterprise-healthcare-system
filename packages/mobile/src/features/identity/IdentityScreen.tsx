@@ -97,7 +97,7 @@ export default function IdentityScreen() {
       if (!granted.granted) {
         showAppAlert(
           'Camera access is needed',
-          'RayHealth needs the camera to take your identity photo. You can turn it on in Settings.',
+          'Health needs the camera to take your identity photo. You can turn it on in Settings.',
           undefined,
           { variant: 'info' },
         );

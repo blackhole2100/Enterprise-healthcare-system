@@ -27,11 +27,11 @@ function safePart(value: string): string {
 }
 
 function indexKey(scope: CacheScope): string {
-  return `rayhealth_visit_cache_index_${safePart(scope.userId)}_${safePart(scope.agencyId)}`;
+  return `health_visit_cache_index_${safePart(scope.userId)}_${safePart(scope.agencyId)}`;
 }
 
 function rowKey(scope: CacheScope, assignmentId: string): string {
-  return `rayhealth_visit_cache_row_${safePart(scope.userId)}_${safePart(scope.agencyId)}_${safePart(assignmentId)}`;
+  return `health_visit_cache_row_${safePart(scope.userId)}_${safePart(scope.agencyId)}_${safePart(assignmentId)}`;
 }
 
 async function readIndex(store: SecureKvStore, scope: CacheScope): Promise<string[]> {

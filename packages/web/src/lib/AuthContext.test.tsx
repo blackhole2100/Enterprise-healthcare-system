@@ -8,7 +8,7 @@ function Probe() {
   return (
     <div>
       <div data-testid="state">{isAuthenticated ? 'in' : 'out'}</div>
-      <button onClick={() => login('admin@rayhealth.example', 'password')}>login</button>
+      <button onClick={() => login('admin@health.example', 'password')}>login</button>
       <button onClick={() => void logout()}>logout</button>
     </div>
   );
@@ -39,7 +39,7 @@ describe('AuthProvider', () => {
     );
 
     await waitFor(() => expect(screen.getByTestId('state')).toHaveTextContent('in'));
-    expect(localStorage.getItem('rayhealth_token')).toBeNull();
+    expect(localStorage.getItem('health_token')).toBeNull();
     expect(fetchMock).toHaveBeenCalledWith('/api/auth/me', expect.objectContaining({ credentials: 'include' }));
   });
 

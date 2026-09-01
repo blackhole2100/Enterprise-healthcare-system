@@ -13,7 +13,7 @@
 import { Router, type Request, type Response } from 'express';
 import type { Knex } from 'knex';
 import { z } from 'zod';
-import { PushTokenRepository } from '@rayhealth/core';
+import { PushTokenRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 

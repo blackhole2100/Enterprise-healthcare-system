@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
- * Company › Switching to RayHealth.
+ * Company › Switching to Health.
  * The migration promise page: what moves, who does the work, and how long it
  * takes. Deliberately names no competitor — it speaks to the category
  * (spreadsheets, payer portals, legacy agency platforms) and to the fear of
@@ -24,17 +24,17 @@ const STEPS: MigrationStep[] = [
   {
     n: '02',
     title: 'We map and import',
-    body: 'Clients, caregivers, and service authorizations are mapped into RayHealth by our team and verified against your source files, row by row.',
+    body: 'Clients, caregivers, and service authorizations are mapped into Health by our team and verified against your source files, row by row.',
   },
   {
     n: '03',
     title: 'Run a parallel week',
-    body: 'Your caregivers clock real visits in RayHealth while your old process keeps running. You compare outputs before anything depends on us.',
+    body: 'Your caregivers clock real visits in Health while your old process keeps running. You compare outputs before anything depends on us.',
   },
   {
     n: '04',
     title: 'Cut over clean',
-    body: 'EVV submissions and claims continue without a gap. Your old exports stay archived in RayHealth for audit continuity.',
+    body: 'EVV submissions and claims continue without a gap. Your old exports stay archived in Health for audit continuity.',
   },
 ];
 
@@ -95,7 +95,7 @@ const FAQS = [
   },
   {
     q: 'Are we locked into a contract?',
-    a: 'No. RayHealth is month-to-month. The switching work we do for you is not a hostage — your data is exportable at any time.',
+    a: 'No. Health is month-to-month. The switching work we do for you is not a hostage — your data is exportable at any time.',
   },
 ];
 
@@ -105,7 +105,7 @@ export function SwitchPage() {
       <header className="mk-hero">
         <div className="mk-hero-grid" />
         <div className="mk-heroin">
-          <span className="mk-eyebrow">Switching to RayHealth</span>
+          <span className="mk-eyebrow">Switching to Health</span>
           <h1 className="mk-h1">Switch without the scary part.</h1>
           <p className="mk-lead">
             The reason agencies stay on software they dislike is the migration, not the product.
@@ -125,7 +125,7 @@ export function SwitchPage() {
           <h2 className="mk-h2">Four steps, and we do the heavy two.</h2>
           <p className="mk-deck">
             You export and approve. We map, import, verify, and train. Nothing cuts over until
-            you have watched a real week of visits flow through RayHealth correctly.
+            you have watched a real week of visits flow through Health correctly.
           </p>
           <div className="mk-steps">
             {STEPS.map((s) => (
@@ -147,7 +147,7 @@ export function SwitchPage() {
               <h3>Your operating history, not just your roster.</h3>
               <p>
                 A switch that only moves names and phone numbers leaves your compliance story
-                behind. RayHealth imports the records an auditor will actually ask about.
+                behind. Health imports the records an auditor will actually ask about.
               </p>
               <ul className="mk-checks">
                 {MOVES_WITH_YOU.map((item) => (

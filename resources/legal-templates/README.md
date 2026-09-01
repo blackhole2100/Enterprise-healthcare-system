@@ -145,10 +145,10 @@ Before any of these documents are presented to a client, employee, regulator, or
 - Confirm your HIPAA Notice of Privacy Practices reflects your actual uses and disclosures, not just the regulatory floor.
 - Replace synthetic example values in `agency-info.json` (such as `(215) 555-0100` or `00-0000000`) with your real agency information.
 
-The authors of this package, the rayhealth-evv-platform project, and any contributors disclaim any liability for use of these templates without legal review.
+The authors of this package, the health-evv-platform project, and any contributors disclaim any liability for use of these templates without legal review.
 
 ---
 
 ## License & redistribution
 
-Templates are written from scratch and provided to RayHealth licensees as a working starting point. They contain no third-party copyrighted policy text. Verbatim regulatory language (e.g. the HIPAA NPP header) is included because the regulation requires it.
+Templates are written from scratch and provided to Health licensees as a working starting point. They contain no third-party copyrighted policy text. Verbatim regulatory language (e.g. the HIPAA NPP header) is included because the regulation requires it.

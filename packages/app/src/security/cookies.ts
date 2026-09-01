@@ -1,7 +1,7 @@
 import type { CookieOptions, Request } from 'express';
 
-export const SESSION_COOKIE_NAME = 'rayhealth_session';
-export const PLATFORM_COOKIE_NAME = 'rayhealth_platform';
+export const SESSION_COOKIE_NAME = 'health_session';
+export const PLATFORM_COOKIE_NAME = 'health_platform';
 const EIGHT_HOURS_MS = 8 * 60 * 60 * 1000;
 const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
 

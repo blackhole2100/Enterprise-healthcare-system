@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
    Shared brand shell for the PUBLIC hiring surface: the agency
    homepage (/:slug), application (/:slug/apply), applicant portal
    and interview. These pages carry the AGENCY's identity, not
-   RayHealth's admin chrome — warm editorial palette, a serif
+   Health's admin chrome — warm editorial palette, a serif
    display face (Fraunces), and a red monoline mark that echoes
    the home-care agency world (Cyanjel's own logo is a red
    monoline home). Everything is scoped under .pub-* so nothing

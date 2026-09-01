@@ -1,15 +1,15 @@
-# RayHealthEVV™ Launch Ads
+# HealthEVV™ Launch Ads
 
 Last updated: 2026-05-09
 
 ## Canonical URL
 
-Use `rayhealthevv.com` in all end frames and paid placements.
+Use `healthevv.com` in all end frames and paid placements.
 
 Verification notes:
 
-- `https://rayhealthevv.com` returned HTTP 200 and served the RayHealthEVV app.
-- `https://rayhealth-evv.com` did not resolve during verification.
+- `https://healthevv.com` returned HTTP 200 and served the HealthEVV app.
+- `https://health-evv.com` did not resolve during verification.
 
 ## Brand Direction
 
@@ -23,11 +23,11 @@ Type and color cues:
 - Surface white: `#F7FAFC`
 - Status success: `#1F9D55`
 - Status attention: `#D97706`
-- Logo lockup: white logomark plus `RayHealthEVV™` wordmark on blue end frames; navy mark on white.
+- Logo lockup: white logomark plus `HealthEVV™` wordmark on blue end frames; navy mark on white.
 
 Compliance copy rule:
 
-- Never imply RayHealthEVV directly files taxes or executes wage payments.
+- Never imply HealthEVV directly files taxes or executes wage payments.
 - Use "payroll readiness", "approvals", "exports", or "authorized payroll-provider handoff".
 
 Voiceover pacing target:
@@ -49,14 +49,14 @@ Music: warm piano plus soft synth pad, subtle pulse around the 18s mark. Resolve
 | --- | --- | --- |
 | 0.0-3.0s | Slow push-in on a caregiver's hand gently steadying an older client's arm in a sunlit hallway. | - |
 | 3.0-7.0s | Overhead of a coordinator's desk: paper schedule, sticky notes, three browser tabs. | Agencies juggle a lot. |
-| 7.0-13.0s | Match cut: same desk, now a clean RayHealthEVV dashboard. Visits glide onto a calendar, EVV check marks appear. | We brought it onto one page. |
+| 7.0-13.0s | Match cut: same desk, now a clean HealthEVV dashboard. Visits glide onto a calendar, EVV check marks appear. | We brought it onto one page. |
 | 13.0-19.0s | Triptych: caregiver app clock-in, invoice status flips to ready, payroll period locks. | Scheduling. EVV. Billing. Payroll readiness. |
 | 19.0-24.0s | Coordinator slides phone to a caregiver across a table; both look relieved. | Built for the people doing the work. |
-| 24.0-30.0s | End frame on RayHealth blue. | RayHealthEVV™ - Care, on the same page. `rayhealthevv.com` |
+| 24.0-30.0s | End frame on Health blue. | HealthEVV™ - Care, on the same page. `healthevv.com` |
 
 VO:
 
-> Home care teams juggle a lot - schedules, visits, compliance, payroll readiness, and the people in the middle of it all. RayHealthEVV brings every part of an agency onto one calm, operations-grade platform. Scheduling. EVV. Billing. Payroll readiness. Caregiver training. Family visibility. All in one place - built for the people doing the work, not against them. RayHealthEVV. Care, finally on the same page.
+> Home care teams juggle a lot - schedules, visits, compliance, payroll readiness, and the people in the middle of it all. HealthEVV brings every part of an agency onto one calm, operations-grade platform. Scheduling. EVV. Billing. Payroll readiness. Caregiver training. Family visibility. All in one place - built for the people doing the work, not against them. HealthEVV. Care, finally on the same page.
 
 Sound design:
 
@@ -78,14 +78,14 @@ Music: light percussion under the pain section, lifting to a clean ambient progr
 | --- | --- | --- |
 | 0.0-3.0s | Shaky handheld tour of cluttered desk: spreadsheet, sticky notes, vibrating phone. | Friday, 4:48 PM. |
 | 3.0-8.0s | Whip pan: paper schedule, fax confirmation, EVV portal tab, caregiver text: "running late." | Closing the week the hard way. |
-| 8.0-12.0s | Hard cut to RayHealthEVV dashboard. Numbers settle; one click locks the pay period. | Meet RayHealthEVV. |
+| 8.0-12.0s | Hard cut to HealthEVV dashboard. Numbers settle; one click locks the pay period. | Meet HealthEVV. |
 | 12.0-20.0s | Schedule conflicts auto-resolved, EVV exceptions flagged, billing readiness green, training certificates renewed. | Fewer tabs. Fewer calls. Fewer surprises. |
 | 20.0-25.0s | Owner closes laptop at 5:00 PM and walks out. | Run the agency, not the spreadsheet. |
-| 25.0-30.0s | End frame on RayHealth blue. | RayHealthEVV™. Book an agency demo. `rayhealthevv.com/book-demo` |
+| 25.0-30.0s | End frame on Health blue. | HealthEVV™. Book an agency demo. `healthevv.com/book-demo` |
 
 VO:
 
-> Friday at 4:48 - closing the week one tab at a time. Schedule changes. EVV exceptions. Pay period still open. RayHealthEVV brings scheduling, EVV review, billing readiness, and payroll approvals into one operations-grade platform. Conflicts resolved before they hit Monday. Compliance flagged before it bites. Pay periods closed in clicks, not hours. Run the agency. Not the spreadsheet. RayHealthEVV. Book an agency demo today.
+> Friday at 4:48 - closing the week one tab at a time. Schedule changes. EVV exceptions. Pay period still open. HealthEVV brings scheduling, EVV review, billing readiness, and payroll approvals into one operations-grade platform. Conflicts resolved before they hit Monday. Compliance flagged before it bites. Pay periods closed in clicks, not hours. Run the agency. Not the spreadsheet. HealthEVV. Book an agency demo today.
 
 Lower-third typography burst at 12s:
 
@@ -108,11 +108,11 @@ Music: acoustic guitar plus soft pad. Layer real-life ambient sounds: kettle, do
 | 9.0-15.0s | Caregiver helps with morning meds, checks tasks off one-handed, records a voice note. | Care plan. Tasks. Notes - all here. |
 | 15.0-21.0s | Visit notes saved, EVV verified, tomorrow's schedule visible, coordinator message arrives. | EVV happens automatically. |
 | 21.0-26.0s | Caregiver and client laugh together; phone is set down. | So you can be here. |
-| 26.0-30.0s | End frame on RayHealth blue. | RayHealthEVV™ Caregiver app - built for the people doing the work. |
+| 26.0-30.0s | End frame on Health blue. | HealthEVV™ Caregiver app - built for the people doing the work. |
 
 VO:
 
-> When you walk into someone's home, the last thing they need is a caregiver staring at a clipboard. RayHealthEVV is the caregiver app that gets out of your way. One tap to clock in. Care plan ready. Tasks one-hand simple. Voice notes when typing won't do. EVV verified in the background - automatically. Less paperwork. More presence. RayHealthEVV. A workday that respects your time.
+> When you walk into someone's home, the last thing they need is a caregiver staring at a clipboard. HealthEVV is the caregiver app that gets out of your way. One tap to clock in. Care plan ready. Tasks one-hand simple. Voice notes when typing won't do. EVV verified in the background - automatically. Less paperwork. More presence. HealthEVV. A workday that respects your time.
 
 Sound design:
 
@@ -134,18 +134,18 @@ Music: soft strings plus piano. No drums. Resolve on a held minor-to-major lift.
 | --- | --- | --- |
 | 0.0-4.0s | Adult daughter at airport gate sees notification: "Mom's morning visit completed." | She is two flights away. |
 | 4.0-10.0s | Mother at home, caregiver placing tea, life as normal. | He just made sure her day starts right. |
-| 10.0-18.0s | Daughter scrolls a gentle non-medical timeline: visit completed, meds confirmed, light walk recorded. | RayHealthEVV family portal. |
+| 10.0-18.0s | Daughter scrolls a gentle non-medical timeline: visit completed, meds confirmed, light walk recorded. | HealthEVV family portal. |
 | 18.0-24.0s | Mother opens iPad and sees the same calm view of care team and tomorrow's schedule. | Real-time visibility - gentle, not loud. |
-| 24.0-30.0s | End frame on RayHealth blue. | RayHealthEVV™ - Closer to the people you love. `rayhealthevv.com/family` |
+| 24.0-30.0s | End frame on Health blue. | HealthEVV™ - Closer to the people you love. `healthevv.com/family` |
 
 VO:
 
-> She lives a few flights away. He's the caregiver who just made sure her morning started right. RayHealthEVV's family portal turns a phone call you forgot to make into a quiet update you can trust. Visits as they happen. Tasks completed. Tomorrow's schedule. No alarms. No surprises. Just a calmer way of staying close. RayHealthEVV. Closer to the people you love.
+> She lives a few flights away. He's the caregiver who just made sure her morning started right. HealthEVV's family portal turns a phone call you forgot to make into a quiet update you can trust. Visits as they happen. Tasks completed. Tomorrow's schedule. No alarms. No surprises. Just a calmer way of staying close. HealthEVV. Closer to the people you love.
 
 Caption note:
 
 - Use burned-in captions for paid social.
-- White captions over a 60%-opacity RayHealth blue lower third.
+- White captions over a 60%-opacity Health blue lower third.
 - Minimum 18px.
 
 ## 5. Compliance / Operations - "Audit-ready by design."
@@ -161,14 +161,14 @@ Music: restrained piano plus low ambient bed.
 | Time | Visual | On-screen text |
 | --- | --- | --- |
 | 0.0-4.0s | Static shot of a printed audit folder. Camera slowly pushes in. | Audits don't have to feel like this. |
-| 4.0-10.0s | Folder dissolves into a clean RayHealthEVV audit-trail UI. Rows reveal timestamp, GPS, signature. | Every visit. Every event. Verified. |
+| 4.0-10.0s | Folder dissolves into a clean HealthEVV audit-trail UI. Rows reveal timestamp, GPS, signature. | Every visit. Every event. Verified. |
 | 10.0-18.0s | GPS-pinned clock-in, EVV exception cleared, payer claim flagged early, training cert auto-renewed. | 21st Cures Act ready. |
 | 18.0-24.0s | Operator scrolls audit log; one keystroke exports a state-ready report. | Built audit-ready. |
-| 24.0-30.0s | End frame on RayHealth blue. | RayHealthEVV™ - Operations-grade home care platform. |
+| 24.0-30.0s | End frame on Health blue. | HealthEVV™ - Operations-grade home care platform. |
 
 VO:
 
-> Compliance shouldn't feel like a folder you carry into a courtroom. RayHealthEVV makes audit-readiness the default. Every visit GPS-checked against the client's address. Every clock event time-stamped. Every signature stored. EVV exceptions surfaced before billing. Training certificates renewed before they lapse. State-ready exports in a single click. 21st Cures Act ready, by design. RayHealthEVV. The operations-grade home care platform.
+> Compliance shouldn't feel like a folder you carry into a courtroom. HealthEVV makes audit-readiness the default. Every visit GPS-checked against the client's address. Every clock event time-stamped. Every signature stored. EVV exceptions surfaced before billing. Training certificates renewed before they lapse. State-ready exports in a single click. 21st Cures Act ready, by design. HealthEVV. The operations-grade home care platform.
 
 ## 6. Six-second Bumper - "Care, on the same page."
 
@@ -180,7 +180,7 @@ Storyboard:
 
 - 0.0-1.5s: Three blue tabs labeled `Schedule`, `EVV`, `Billing` collide and merge into one.
 - 1.5-4.0s: Bold display text: "Care, on the same page." Lower-third pulses once on the period.
-- 4.0-6.0s: RayHealthEVV™ logo plus `rayhealthevv.com`. Hold.
+- 4.0-6.0s: HealthEVV™ logo plus `healthevv.com`. Hold.
 
 Sound:
 
@@ -197,12 +197,12 @@ Bed: same warm piano-pad cue from the hero spot, mixed to -20 LUFS dialogue. End
 
 VO:
 
-> Home care teams juggle a lot - schedules, visits, compliance, payroll readiness, and the people in the middle of it all. RayHealthEVV brings every part of an agency onto one calm, operations-grade platform. Scheduling. EVV. Billing readiness. Payroll. Caregiver training. Family visibility. Built for the people doing the work - not against them. RayHealthEVV - care, on the same page. Learn more at rayhealthevv.com.
+> Home care teams juggle a lot - schedules, visits, compliance, payroll readiness, and the people in the middle of it all. HealthEVV brings every part of an agency onto one calm, operations-grade platform. Scheduling. EVV. Billing readiness. Payroll. Caregiver training. Family visibility. Built for the people doing the work - not against them. HealthEVV - care, on the same page. Learn more at healthevv.com.
 
 ## Production Checklist Before Shipping
 
-- Domain: use `rayhealthevv.com` everywhere.
-- Trademark: confirm `RayHealthEVV™` versus a registered mark before final render.
+- Domain: use `healthevv.com` everywhere.
+- Trademark: confirm `HealthEVV™` versus a registered mark before final render.
 - Talent and b-roll: prefer real caregivers and clients with signed consent and release.
 - Captions: burn captions into all paid social cuts for Meta, TikTok, and LinkedIn.
 - Legal/compliance review:

@@ -16,7 +16,7 @@ describe('ComparePage', () => {
   it('renders the hero heading', () => {
     renderPage();
     expect(
-      screen.getByRole('heading', { name: /RayHealth vs\. the old way/i, level: 1 })
+      screen.getByRole('heading', { name: /Health vs\. the old way/i, level: 1 })
     ).toBeInTheDocument();
   });
 
@@ -24,7 +24,7 @@ describe('ComparePage', () => {
     renderPage();
     expect(screen.getByRole('columnheader', { name: /Spreadsheets \+ payer portal/i })).toBeInTheDocument();
     expect(screen.getByRole('columnheader', { name: /Legacy agency platforms/i })).toBeInTheDocument();
-    expect(screen.getByRole('columnheader', { name: /RayHealth/i })).toBeInTheDocument();
+    expect(screen.getByRole('columnheader', { name: /Health/i })).toBeInTheDocument();
   });
 
   it('covers the core capabilities', () => {

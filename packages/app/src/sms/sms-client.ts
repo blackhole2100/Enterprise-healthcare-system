@@ -47,7 +47,7 @@ export interface SmsClient {
  *
  * Agency-entered numbers arrive in every shape a human types: "(412)
  * 555-0123", "412.555.0123", "1-412-555-0123". Ten digits are assumed to be
- * North American, since RayHealth operates in PA; eleven starting with 1 are
+ * North American, since Health operates in PA; eleven starting with 1 are
  * the same number written long. Anything else is left alone if it already
  * looks like E.164, and rejected otherwise rather than guessed at, because a
  * wrong guess texts a stranger.

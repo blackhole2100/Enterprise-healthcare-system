@@ -96,7 +96,7 @@ const eventTone = (e: string): string => EVENT_TONE[e] ?? (e.includes('fail') ||
 async function api<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`/api/superadmin${path}`, {
     ...init,
-    // Auth rides on the httpOnly `rayhealth_platform` cookie (set at login); the
+    // Auth rides on the httpOnly `health_platform` cookie (set at login); the
     // token is never held in JS. credentials:'include' sends that cookie.
     credentials: 'include',
     headers: { 'content-type': 'application/json', accept: 'application/json', ...(init?.headers ?? {}) },
@@ -217,7 +217,7 @@ function UserRowView({ u, busy, onToggle }: { u: UserRow; busy: boolean; onToggl
 // ============================================================
 export function SuperAdminPage() {
   // Auth is a boolean, never the token itself, the platform token lives only in
-  // the httpOnly `rayhealth_platform` cookie. `checking` covers the initial
+  // the httpOnly `health_platform` cookie. `checking` covers the initial
   // cookie probe on mount so we don't flash the login screen for an already-
   // authenticated founder returning to the tab.
   const [authed, setAuthed] = useState(false);
@@ -399,7 +399,7 @@ export function SuperAdminPage() {
           <div style={{ width: 34, height: 34, borderRadius: 9, background: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 4 }}>
             <BrandLogo variant="mark" height={24} />
           </div>
-          <div style={{ fontWeight: 700, fontSize: '0.92rem', letterSpacing: '-0.01em' }}>RayHealth</div>
+          <div style={{ fontWeight: 700, fontSize: '0.92rem', letterSpacing: '-0.01em' }}>Health</div>
           <span style={{ marginLeft: 'auto', fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.08em', color: SIDE_INK_DIM, border: `1px solid ${C.sidebarPanel}`, borderRadius: 5, padding: '0.1rem 0.35rem' }}>ADMIN</span>
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.15rem', marginTop: '1rem' }}>
@@ -525,7 +525,7 @@ export function SuperAdminPage() {
         )}
 
         <footer style={{ marginTop: '2.5rem', color: C.ink3, fontSize: '0.74rem' }}>
-          RayHealth Platform Command · {CEO_NAME} · every action is audit-logged
+          Health Platform Command · {CEO_NAME} · every action is audit-logged
         </footer>
       </main>
     </div>

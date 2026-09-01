@@ -1,6 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { SessionRepository, type AppRole } from '@rayhealth/core';
+import { SessionRepository, type AppRole } from '@health/core';
 import { readCookie, SESSION_COOKIE_NAME } from '../security/cookies.js';
 import { hashOpaqueToken } from '../security/token-hashing.js';
 import { getMobileSessionStore } from '../services/mobile-session-store.js';

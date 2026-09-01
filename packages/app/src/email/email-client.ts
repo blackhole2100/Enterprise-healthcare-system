@@ -48,14 +48,14 @@ export interface EmailClient {
   sendReminderEmail(params: ReminderEmailParams): Promise<SendEmailResult>;
 }
 
-const DEFAULT_FROM = 'RayHealth <onboarding@www.rayhealthevv.com>';
+const DEFAULT_FROM = 'Health <onboarding@www.healthevv.com>';
 
 function createSmtpClient(user: string, pass: string): EmailClient {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: { user, pass }
   });
-  const from = `RayHealth <${user}>`;
+  const from = `Health <${user}>`;
 
   async function smtpSend(to: string, subject: string, html: string, text: string): Promise<SendEmailResult> {
     try {
@@ -279,7 +279,7 @@ export function createEmailClient(): EmailClient {
  *
  * Resolution order:
  *  1. Explicit `INVITE_URL_BASE` env (preferred, set in Vercel to
- *     `https://rayhealthevv.com` or your custom domain).
+ *     `https://healthevv.com` or your custom domain).
  *  2. `APP_URL` env (already used elsewhere in the codebase).
  *  3. `BASE_URL` env (last fallback before localhost).
  *  4. `http://localhost:5173` for local dev.

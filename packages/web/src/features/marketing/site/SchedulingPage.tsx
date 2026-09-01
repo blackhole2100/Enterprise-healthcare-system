@@ -19,11 +19,11 @@ const pillars: Pillar[] = [
     i: mkic(<><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></>) },
   { t: 'Live eligibility & credential checks', b: 'Every assignment is checked against the caregiver’s record. Expired clearances, missing training, or service mismatches surface before the visit is published.',
     i: mkic(<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></>) },
-  { t: 'Authorization burn-down', b: 'See approved units against units scheduled and delivered. RayHealth warns before you over-schedule a client past their authorization.',
+  { t: 'Authorization burn-down', b: 'See approved units against units scheduled and delivered. Health warns before you over-schedule a client past their authorization.',
     i: mkic(<><path d="M3 3v18h18" /><path d="M19 9l-5 5-4-4-3 3" /></>) },
   { t: 'Open-shift & coverage alerts', b: 'Uncovered visits and call-outs are flagged the moment they appear, with eligible caregivers ranked so coverage is a decision, not a search.',
     i: mkic(<><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.7 21a2 2 0 0 1-3.4 0" /></>) },
-  { t: 'Recurring visits', b: 'Set a client’s standing schedule once. RayHealth generates the recurring visits and keeps them aligned as authorizations and availability change.',
+  { t: 'Recurring visits', b: 'Set a client’s standing schedule once. Health generates the recurring visits and keeps them aligned as authorizations and availability change.',
     i: mkic(<><path d="M17 2.1 21 6l-4 3.9" /><path d="M3 11V9a4 4 0 0 1 4-4h14" /><path d="M7 21.9 3 18l4-3.9" /><path d="M21 13v2a4 4 0 0 1-4 4H3" /></>) },
   { t: 'Travel-gap detection', b: 'Back-to-back visits that can’t physically be reached are flagged, so a caregiver is never scheduled in two places at once.',
     i: mkic(<><circle cx="12" cy="10" r="3" /><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z" /></>) },
@@ -37,7 +37,7 @@ interface Step {
 
 const steps: Step[] = [
   { n: '01', t: 'Open the weekly board', b: 'Coordinators see every client and caregiver on one drag-and-drop grid, by day, by week, or by team.' },
-  { n: '02', t: 'Drop a visit', b: 'Assign a caregiver to a slot. RayHealth checks eligibility, credentials, authorization, and travel the instant you do.' },
+  { n: '02', t: 'Drop a visit', b: 'Assign a caregiver to a slot. Health checks eligibility, credentials, authorization, and travel the instant you do.' },
   { n: '03', t: 'Resolve conflicts', b: 'Anything that can’t be billed or verified is flagged inline with the reason, overlaps, expired credentials, exhausted units.' },
   { n: '04', t: 'Publish with confidence', b: 'Caregivers get the schedule on the same app they clock in with, and the visit is ready to verify and bill.' },
 ];
@@ -61,8 +61,8 @@ interface Faq {
 
 const faqs: Faq[] = [
   { q: 'What conflicts does the scheduler actually catch?', a: 'Overlapping visits for the same caregiver, travel gaps that can’t be physically met, expired or missing credentials, training that’s overdue, service-type mismatches, and visits that would exceed a client’s authorized units. Each is flagged inline with the specific reason.' },
-  { q: 'How does authorization burn-down work?', a: 'RayHealth tracks approved units per client against what’s already scheduled and delivered. As you build the week, it shows remaining units and warns before you publish visits that would push a client past their authorization.' },
-  { q: 'Can I set up recurring and standing schedules?', a: 'Yes. Define a client’s standing pattern once and RayHealth generates the recurring visits, keeping them in step with availability and authorization changes so you’re not rebuilding the week by hand.' },
+  { q: 'How does authorization burn-down work?', a: 'Health tracks approved units per client against what’s already scheduled and delivered. As you build the week, it shows remaining units and warns before you publish visits that would push a client past their authorization.' },
+  { q: 'Can I set up recurring and standing schedules?', a: 'Yes. Define a client’s standing pattern once and Health generates the recurring visits, keeping them in step with availability and authorization changes so you’re not rebuilding the week by hand.' },
   { q: 'How does scheduling connect to EVV and workforce?', a: 'Scheduling reads the same caregiver record used for credentialing and the same authorization data used for billing. A published visit flows straight into EVV for clock-in and verification, one source of truth, not three systems to reconcile.' },
 ];
 
@@ -122,7 +122,7 @@ export function SchedulingPage() {
           <span className="mk-eyebrow">Solutions &middot; Scheduling</span>
           <h1 className="mk-h1">A schedule that catches conflicts before you publish them.</h1>
           <p className="mk-lead">
-            RayHealth&rsquo;s scheduling is a drag-and-drop weekly board that reads eligibility, credentials, and
+            Health&rsquo;s scheduling is a drag-and-drop weekly board that reads eligibility, credentials, and
             authorizations as you build it. Move a visit and the platform tells you, in real time, whether it can
             actually be staffed, verified, and billed &mdash; so the week you publish is one that holds up.
           </p>
@@ -177,7 +177,7 @@ export function SchedulingPage() {
             <div className="mk-feattext">
               <p className="mk-eylabel">The weekly board</p>
               <h3>See the whole week, move one visit at a time.</h3>
-              <p>Day columns, color-coded caregivers, and open shifts in plain sight. Drag a visit to a new slot and RayHealth re-checks eligibility and travel as you drop it.</p>
+              <p>Day columns, color-coded caregivers, and open shifts in plain sight. Drag a visit to a new slot and Health re-checks eligibility and travel as you drop it.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Color-coded visit cards per caregiver and service</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Open shifts surfaced in-line for fast coverage</li>
@@ -185,7 +185,7 @@ export function SchedulingPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com &middot; Week of Jun 23" />
+              <Chrome url="app.healthevv.com &middot; Week of Jun 23" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 12 }}>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 8 }}>
                   {board.map((col) => (
@@ -219,7 +219,7 @@ export function SchedulingPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com &middot; Assign visit" />
+              <Chrome url="app.healthevv.com &middot; Assign visit" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 12, borderBottom: '1px solid var(--line)' }}>
                   <div style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '.9rem' }}>Wed &middot; 1:00 PM &middot; J. Carter</div>
@@ -272,7 +272,7 @@ export function SchedulingPage() {
         <div className="mk-wrap">
           <div className="mk-callout">
             <h2>Watch the board catch a conflict live.</h2>
-            <p>We&rsquo;ll load a sample week, drag a visit into an impossible slot, and show you RayHealth flag it before it&rsquo;s ever published.</p>
+            <p>We&rsquo;ll load a sample week, drag a visit into an impossible slot, and show you Health flag it before it&rsquo;s ever published.</p>
             <div className="mk-herocta">
               <Link to="/demo" className="mk-btn mk-white">Book a demo</Link>
               <Link to="/solutions/workforce-training" className="mk-btn mk-outline">Explore workforce &amp; training</Link>

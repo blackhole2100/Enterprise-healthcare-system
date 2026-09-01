@@ -95,7 +95,7 @@ export function CertificatePage() {
 
         <div style={{ position: 'relative' }}>
           <div style={{ fontSize: '0.8125rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--color-primary)', marginBottom: '0.5rem' }}>
-            {cert.agencyName || 'RayHealthEVV'}
+            {cert.agencyName || 'HealthEVV'}
           </div>
           <div style={{ width: '56px', height: '4px', background: 'linear-gradient(90deg,var(--color-primary),var(--color-accent))', borderRadius: '4px', margin: '0 auto 1.75rem' }} />
 
@@ -141,7 +141,7 @@ export function CertificatePage() {
 
           <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--color-surface-soft)', color: 'var(--color-text-subtle)', fontSize: '0.75rem' }}>
             Verification code <strong style={{ color: 'var(--color-text-muted)', fontFamily: 'monospace' }}>{cert.verificationCode}</strong>
-            {' · '}Issued via RayHealthEVV&trade; learning platform
+            {' · '}Issued via HealthEVV&trade; learning platform
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
  * INTEGRITY NOTE: This page does NOT reproduce the official PA DHS / OLTL
  * code list. The numbers shown are illustrative examples to communicate how
  * task codes group into categories. The authoritative, current code set ships
- * inside the RayHealth product and must be confirmed against current PA DHS /
+ * inside the Health product and must be confirmed against current PA DHS /
  * OLTL bulletins. Disclaimers are rendered prominently near the top and again
  * directly above every table.
  */
@@ -84,7 +84,7 @@ const Disclaimer = ({ compact = false }: { compact?: boolean }) => (
     <div style={{ fontSize: compact ? '.85rem' : '.92rem', color: 'var(--color-accent-dark)', lineHeight: 1.55 }}>
       <strong style={{ color: 'var(--color-accent-dark)' }}>Representative reference only.</strong>{' '}
       Confirm exact codes and descriptions against current PA DHS / OLTL bulletins. The numbers below
-      are <em>illustrative examples</em>, not official code assignments. RayHealth ships the current,
+      are <em>illustrative examples</em>, not official code assignments. Health ships the current,
       authoritative code set in-product and updates it as the state publishes changes.
     </div>
   </div>
@@ -102,7 +102,7 @@ export function TaskCodesPage() {
           <p className="mk-lead">
             A plain-language reference to the personal-assistance and home-health task codes
             (roughly the <strong>106&ndash;256</strong> range) that coordinators place on PA care
-            plans &mdash; and how RayHealth wires them into care plans and visit templates.
+            plans &mdash; and how Health wires them into care plans and visit templates.
           </p>
           <div className="mk-herocta">
             <span className="mk-pill">Reference</span>
@@ -122,7 +122,7 @@ export function TaskCodesPage() {
               described the same way on the care plan, the schedule, and the claim.
             </p>
             <p>
-              In RayHealth, task codes are the connective tissue between authorization and delivery.
+              In Health, task codes are the connective tissue between authorization and delivery.
               A consumer&rsquo;s authorized tasks become a <strong>care plan</strong>; that care plan
               becomes a <strong>visit template</strong> the caregiver sees at clock-in; and the tasks
               completed on the visit flow back into the verified record and the claim. Because the
@@ -132,7 +132,7 @@ export function TaskCodesPage() {
 
             <Disclaimer />
 
-            <h2>How task codes are used in RayHealth</h2>
+            <h2>How task codes are used in Health</h2>
             <ul>
               <li>
                 <span className="mk-ck">{mkic(MK_CHECK)}</span>
@@ -206,7 +206,7 @@ export function TaskCodesPage() {
           <p style={{ marginTop: 28, fontSize: '.85rem', color: 'var(--mut)', lineHeight: 1.6, maxWidth: '64ch' }}>
             Code numbers shown as &ldquo;e.g.&rdquo; are placeholders illustrating the category band, not
             assignments from a DHS bulletin. Always validate against the current OLTL guidance or the
-            code set maintained inside RayHealth.
+            code set maintained inside Health.
           </p>
         </div>
       </section>
@@ -225,7 +225,7 @@ export function TaskCodesPage() {
                 )}
               </div>
               <h3>Workforce &amp; training</h3>
-              <p>How RayHealth credentials and trains caregivers so the right person performs each authorized task.</p>
+              <p>How Health credentials and trains caregivers so the right person performs each authorized task.</p>
               <p className="mk-line" style={{ marginTop: 12 }}>Explore workforce &amp; training &rarr;</p>
             </Link>
             <Link to="/resources/evv-guide" className="mk-card" style={{ display: 'block' }}>
@@ -251,7 +251,7 @@ export function TaskCodesPage() {
           <div className="mk-callout">
             <h2>The current code set, built into your care plans.</h2>
             <p>
-              RayHealth ships the authoritative PA task codes in-product and keeps them aligned with
+              Health ships the authoritative PA task codes in-product and keeps them aligned with
               OLTL guidance &mdash; so coordinators build care plans on the right codes, not a stale
               spreadsheet.
             </p>

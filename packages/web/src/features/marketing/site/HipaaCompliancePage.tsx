@@ -227,7 +227,7 @@ export function HipaaCompliancePage() {
           <span className="mk-eyebrow">Compliance</span>
           <h1 className="mk-h1">Designed with HIPAA-grade controls.</h1>
           <p className="mk-lead">
-            RayHealthEVV™ is engineered to meet the HIPAA Security Rule
+            HealthEVV™ is engineered to meet the HIPAA Security Rule
             (45 CFR § 164.308, § 164.318) and the Privacy Rule controls
             that apply to a Business Associate handling ePHI for
             Pennsylvania home-care agencies.
@@ -276,9 +276,9 @@ export function HipaaCompliancePage() {
                     What's in scope
                   </h3>
                   <ul className="mk-checks" style={{ margin: 0 }}>
-                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>RayHealthEVV™ web admin application</li>
-                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>RayHealthEVV™ caregiver mobile application</li>
-                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Public RayHealthEVV™ API and admin API</li>
+                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>HealthEVV™ web admin application</li>
+                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>HealthEVV™ caregiver mobile application</li>
+                    <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Public HealthEVV™ API and admin API</li>
                     <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Audit pipeline and `audit_events` data of record</li>
                   </ul>
                 </div>
@@ -303,7 +303,7 @@ export function HipaaCompliancePage() {
               </h2>
               <p className="mk-deck" style={{ marginTop: 12 }}>
                 Each row maps a HIPAA safeguard to the concrete control that
-                implements it inside RayHealthEVV™. CFR section is cited under
+                implements it inside HealthEVV™. CFR section is cited under
                 each safeguard heading.
               </p>
 
@@ -315,7 +315,7 @@ export function HipaaCompliancePage() {
                     <thead>
                       <tr>
                         <th scope="col" style={{ width: '32%' }}>Control</th>
-                        <th scope="col">How RayHealth implements it</th>
+                        <th scope="col">How Health implements it</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -335,7 +335,7 @@ export function HipaaCompliancePage() {
             <section aria-labelledby="baa-heading" className="mk-card">
               <h2 id="baa-heading" style={cardHeading}>Business Associate Agreement</h2>
               <p style={{ ...bodyText, margin: '0.75rem 0 1rem' }}>
-                RayHealthEVV™ executes a BAA with every agency before any PHI
+                HealthEVV™ executes a BAA with every agency before any PHI
                 is processed. The current template covers
                 the required HIPAA § 164.504(e) provisions: permitted uses,
                 safeguards, subcontractor flow-down, breach notification
@@ -343,7 +343,7 @@ export function HipaaCompliancePage() {
                 termination.
               </p>
               <a
-                href="mailto:compliance@rayhealthevv.com?subject=BAA%20request"
+                href="mailto:compliance@healthevv.com?subject=BAA%20request"
                 className="mk-btn mk-pri"
               >
                 Request our BAA template
@@ -414,7 +414,7 @@ export function HipaaCompliancePage() {
               <ul style={{ marginTop: '1rem', paddingLeft: '1.2rem', lineHeight: 1.7, color: 'var(--body)' }}>
                 <li>
                   <a
-                    href="mailto:compliance@rayhealthevv.com?subject=Security%20%26%20Compliance%20Pack%20request"
+                    href="mailto:compliance@healthevv.com?subject=Security%20%26%20Compliance%20Pack%20request"
                     style={linkStyle}
                   >
                     Security &amp; Compliance Pack (PDF)
@@ -424,7 +424,7 @@ export function HipaaCompliancePage() {
                 </li>
                 <li>
                   <a
-                    href="mailto:compliance@rayhealthevv.com?subject=Audit%20log%20sample%20export%20request"
+                    href="mailto:compliance@healthevv.com?subject=Audit%20log%20sample%20export%20request"
                     style={linkStyle}
                   >
                     Audit log sample export (CSV)
@@ -476,10 +476,10 @@ export function HipaaCompliancePage() {
               <span>
                 Questions:{' '}
                 <a
-                  href="mailto:compliance@rayhealthevv.com"
+                  href="mailto:compliance@healthevv.com"
                   style={linkStyle}
                 >
-                  compliance@rayhealthevv.com
+                  compliance@healthevv.com
                 </a>
               </span>
             </div>

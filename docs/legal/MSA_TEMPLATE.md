@@ -8,15 +8,15 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 **Customer:** ________________________________ ("Agency")
 
-**Vendor:** RayHealth Technologies, Inc., a Delaware corporation ("RayHealth")
+**Vendor:** Health Technologies, Inc., a Delaware corporation ("Health")
 
 ## 1. Services
 
-1.1 **Description.** RayHealth will provide Agency with access to its cloud-based Electronic Visit Verification (EVV) platform, including: the caregiver mobile application, the agency web portal, visit data collection and storage, state aggregator data submission, and standard support services (collectively, "Services").
+1.1 **Description.** Health will provide Agency with access to its cloud-based Electronic Visit Verification (EVV) platform, including: the caregiver mobile application, the agency web portal, visit data collection and storage, state aggregator data submission, and standard support services (collectively, "Services").
 
 1.2 **Order Forms.** The parties may execute one or more Order Forms specifying the number of licensed caregivers, subscription tier, fees, and any additional services. Each Order Form is incorporated into and governed by this Agreement.
 
-1.3 **Updates.** RayHealth may update the Services from time to time; updates will not materially reduce core functionality. RayHealth will provide at least 30 days' notice of material changes.
+1.3 **Updates.** Health may update the Services from time to time; updates will not materially reduce core functionality. Health will provide at least 30 days' notice of material changes.
 
 ## 2. Fees and Payment
 
@@ -24,9 +24,9 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 2.2 **Payment Terms.** Payment is due within 30 days of invoice. Overdue amounts accrue interest at 1.5% per month (or the legal maximum, whichever is lower).
 
-2.3 **Taxes.** Fees are exclusive of applicable taxes. Agency is responsible for all taxes (excluding taxes on RayHealth's income).
+2.3 **Taxes.** Fees are exclusive of applicable taxes. Agency is responsible for all taxes (excluding taxes on Health's income).
 
-2.4 **Fee Changes.** RayHealth may adjust fees annually with 60 days' written notice.
+2.4 **Fee Changes.** Health may adjust fees annually with 60 days' written notice.
 
 ## 3. Term and Termination
 
@@ -38,7 +38,7 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 3.4 **Termination for Convenience.** Agency may terminate with 60 days' written notice. Prepaid fees are non-refundable.
 
-3.5 **Effect of Termination.** Agency's access ceases on termination. RayHealth will make Agency's EVV data available for export (CSV or JSON) for 30 days after the termination date, after which RayHealth may delete it.
+3.5 **Effect of Termination.** Agency's access ceases on termination. Health will make Agency's EVV data available for export (CSV or JSON) for 30 days after the termination date, after which Health may delete it.
 
 ## 4. Agency Responsibilities
 
@@ -46,25 +46,25 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 4.2 Agency shall maintain accurate caregiver and client records in the platform.
 
-4.3 Agency shall promptly notify RayHealth of any unauthorized access to Agency's accounts.
+4.3 Agency shall promptly notify Health of any unauthorized access to Agency's accounts.
 
 4.4 Agency shall not: (a) resell or sublicense the Services; (b) reverse-engineer the platform; (c) introduce malicious code; (d) circumvent security controls.
 
 ## 5. Data and Privacy
 
-5.1 **Agency Data.** Agency retains all right, title, and interest in data it submits to the platform ("Agency Data"). RayHealth's rights are limited to those needed to provide the Services.
+5.1 **Agency Data.** Agency retains all right, title, and interest in data it submits to the platform ("Agency Data"). Health's rights are limited to those needed to provide the Services.
 
 5.2 **HIPAA.** The parties shall execute a Business Associate Agreement ("BAA") concurrently with this Agreement.
 
-5.3 **Aggregated Data.** RayHealth may use anonymized, de-identified data derived from Agency Data to improve its products, provided no such data identifies Agency, its caregivers, or its clients.
+5.3 **Aggregated Data.** Health may use anonymized, de-identified data derived from Agency Data to improve its products, provided no such data identifies Agency, its caregivers, or its clients.
 
-5.4 **Security.** RayHealth maintains encryption at rest and in transit, role-based access controls, audit logging, and annual security review.
+5.4 **Security.** Health maintains encryption at rest and in transit, role-based access controls, audit logging, and annual security review.
 
 ## 6. Intellectual Property
 
-6.1 RayHealth retains all right, title, and interest in the Services and platform.
+6.1 Health retains all right, title, and interest in the Services and platform.
 
-6.2 Agency grants RayHealth a limited license to use Agency Data solely to provide and improve the Services.
+6.2 Agency grants Health a limited license to use Agency Data solely to provide and improve the Services.
 
 ## 7. Confidentiality
 
@@ -78,9 +78,9 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 8.1 **Mutual.** Each party represents it has authority to enter this Agreement.
 
-8.2 **RayHealth.** RayHealth warrants the Services will perform materially in accordance with documentation and that it holds all rights needed to provide the Services.
+8.2 **Health.** Health warrants the Services will perform materially in accordance with documentation and that it holds all rights needed to provide the Services.
 
-8.3 **Disclaimer.** EXCEPT AS STATED ABOVE, RAYHEALTH PROVIDES THE SERVICES "AS IS." RAYHEALTH DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. RAYHEALTH DOES NOT WARRANT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.
+8.3 **Disclaimer.** EXCEPT AS STATED ABOVE, Health PROVIDES THE SERVICES "AS IS." Health DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Health DOES NOT WARRANT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.
 
 ## 9. Limitation of Liability
 
@@ -92,9 +92,9 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 ## 10. Indemnification
 
-10.1 **By RayHealth.** RayHealth shall defend Agency against third-party IP infringement claims arising solely from the Services, provided Agency promptly notifies RayHealth and cooperates with the defense.
+10.1 **By Health.** Health shall defend Agency against third-party IP infringement claims arising solely from the Services, provided Agency promptly notifies Health and cooperates with the defense.
 
-10.2 **By Agency.** Agency shall defend RayHealth against third-party claims arising from Agency's misuse of the Services or violation of applicable law.
+10.2 **By Agency.** Agency shall defend Health against third-party claims arising from Agency's misuse of the Services or violation of applicable law.
 
 ## 11. General
 
@@ -104,7 +104,7 @@ This Master Service Agreement ("Agreement") is entered into as of __________ ("E
 
 11.3 **Force Majeure.** Neither party is liable for delays outside its reasonable control (payment obligations excepted).
 
-11.4 **Assignment.** No assignment without written consent, except RayHealth may assign in connection with an M&A transaction.
+11.4 **Assignment.** No assignment without written consent, except Health may assign in connection with an M&A transaction.
 
 11.5 **Entire Agreement.** This Agreement (including Order Forms and BAA) is the entire agreement on its subject matter and supersedes all prior agreements.
 
@@ -119,7 +119,7 @@ Name: ___________________________________
 Title: ____________________________________
 Date: ____________________________________
 
-**RAYHEALTH TECHNOLOGIES, INC.**
+**Health TECHNOLOGIES, INC.**
 
 Signature: _______________________________
 Name: ___________________________________

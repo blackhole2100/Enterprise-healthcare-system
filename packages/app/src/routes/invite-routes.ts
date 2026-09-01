@@ -7,7 +7,7 @@ import {
   CaregiverRepository,
   UserRepository,
   type NewAuditEvent
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 import { createEmailClient, buildInviteUrl, type EmailClient } from '../email/email-client.js';
 

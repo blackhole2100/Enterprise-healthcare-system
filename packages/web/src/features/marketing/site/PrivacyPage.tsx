@@ -36,7 +36,7 @@ export function PrivacyPage() {
             </span>
 
             <p className="lead">
-              RayHealthEVV™ is a HIPAA-ready Electronic Visit Verification (EVV)
+              HealthEVV™ is a HIPAA-ready Electronic Visit Verification (EVV)
               and home-care operations platform. It is built to handle Protected
               Health Information (PHI) on behalf of the home-care agencies that
               license us as a Business Associate. Until our operational HIPAA
@@ -113,7 +113,7 @@ export function PrivacyPage() {
                   />
                   <strong style={{ color: 'var(--color-surface)' }}>In transit:</strong>{' '}
                   TLS 1.2+ everywhere. HSTS is enforced
-                  on <code style={{ color: 'var(--accent-tint)', backgroundColor: 'rgba(255,255,255,0.08)', padding: '0.1rem 0.3rem', borderRadius: '3px' }}>rayhealthevv.com</code> end-to-end through Cloudflare to
+                  on <code style={{ color: 'var(--accent-tint)', backgroundColor: 'rgba(255,255,255,0.08)', padding: '0.1rem 0.3rem', borderRadius: '3px' }}>healthevv.com</code> end-to-end through Cloudflare to
                   our compute origin.
                 </li>
                 <li style={{ color: 'var(--color-border-strong)', lineHeight: 1.6, listStyle: 'none', display: 'block' }}>
@@ -230,13 +230,13 @@ export function PrivacyPage() {
             <h2>Your rights</h2>
             <p>
               If you are a client or caregiver receiving services through an
-              agency that uses RayHealthEVV, your privacy rights flow through
+              agency that uses HealthEVV, your privacy rights flow through
               that agency under its Notice of Privacy Practices. Contact the
               agency directly for access, correction, or deletion requests
               covering your records. We will support the agency in fulfilling
               those requests. To reach us directly about a security or privacy
               concern, use the contact form below or email{' '}
-              <a href="mailto:security@rayhealthevv.com">security@rayhealthevv.com</a>.
+              <a href="mailto:security@healthevv.com">security@healthevv.com</a>.
             </p>
 
             <h2>Incidents</h2>
@@ -268,8 +268,8 @@ export function PrivacyPage() {
               }}
             >
               <p style={{ margin: 0, lineHeight: 1.7 }}>
-                Privacy / Security Officer. RayHealthEVV™<br />
-                <a href="mailto:security@rayhealthevv.com">security@rayhealthevv.com</a>
+                Privacy / Security Officer. HealthEVV™<br />
+                <a href="mailto:security@healthevv.com">security@healthevv.com</a>
                 <br />
                 Or via <Link to="/contact">/contact</Link> (the form routes to the same
                 inbox and is logged).

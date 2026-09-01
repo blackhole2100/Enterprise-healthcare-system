@@ -5,9 +5,9 @@ import { registerPushToken, unregisterPushToken } from './push-registration';
 import { cancelAllShiftAlerts } from './shift-alert-scheduler';
 import { clearCachedVisitSchedule } from './offline-visit-cache';
 
-const TOKEN_KEY = 'rayhealth_mobile_access_token';
-const USER_KEY = 'rayhealth_mobile_user';
-const AGENCIES_KEY = 'rayhealth_mobile_agencies';
+const TOKEN_KEY = 'health_mobile_access_token';
+const USER_KEY = 'health_mobile_user';
+const AGENCIES_KEY = 'health_mobile_agencies';
 
 export interface MobileUser {
   userId?: string;

@@ -101,7 +101,7 @@ export function AgencySetupPage() {
   const [feeBanner, setFeeBanner] = useState<Banner>(null);
   const [feeSaving, setFeeSaving] = useState(false);
 
-  // Public hiring page (rayhealthevv.com/<slug>).
+  // Public hiring page (healthevv.com/<slug>).
   const [pageSlug, setPageSlug] = useState('');
   const [pageAbout, setPageAbout] = useState('');
   const [pageDisplayName, setPageDisplayName] = useState('');
@@ -356,7 +356,7 @@ export function AgencySetupPage() {
                 className="input-field"
               />
               <p style={{ margin: 0, fontSize: '0.75rem', color: 'var(--color-text-subtle)', lineHeight: 1.5 }}>
-                State is locked to Pennsylvania. RayHealthEVV™ is purpose-built for PA DHS Personal Assistance Services.
+                State is locked to Pennsylvania. HealthEVV™ is purpose-built for PA DHS Personal Assistance Services.
               </p>
             </div>
 
@@ -398,7 +398,7 @@ export function AgencySetupPage() {
             Pennsylvania Only
           </p>
           <p style={{ margin: '0 0 1rem', color: 'var(--color-text-subtle)', fontSize: '0.8125rem', lineHeight: 1.6 }}>
-            RayHealthEVV™ is purpose-built for Pennsylvania DHS Personal Assistance Services, ensuring full compliance with state and federal requirements.
+            HealthEVV™ is purpose-built for Pennsylvania DHS Personal Assistance Services, ensuring full compliance with state and federal requirements.
           </p>
           <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
             {[
@@ -519,7 +519,7 @@ export function AgencySetupPage() {
         )}
       </div>
 
-      {/* Public hiring page, rayhealthevv.com/<slug> */}
+      {/* Public hiring page, healthevv.com/<slug> */}
       <div className="card" style={{ marginTop: '1.5rem', padding: '1.5rem' }}>
         <h2 style={{ margin: '0 0 0.35rem', fontSize: '1.05rem', fontWeight: 800 }}>
           Public hiring page

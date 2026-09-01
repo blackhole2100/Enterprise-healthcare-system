@@ -1,11 +1,11 @@
-# RayHealth EVV — Data Retention and Disposal Policy
+# Health EVV — Data Retention and Disposal Policy
 
 **Version:** 1.1
 **Effective:** 2026-07-12
-**Owner:** RayHealth EVV Privacy Officer / Security Officer
+**Owner:** Health EVV Privacy Officer / Security Officer
 **Review cadence:** Annually and within 30 days of any major regulatory or architecture change
 
-This policy defines how long RayHealth EVV retains security, operational,
+This policy defines how long Health EVV retains security, operational,
 and ePHI-bearing records. It supports HIPAA Security Rule documentation
 retention (45 CFR §164.316(b)(2)), state home-care retention rules,
 payer audit readiness, and safe disposal controls.
@@ -16,7 +16,7 @@ longer retention. **When rules conflict, the stricter rule wins.**
 
 > **Authorship note.** Ported from a predecessor codebase on 2026-05-08
 > and adapted to match the controls actually shipped in
-> `rayhealth-evv`. The predecessor referenced separate
+> `health-evv`. The predecessor referenced separate
 > `audit_revisions` and `auth_events` tables; this version routes
 > everything through the single `audit_events` table.
 
@@ -24,7 +24,7 @@ longer retention. **When rules conflict, the stricter rule wins.**
 
 ## 1. Governing Principles
 
-RayHealth follows these rules in order:
+Health follows these rules in order:
 
 1. Legal hold or active investigation overrides normal deletion
 2. Contractual or payer retention overrides platform defaults
@@ -32,7 +32,7 @@ RayHealth follows these rules in order:
 4. HIPAA documentation records are retained at least **6 years**
 5. If multiple supported-state rules apply, keep the longer period
 
-For multi-state operations, RayHealth uses a conservative default
+For multi-state operations, Health uses a conservative default
 retention floor of **7 years** for core client, caregiver, visit, and
 EVV records unless the agency's documented policy requires longer
 retention.
@@ -44,7 +44,7 @@ retention.
 | Category | Examples (tables) | Minimum retention | Notes |
 |---|---|---:|---|
 | HIPAA compliance documentation | `docs/compliance/hipaa/*.md`, signed BAAs, training records, incident records | 6 years | Measured from creation or last effective date |
-| Audit logs | `audit_events`, `audit_events_archive` | 7 years | RayHealth operational policy; both tables have append-only mutation triggers. The seven-year period is a risk/payer/state policy choice, not a claim that HIPAA explicitly mandates seven years of every audit event. |
+| Audit logs | `audit_events`, `audit_events_archive` | 7 years | Health operational policy; both tables have append-only mutation triggers. The seven-year period is a risk/payer/state policy choice, not a claim that HIPAA explicitly mandates seven years of every audit event. |
 | Client and clinical records | `clients`, `authorizations`, `evv_exceptions` | 7 years default | Use longer state or payer rule if required |
 | EVV records | `evv_visits`, `visit_maintenance`, GPS coordinates, exception workflow | 7 years default | Never shorter than the applicable state EVV floor; `evv_visits` rows are immutable by trigger (`evv_visits_enforce_immutability_trg`) — corrections go to `visit_maintenance` |
 | Caregiver records | `caregivers`, `caregiver_credentials`, `assignments`, training records | 7 years default | Some personnel subcategories may have separate labor-law rules |
@@ -59,16 +59,16 @@ retention.
 
 ## 3. Supported-State Retention Floors
 
-These are RayHealth platform floors for currently emphasized state
+These are Health platform floors for currently emphasized state
 operations. If a customer contract, payer rule, or agency counsel requires
 more, retain longer.
 
 | State | Core record floor | Notes |
 |---|---:|---|
-| Pennsylvania | 7 years | Longest currently documented supported-state floor; PA is the launch state for RayHealth |
+| Pennsylvania | 7 years | Longest currently documented supported-state floor; PA is the launch state for Health |
 | (Other states added on rollout) |  | Update this table within 30 days of each new state launch |
 
-Because Pennsylvania requires 7 years, RayHealth's cross-state operational
+Because Pennsylvania requires 7 years, Health's cross-state operational
 default is **7 years** for core PHI-bearing records.
 
 ---
@@ -113,7 +113,7 @@ Current operating model:
 - Once backup retention expires, deleted data ages out naturally with
   the backup set
 
-RayHealth does not promise instant erasure from every backup copy.
+Health does not promise instant erasure from every backup copy.
 Instead:
 
 - Primary records are deleted from active systems according to this
@@ -199,7 +199,7 @@ Any exception must be:
 - approved by the Privacy Officer
 - revisited on the next annual review
 
-If a state launches new requirements or RayHealth expands to a new state,
+If a state launches new requirements or Health expands to a new state,
 update this policy within 30 days.
 
 Authoritative references:
@@ -214,5 +214,5 @@ Authoritative references:
 | Date | Reviewer | Change |
 |---|---|---|
 | 2026-05-07 | Founder (predecessor repo) | Initial policy authored |
-| 2026-05-08 | Founder + assistant | Ported into `rayhealth-evv-clean`; replaced predecessor `audit_revisions` / `auth_events` references with the single `audit_events` table; added rows for `mobile_sessions`, `sessions`, `support_conversations`, `contact_submissions` retention; pinned the trigger verifier script path; cross-linked `INCIDENT_RESPONSE.md` and `DISASTER_RECOVERY.md` |
-| 2026-07-12 | Engineering-assisted control review | Corrected the HIPAA documentation citation; set the audit-event period as a RayHealth seven-year policy; protected archived evidence from mutation; corrected the allowed deletion audit event; added the scheduled retention workflow and separated source readiness from production evidence. Pennsylvania's seven-year clinical-record rule is 28 Pa. Code §601.36(b). |
+| 2026-05-08 | Founder + assistant | Ported into `health-evv-clean`; replaced predecessor `audit_revisions` / `auth_events` references with the single `audit_events` table; added rows for `mobile_sessions`, `sessions`, `support_conversations`, `contact_submissions` retention; pinned the trigger verifier script path; cross-linked `INCIDENT_RESPONSE.md` and `DISASTER_RECOVERY.md` |
+| 2026-07-12 | Engineering-assisted control review | Corrected the HIPAA documentation citation; set the audit-event period as a Health seven-year policy; protected archived evidence from mutation; corrected the allowed deletion audit event; added the scheduled retention workflow and separated source readiness from production evidence. Pennsylvania's seven-year clinical-record rule is 28 Pa. Code §601.36(b). |

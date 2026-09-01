@@ -1,4 +1,4 @@
-# RayHealth EVV. production robots policy.
+# Health EVV. production robots policy.
 # Public marketing surface is crawlable; everything behind /admin and /portal
 # is gated by session and lives on the same hostname, so block crawlers from
 # wasting their budget there.
@@ -24,4 +24,4 @@ Disallow: /forgot-password
 Disallow: /reset-password
 Disallow: /api/
 
-Sitemap: https://rayhealthevv.com/sitemap.xml
+Sitemap: https://healthevv.com/sitemap.xml

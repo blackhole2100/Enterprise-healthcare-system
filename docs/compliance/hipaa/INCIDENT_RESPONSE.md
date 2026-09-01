@@ -1,12 +1,12 @@
-# RayHealth EVV — HIPAA Incident Response Plan
+# Health EVV — HIPAA Incident Response Plan
 
 **Version:** 1.1
 **Effective:** 2026-07-12
-**Owner:** RayHealth EVV Privacy Officer / Security Officer
+**Owner:** Health EVV Privacy Officer / Security Officer
 **Review cadence:** Annually, after any material incident, and within 30 days of any major architecture change
 
 This runbook governs suspected or confirmed security incidents involving
-RayHealth EVV systems, especially any event that may affect electronic
+Health EVV systems, especially any event that may affect electronic
 Protected Health Information (ePHI). It supports the HIPAA Security Rule
 (45 CFR §164.308(a)(6)) and the Breach Notification Rule (45 CFR
 §164.400-414).
@@ -17,7 +17,7 @@ engage counsel immediately.
 
 > **Authorship note.** Ported from a predecessor codebase on 2026-05-08
 > and adapted to match the controls actually shipped in
-> `rayhealth-evv`. Where the prior version referenced separate
+> `health-evv`. Where the prior version referenced separate
 > `audit_revisions` / `auth_events` tables, this version routes everything
 > through the single `audit_events` table that is present in this repo.
 > See §13 review log.
@@ -32,14 +32,14 @@ This plan applies to:
 - Suspected tenant-isolation failures (cross-agency data exposure)
 - Audit-log tampering attempts
 - Database exfiltration or corruption
-- Lost or stolen caregiver / admin devices with RayHealth access
+- Lost or stolen caregiver / admin devices with Health access
 - Push notification or email misdelivery involving PHI
 - AI prompt or response handling that may expose PHI to a non-BAA vendor
 - Ransomware, malware, insider misuse, or third-party vendor incidents
 
 Systems in scope:
 
-- `rayhealthevv.com` web app and API (Vercel project `rayhealth-evv-platform-app`)
+- `healthevv.com` web app and API (Vercel project `health-evv-platform-app`)
 - Mobile caregiver app (Expo SDK 54 managed project at `packages/mobile`)
 - AWS Bedrock-backed AI inference (`/api/support/chat`, `/api/admin-assistant/chat`)
 - Neon Postgres (project `late-art-87716813`)
@@ -51,7 +51,7 @@ Systems in scope:
 
 ## 2. Roles
 
-Until RayHealth has a larger workforce, one person may hold multiple roles.
+Until Health has a larger workforce, one person may hold multiple roles.
 
 - **Incident Commander:** directs the response, sets severity, approves recovery
 - **Technical Lead:** investigates systems, coordinates containment and fixes
@@ -263,7 +263,7 @@ Baseline federal rule:
   prominent media outlets in the affected state without unreasonable
   delay
 
-State law or contract may be stricter. For RayHealth-supported states,
+State law or contract may be stricter. For Health-supported states,
 apply the **stricter** of state, payer, contract, or federal requirements.
 
 If a vendor incident is involved:
@@ -281,7 +281,7 @@ Recovery begins only after containment is stable.
 
 Required recovery checks:
 
-- patch deployed and verified (`curl https://rayhealthevv.com/api/health`
+- patch deployed and verified (`curl https://healthevv.com/api/health`
   returns 200 + `{"ok":true}`)
 - session repository revocations applied (`revoked_at` set on affected
   `mobile_sessions` and cookie `sessions` rows)
@@ -317,7 +317,7 @@ Use clear, factual language:
 
 - what happened
 - what data categories may be involved
-- what RayHealth has already done
+- what Health has already done
 - what the agency should do next
 - when the next update will arrive
 
@@ -375,7 +375,7 @@ Retain these artifacts with the incident record:
 - final breach assessment
 - notice records, if notices were sent
 
-Retain incident documentation for **at least 6 years** under the RayHealth
+Retain incident documentation for **at least 6 years** under the Health
 documentation policy aligned to 45 CFR §164.316(b)(2), or longer when a legal
 hold, contract, or notification obligation applies.
 
@@ -405,5 +405,5 @@ hold, contract, or notification obligation applies.
 | Date | Reviewer | Change |
 |---|---|---|
 | 2026-05-07 | Founder (predecessor repo) | Initial plan authored |
-| 2026-05-08 | Founder + assistant | Ported into `rayhealth-evv-clean`; replaced predecessor `audit_revisions` / `auth_events` references with the single `audit_events` table that ships in this repo; pinned the trigger verifier script path; added Cloudflare to subprocessor list; pinned the active Bedrock model ID; cross-referenced `ORGANIZATION_SCOPING_SECURITY.md` for tenant-isolation recovery checks |
+| 2026-05-08 | Founder + assistant | Ported into `health-evv-clean`; replaced predecessor `audit_revisions` / `auth_events` references with the single `audit_events` table that ships in this repo; pinned the trigger verifier script path; added Cloudflare to subprocessor list; pinned the active Bedrock model ID; cross-referenced `ORGANIZATION_SCOPING_SECURITY.md` for tenant-isolation recovery checks |
 | 2026-07-12 | Engineering-assisted control review | Updated the mobile architecture, replaced unsafe password-hash/session-deletion containment advice with supported suspension and revocation, added archived-audit trigger coverage, and corrected incident-document retention attribution. |

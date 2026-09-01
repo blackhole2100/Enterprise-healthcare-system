@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 
@@ -19,7 +19,7 @@ describe('GET /auth/mobile/me', () => {
     const findById = vi.fn().mockResolvedValue({
       id: userId,
       agencyId,
-      email: 'roman@rayhealth.example',
+      email: 'roman@health.example',
       passwordHash: 'unused',
       role: 'caregiver',
       caregiverId
@@ -29,7 +29,7 @@ describe('GET /auth/mobile/me', () => {
       agencyId,
       firstName: 'Roman',
       lastName: 'Ghimeray',
-      email: 'roman@rayhealth.example',
+      email: 'roman@health.example',
       phone: null,
       npi: 'unused',
       hireDate: null,
@@ -53,7 +53,7 @@ describe('GET /auth/mobile/me', () => {
     expect(response.status).toBe(200);
     expect(response.body).toMatchObject({
       userId,
-      email: 'roman@rayhealth.example',
+      email: 'roman@health.example',
       role: 'caregiver',
       agencyId,
       firstName: 'Roman',
@@ -71,7 +71,7 @@ describe('GET /auth/mobile/me', () => {
           findById: vi.fn().mockResolvedValue({
             id: userId,
             agencyId,
-            email: 'admin@rayhealth.example',
+            email: 'admin@health.example',
             passwordHash: 'unused',
             role: 'admin'
             // no caregiverId, admin-only user

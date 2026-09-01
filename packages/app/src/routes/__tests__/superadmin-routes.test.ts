@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { createApp } from '../../app.js';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { setTestJwtSecret } from './test-helpers.js';
 
 const USERNAME = 'TestSuper';

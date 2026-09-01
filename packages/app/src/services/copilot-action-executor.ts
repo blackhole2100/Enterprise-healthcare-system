@@ -21,7 +21,7 @@ import {
   LearningRepository,
   type CopilotAction,
   type CopilotActionResult,
-} from '@rayhealth/core'
+} from '@health/core'
 import { createEmailClient } from '../email/email-client.js'
 
 export interface ExecutionContext {

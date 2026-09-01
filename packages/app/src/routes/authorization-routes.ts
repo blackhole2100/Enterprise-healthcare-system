@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { requireCapability } from '../middleware/require-capability.js';
-import { ClaimRepository, ClientRepository, authorizationSchema, paServiceCodes } from '@rayhealth/core';
+import { ClaimRepository, ClientRepository, authorizationSchema, paServiceCodes } from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 const router = Router();

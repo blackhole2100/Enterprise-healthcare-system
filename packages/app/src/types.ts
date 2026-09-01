@@ -1,4 +1,4 @@
-import type { AppRole } from '@rayhealth/core';
+import type { AppRole } from '@health/core';
 
 export interface AuthContext {
   agencyId: string;

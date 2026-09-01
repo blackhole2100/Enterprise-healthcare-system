@@ -3,7 +3,7 @@
  *
  * Works entirely from `claim_remittances` data, so it functions even for
  * postings that never matched a generated claim (an agency can upload payer
- * 835s and get a denial picture before any other part of RayHealth is in
+ * 835s and get a denial picture before any other part of Health is in
  * use — this is the standalone-dashboard wedge).
  *
  * Denial semantics are derived from stored CLP fields, not recomputed from

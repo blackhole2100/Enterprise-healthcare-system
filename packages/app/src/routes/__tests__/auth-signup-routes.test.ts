@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { setTestJwtSecret } from './test-helpers.js';
 
@@ -65,7 +65,7 @@ describe('auth signup route', () => {
     expect(response.body.message).toEqual(expect.any(String));
     // No session cookie may be set.
     const setCookie = (response.headers['set-cookie'] as unknown as string[]) ?? [];
-    expect(setCookie.join(';')).not.toContain('rayhealth_session=');
+    expect(setCookie.join(';')).not.toContain('health_session=');
     // No session row may be created.
     expect(createSession).not.toHaveBeenCalled();
     // Must not leak a usable csrf token (which would imply a live session).

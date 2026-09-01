@@ -1,11 +1,11 @@
 import { randomUUID } from 'node:crypto';
 import type { Request, Response, NextFunction } from 'express';
-import { AuditEventRepository } from '@rayhealth/core';
+import { AuditEventRepository } from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 /**
  * Local alias of the AuditEventType domain enum. The full union lives in
- * `@rayhealth/core/src/domain/audit.ts`; we redeclare a narrow subset here
+ * `@health/core/src/domain/audit.ts`; we redeclare a narrow subset here
  * to keep this middleware's dispatch table self-documenting and to keep the
  * type narrow without dragging in the full Zod schema.
  */

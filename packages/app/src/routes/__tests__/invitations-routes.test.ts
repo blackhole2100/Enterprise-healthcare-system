@@ -1,7 +1,7 @@
 import request from 'supertest';
 import bcrypt from 'bcryptjs';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { setTestJwtSecret } from './test-helpers.js';
 

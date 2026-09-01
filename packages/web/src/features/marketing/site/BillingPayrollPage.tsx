@@ -105,16 +105,16 @@ const faqs = [
     a: 'A lot: claim generation from GPS-verified visits, unit & authorization validation (billed units never exceed the authorization), denial-risk scoring on every line, X12 837P export, and payroll CSV export, plus the reconciliation, claim-status, and exception views in the live Compliance Engine. All of it is derived from GPS-verified EVV visits.',
   },
   {
-    q: 'Can RayHealth submit claims directly to the payer?',
-    a: 'RayHealth generates the 837P file today. Direct electronic transmission plugs into your clearinghouse trading-partner account, an external credential only your agency can provision. Until that connector is enabled, you download the generated 837 and upload it to your clearinghouse portal, which is a standard, supported workflow. We label automated transmission "coming" and won’t claim it as live until it ships.',
+    q: 'Can Health submit claims directly to the payer?',
+    a: 'Health generates the 837P file today. Direct electronic transmission plugs into your clearinghouse trading-partner account, an external credential only your agency can provision. Until that connector is enabled, you download the generated 837 and upload it to your clearinghouse portal, which is a standard, supported workflow. We label automated transmission "coming" and won’t claim it as live until it ships.',
   },
   {
     q: 'Do generated claims include dollar amounts?',
     a: 'Units are computed from verified visit time and validated against the authorization today. Dollar charges populate once you load your contracted fee schedule; until then the 837 carries validated units with $0.00 charges, and we surface that before you submit, so nothing goes out priced incorrectly by surprise.',
   },
   {
-    q: 'Will RayHealth replace my clearinghouse or payroll provider?',
-    a: 'No. A claim line should only exist behind a GPS-verified visit, that’s the foundation. RayHealth is the verification, claim-assembly, and payroll-prep layer: it hands clean, validated 837s and payroll CSVs to the clearinghouse and payroll systems you already use. It is not your check-cutter.',
+    q: 'Will Health replace my clearinghouse or payroll provider?',
+    a: 'No. A claim line should only exist behind a GPS-verified visit, that’s the foundation. Health is the verification, claim-assembly, and payroll-prep layer: it hands clean, validated 837s and payroll CSVs to the clearinghouse and payroll systems you already use. It is not your check-cutter.',
   },
 ] as const;
 
@@ -205,7 +205,7 @@ export function BillingPayrollPage() {
               <p>
                 The claim-matching view sorts each EVV visit into verified, flagged, or pending &mdash; so billers can
                 see which visits are claim-ready and which need attention before submission. This view is live in
-                RayHealth today.
+                Health today.
               </p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Verified &mdash; GPS-confirmed visit, claim-ready</li>
@@ -214,7 +214,7 @@ export function BillingPayrollPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com · Claims overview" />
+              <Chrome url="app.healthevv.com · Claims overview" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 14 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 12, marginBottom: 4, borderBottom: '1px solid var(--line)' }}>
                   <div style={{ fontWeight: 700, color: 'var(--ink)', fontSize: '.9rem' }}>Visits · Jun 16-22</div>
@@ -246,7 +246,7 @@ export function BillingPayrollPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com · Payroll overview" />
+              <Chrome url="app.healthevv.com · Payroll overview" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16 }}>
                 {[
                   { l: 'Verified hours · last 7 days', v: '312.5 hrs' },

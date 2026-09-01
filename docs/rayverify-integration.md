@@ -1,6 +1,6 @@
 # RayVerify Integration — Architecture & Build Plan
 
-> **Positioning.** RayHealthEVV is the product agencies buy. **RayVerify is the
+> **Positioning.** HealthEVV is the product agencies buy. **RayVerify is the
 > verification engine underneath it** (Stripe → Radar). RayVerify also stands
 > alone as a B2G program-integrity platform for state Medicaid / MCO / OIG. Both
 > stories hold simultaneously because RayVerify is consumed as a *service*, not
@@ -14,7 +14,7 @@ Status: **proposal** · Author: platform · Last updated: 2026-06-29
 
 From a direct read of both codebases:
 
-| Capability | RayHealthEVV (this repo) | RayVerify (`durga710/RayVerify`) |
+| Capability | HealthEVV (this repo) | RayVerify (`durga710/RayVerify`) |
 |---|---|---|
 | Stack | Express · Knex · React/Vite · Capacitor · Vercel | NestJS · Prisma · Next.js · Terraform/AWS |
 | GPS geofence | ✅ live (`core/security/geofence.ts`, Haversine) | consumes a radius anchor |
@@ -32,7 +32,7 @@ provider is wired (see §7).
 
 ## 2. Architecture decision
 
-**Decision: RayVerify is a standalone service consumed by RayHealthEVV over HTTP.
+**Decision: RayVerify is a standalone service consumed by HealthEVV over HTTP.
 Do NOT merge the codebases.**
 
 Rationale:
@@ -44,7 +44,7 @@ Rationale:
   consumers call it through one API).
 
 ```
-RayHealthEVV (Vercel)                         RayVerify (AWS, standalone)
+HealthEVV (Vercel)                         RayVerify (AWS, standalone)
 ─────────────────────                         ──────────────────────────
 completed EvvVisit                            NestJS API
    │  signals (geo, time, device, billing)       ├─ /visits  /clock-in /clock-out
@@ -84,12 +84,12 @@ export interface VisitVerdict {
 }
 ```
 
-### 3.2 Field mapping (RayHealthEVV → RayVerify)
+### 3.2 Field mapping (HealthEVV → RayVerify)
 
 RayVerify's `CreateVisitDto` / `ClockEventDto` and its fraud `VisitFeatureContext`
 map cleanly onto data we already store:
 
-| RayVerify input | RayHealthEVV source |
+| RayVerify input | HealthEVV source |
 |---|---|
 | `caregiverId` | `EvvVisit.caregiverId` |
 | `patientId` | `EvvVisit.clientId` |
@@ -115,17 +115,17 @@ v1 mirrors a completed visit into RayVerify and reads the verdict:
 POST /visits                → rayverifyVisitId
 POST /visits/:id/clock-in   → geo + device
 POST /visits/:id/clock-out  → geo + billedUnits
-POST /visits/:id/verify     → VisitVerdict   ← RayHealthEVV stores this
+POST /visits/:id/verify     → VisitVerdict   ← HealthEVV stores this
 ```
 
 > **Alternative (smaller RayVerify change):** add a stateless
 > `POST /fraud/score` that accepts a full `VisitFeatureContext` and returns the
-> score without persisting a visit. Cleaner for RayHealthEVV (no dual write of
-> visit state), but requires RayHealthEVV to assemble the context (recent-visit
-> history). **Recommended for v1** to keep RayHealthEVV the system of record and
+> score without persisting a visit. Cleaner for HealthEVV (no dual write of
+> visit state), but requires HealthEVV to assemble the context (recent-visit
+> history). **Recommended for v1** to keep HealthEVV the system of record and
 > RayVerify the scoring engine. Track as a RayVerify enhancement.
 
-## 4. RayHealthEVV-side changes
+## 4. HealthEVV-side changes
 
 ### 4.1 Persistence (migration R27, into `schema.ts`)
 
@@ -197,6 +197,6 @@ claim that creates real exposure.
    alongside? (Recommend: its own AWS, per the standalone-product goal.)
 2. **`/fraud/score` stateless endpoint** in RayVerify (recommended v1) vs. mirror
    full visit lifecycle.
-3. **Tenancy mapping:** RayHealthEVV agency ↔ RayVerify organization provisioning.
+3. **Tenancy mapping:** HealthEVV agency ↔ RayVerify organization provisioning.
 4. RayVerify is **under-tested (1 spec)** — harden the fraud engine before a
    production pilot.

@@ -1,7 +1,7 @@
 /**
- * BrandLogo, the single source of truth for the RayHealthEVV brand mark.
+ * BrandLogo, the single source of truth for the HealthEVV brand mark.
  *
- * Renders the official logo (teal "RayHealth" + orange "EVV" with the
+ * Renders the official logo (teal "Health" + orange "EVV" with the
  * person/ribbon/check mark). Two variants:
  *  - "full": the horizontal lockup with wordmark + tagline (default)
  *  - "mark": the icon-only square mark (nav-collapsed, favicons, avatars)
@@ -20,15 +20,15 @@ interface BrandLogoProps {
 }
 
 const SRC: Record<BrandLogoVariant, string> = {
-  full: '/brand/rayhealthevv-logo.png',
-  mark: '/brand/rayhealthevv-mark.png',
+  full: '/brand/healthevv-logo.png',
+  mark: '/brand/healthevv-mark.png',
 };
 
 export function BrandLogo({
   variant = 'full',
   height = 34,
   className,
-  alt = 'RayHealthEVV. Electronic Visit Verification',
+  alt = 'HealthEVV. Electronic Visit Verification',
 }: BrandLogoProps) {
   return (
     <img

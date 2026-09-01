@@ -142,7 +142,7 @@ function AdminScreen({ role, onLogout }: { role: string; onLogout: () => void })
           </Text>
           <View style={styles.adminUrlCard}>
             <Text style={styles.adminUrlLabel}>Web Portal</Text>
-            <Text style={styles.adminUrl}>rayhealthevv.com</Text>
+            <Text style={styles.adminUrl}>healthevv.com</Text>
           </View>
           <Pressable
             onPress={onLogout}

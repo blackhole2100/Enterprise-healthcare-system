@@ -18,7 +18,7 @@ import {
   checkAvailability,
   checkScheduleConflicts,
   type ConflictAuthorization,
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 export interface AssignmentCheckInput {

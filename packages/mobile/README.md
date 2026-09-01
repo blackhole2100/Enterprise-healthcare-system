@@ -64,7 +64,7 @@ scheduled shift. Implementation lives in `src/lib/shift-alert-scheduler.ts`,
   remind you 30 seconds before each shift."*
 - After they tap **Continue** we invoke `Notifications.requestPermissionsAsync()`.
 - The resulting status (`granted` / `denied` / `undetermined`) is persisted in
-  `expo-secure-store` under the key `rayhealth_notification_perm_v1`.
+  `expo-secure-store` under the key `health_notification_perm_v1`.
 - On subsequent launches we **do not re-prompt**. We reconcile the cached
   value with `Notifications.getPermissionsAsync()` so changes the user makes
   in OS Settings flow back into the app state without an extra prompt.
@@ -74,7 +74,7 @@ scheduled shift. Implementation lives in `src/lib/shift-alert-scheduler.ts`,
 `scheduleShiftAlerts(assignments)` is safe to call on every dashboard refresh:
 
 1. Read previously-scheduled notification IDs from
-   `rayhealth_scheduled_shift_alerts_v1` (secure-store).
+   `health_scheduled_shift_alerts_v1` (secure-store).
 2. Cancel every one via `Notifications.cancelScheduledNotificationAsync`.
 3. Walk the new assignment list. For each with a parseable ISO `time`,
    compute `triggerAt = time - 30_000ms`. If `triggerAt` is more than 5

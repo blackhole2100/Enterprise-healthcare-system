@@ -111,7 +111,7 @@ export function MessagesPage() {
       <header style={{ marginBottom: '1.25rem' }}>
         <h1 style={{ margin: 0 }}>Messages</h1>
         <p style={{ color: 'var(--color-text-muted)', margin: '0.35rem 0 0', fontSize: '0.875rem' }}>
-          One conversation per caregiver. Keeps work conversation inside RayHealth instead of on
+          One conversation per caregiver. Keeps work conversation inside Health instead of on
           personal phones.
         </p>
       </header>

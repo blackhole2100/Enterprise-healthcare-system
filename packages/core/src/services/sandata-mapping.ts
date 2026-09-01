@@ -2,7 +2,7 @@
  * Sandata aggregator mapping, config schema + lookup.
  *
  * The Sandata EVV Provider Self-Service Visit Maintenance CSV requires three
- * pieces of identity that we cannot derive from RayHealth's internal IDs alone:
+ * pieces of identity that we cannot derive from Health's internal IDs alone:
  *
  *   1. Sandata Provider ID  , assigned to the agency by Sandata once they
  *                              register with the PA Aggregator. Format: 9-digit
@@ -35,7 +35,7 @@ const HCPCS_MODIFIERS = ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9'] a
 type HcpcsModifier = (typeof HCPCS_MODIFIERS)[number]
 
 export const sandataServiceMappingSchema = z.object({
-  /** RayHealth service code as used in the visit_templates.tasks JSON. */
+  /** Health service code as used in the visit_templates.tasks JSON. */
   internalServiceCode: z.string().min(1),
   /** HCPCS base code, e.g. "T1019". */
   hcpcsCode: z.string().regex(/^[A-Z]\d{4}$/, 'HCPCS must be 5 characters: 1 letter + 4 digits'),
@@ -48,7 +48,7 @@ export const sandataServiceMappingSchema = z.object({
 export type SandataServiceMapping = z.infer<typeof sandataServiceMappingSchema>
 
 export const sandataCaregiverMappingSchema = z.object({
-  /** RayHealth caregiver UUID. */
+  /** Health caregiver UUID. */
   caregiverId: z.string().uuid(),
   /** Sandata external worker ID, opaque string assigned by the agency. */
   externalWorkerId: z.string().min(1).max(32),

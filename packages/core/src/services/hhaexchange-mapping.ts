@@ -11,7 +11,7 @@
  * The agency-level setting picks which aggregator the export pipeline
  * routes to. States with aggregatorChoice=false (e.g. NJ) force HHAeXchange.
  *
- * IMPORTANT: this is a RayHealth mapping preview, not the Pennsylvania
+ * IMPORTANT: this is a Health mapping preview, not the Pennsylvania
  * HHAeXchange Homecare V5 Flat File. PA's official import layout extends
  * through column CR and needs payer-specific code tables issued during vendor
  * onboarding. Never transmit this compact preview as a production V5 file.
@@ -22,7 +22,7 @@ import { z } from 'zod'
 // ---------- Config schema ----------
 
 export const hhaexchangeServiceMappingSchema = z.object({
-  /** RayHealth internal service code referenced in visit_template.tasks. */
+  /** Health internal service code referenced in visit_template.tasks. */
   internalServiceCode: z.string().min(1),
   /** HHAeXchange numeric service code assigned per state Medicaid program. */
   hhaServiceCode: z.string().min(1).max(16),

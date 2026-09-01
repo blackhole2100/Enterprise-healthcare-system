@@ -3,7 +3,7 @@ import { generate837P, type Edi837Input } from '../services/edi-837p.js';
 
 function baseInput(overrides: Partial<Edi837Input> = {}): Edi837Input {
   return {
-    submitter: { name: 'RAYHEALTH EVV', id: 'RAYHEALTH1', contactName: 'Billing', contactPhone: '5705551234' },
+    submitter: { name: 'Health EVV', id: 'Health1', contactName: 'Billing', contactPhone: '5705551234' },
     receiver: { name: 'PA MEDICAID', id: 'PROMISE' },
     billingProvider: {
       organizationName: 'SUNRISE HOME CARE',

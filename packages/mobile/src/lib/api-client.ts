@@ -1,5 +1,5 @@
 import { create as axiosCreate, type AxiosInstance } from 'axios';
-const API_URL = process.env.EXPO_PUBLIC_API_URL?.replace(/\/+$/, '') || 'https://rayhealthevv.com';
+const API_URL = process.env.EXPO_PUBLIC_API_URL?.replace(/\/+$/, '') || 'https://healthevv.com';
 let accessToken: string | null = null;
 let onUnauthorized: (() => void) | null = null;
 

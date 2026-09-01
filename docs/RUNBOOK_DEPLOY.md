@@ -1,4 +1,4 @@
-# RayHealth EVV — Production Deploy Runbook
+# Health EVV — Production Deploy Runbook
 
 This document is the canonical, ordered checklist for going live. Every step
 is reversible until step 9 (delete old repo). Do **not** skip the schema
@@ -11,7 +11,7 @@ will throw on every login otherwise.
 
 You should have:
 
-- Repo: `https://github.com/durga710/rayhealth-evv-platform` on `main`,
+- Repo: `https://github.com/durga710/health-evv-platform` on `main`,
   green `./scripts/check.sh`.
 - A Postgres 14+ instance the API can write to (Neon, Supabase, RDS, Crunchy,
   etc.). If you have not provisioned one yet, do that now.
@@ -28,7 +28,7 @@ You should have:
 
 ## 1. Rotate every secret that was in the old repo
 
-The old repo (`durga710/rayhealth-evv`) had `.env` and `.env.production`
+The old repo (`durga710/health-evv`) had `.env` and `.env.production`
 committed in history. Treat every value as compromised. In each upstream
 console, rotate / regenerate:
 
@@ -50,7 +50,7 @@ that leaked.
 
 ## 2. Connect Vercel to the new repo
 
-1. Vercel dashboard → New Project → Import `durga710/rayhealth-evv-platform`.
+1. Vercel dashboard → New Project → Import `durga710/health-evv-platform`.
 2. Framework preset: `Other` (we use `vercel.json`).
 3. Root Directory: leave blank — the new repo's tree is flat at the root.
 4. Build & Output Settings: defer to `vercel.json`.
@@ -67,7 +67,7 @@ every key from `.env.example` (no comments, no example values). At minimum:
 - `BOOTSTRAP_SECRET` — set ONLY for the first admin bootstrap, then delete
   this row from Vercel after step 6.
 - `CORS_ORIGIN` / `ALLOWED_ORIGINS` — your prod web origin (e.g.
-  `https://app.rayhealthevv.com`).
+  `https://app.healthevv.com`).
 - All Firebase, AWS, Stripe, Resend, etc. keys you rotated in step 1.
 - `NODE_ENV=production`.
 
@@ -82,8 +82,8 @@ trigger on `evv_visits`, the append-only trigger on `audit_events`, and
 all CHECK constraints.
 
 ```bash
-git clone https://github.com/durga710/rayhealth-evv-platform
-cd rayhealth-evv-platform
+git clone https://github.com/durga710/health-evv-platform
+cd health-evv-platform
 npm install
 DATABASE_URL='<PROD_URL>' npm run db:migrate
 ```
@@ -131,7 +131,7 @@ project env. The endpoint then returns 403 Forbidden permanently.
 
 Hit the new prod URL with:
 
-- `POST /api/auth/login` (web) → expect `Set-Cookie: rayhealth_session=...; HttpOnly; Secure; SameSite=Strict` plus `csrfToken` in the body.
+- `POST /api/auth/login` (web) → expect `Set-Cookie: health_session=...; HttpOnly; Secure; SameSite=Strict` plus `csrfToken` in the body.
 - `GET /api/clients` with no auth → `401`.
 - `POST /api/clients` with cookie auth but no `x-csrf-token` → `403 Invalid CSRF token`.
 - `POST /api/auth/mobile/login` → `{ token }`. Decode the JWT — confirm a
@@ -166,7 +166,7 @@ TestFlight first; promote when smoke tests pass.
 
 Only after steps 1–8 pass:
 
-1. GitHub → `durga710/rayhealth-evv` → Settings → scroll to bottom →
+1. GitHub → `durga710/health-evv` → Settings → scroll to bottom →
    **Delete this repository**. Type the repo name to confirm.
 2. Anyone with a clone of the old repo retains the leaked secrets in
    their local history — but those values were rotated in step 1, so
@@ -176,7 +176,7 @@ Only after steps 1–8 pass:
 
 | Stage | Rollback action |
 |---|---|
-| Bad app code | `git revert HEAD && git push` on `rayhealth-evv-platform` — Vercel auto-deploys the revert. |
+| Bad app code | `git revert HEAD && git push` on `health-evv-platform` — Vercel auto-deploys the revert. |
 | Bad migration | All migration blocks are forward-idempotent; reverse requires manual SQL or restoring from a Postgres point-in-time backup. Take a backup BEFORE running step 4. |
 | Compromised env | Rotate the affected secret in the upstream console, update Vercel env, redeploy. The new value takes effect on the next cold start. |
 

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import type { AppRole } from '@rayhealth/core';
+import type { AppRole } from '@health/core';
 
 const TEST_SECRET = 'test-secret-for-unit-tests';
 export const TEST_MOBILE_JTI = '00000000-0000-4000-8000-000000000099';

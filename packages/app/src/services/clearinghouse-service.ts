@@ -25,7 +25,7 @@ import {
   type Claim,
   type ClearinghouseTransport,
   type Edi837Claim,
-} from '@rayhealth/core';
+} from '@health/core';
 
 /**
  * Sentinel actor uuid for cron-driven remittance postings (audit_events
@@ -89,7 +89,7 @@ export async function build837ForClaim(db: Knex, agencyId: string, claim: Claim)
   if (missing.length > 0) return { kind: 'profile_incomplete', missing };
 
   const client = clientInfo.get(claim.clientId);
-  const submitterId = profile.clearinghouseId || profile.medicaidProviderNumber || 'RAYHEALTH';
+  const submitterId = profile.clearinghouseId || profile.medicaidProviderNumber || 'Health';
   const controlNumber = claim.controlNumber ?? (claim.id as string).slice(0, 12);
 
   const edi837Claim: Edi837Claim = {

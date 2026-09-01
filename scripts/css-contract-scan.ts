@@ -202,7 +202,7 @@ for (const declaration of rootBlock.matchAll(/(--[\w-]+)\s*:\s*([^;]+);/g)) {
       STYLESHEET,
       lineOf(css, declaration.index ?? 0),
       `${token} is derived from the brand color but is not in AGENCY_THEME_VARIABLES, so it would keep ` +
-        'the RayHealth default when an agency theme is applied.'
+        'the Health default when an agency theme is applied.'
     );
   }
 }

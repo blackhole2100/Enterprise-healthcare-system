@@ -19,14 +19,14 @@ function escapeHtml(value: string): string {
 }
 
 export function renderPasswordResetEmail(fields: PasswordResetEmailFields): PasswordResetEmailPayload {
-  const support = fields.supportEmail?.trim() || 'support@rayhealthevv.com';
+  const support = fields.supportEmail?.trim() || 'support@healthevv.com';
   const safeUrl = escapeHtml(fields.resetUrl);
   const safeSupport = escapeHtml(support);
 
-  const subject = 'Reset your RayHealth EVV password';
+  const subject = 'Reset your Health EVV password';
 
   const text = [
-    'You requested a password reset for your RayHealth EVV account.',
+    'You requested a password reset for your Health EVV account.',
     '',
     'Open this link to set a new password (expires in 1 hour):',
     fields.resetUrl,
@@ -35,7 +35,7 @@ export function renderPasswordResetEmail(fields: PasswordResetEmailFields): Pass
     '',
     `Questions? Reach us at ${support}.`,
     '',
-    ',  The RayHealth EVV team',
+    ',  The Health EVV team',
   ].join('\n');
 
   const html = `<!DOCTYPE html>
@@ -52,14 +52,14 @@ export function renderPasswordResetEmail(fields: PasswordResetEmailFields): Pass
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,0.08);">
         <tr>
           <td style="background-color:#0b2a4a;padding:32px 32px 28px;color:#ffffff;">
-            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">RayHealth EVV</div>
+            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">Health EVV</div>
             <div style="margin-top:6px;font-size:14px;color:#fb923c;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;">Password reset</div>
           </td>
         </tr>
         <tr>
           <td style="padding:32px;">
             <p style="margin:0 0 16px;font-size:16px;line-height:1.55;">
-              You requested a password reset for your RayHealth EVV account.
+              You requested a password reset for your Health EVV account.
             </p>
             <p style="margin:0 0 24px;font-size:16px;line-height:1.55;color:#334155;">
               Click the button below to set a new password. This link expires in <strong>1 hour</strong>.

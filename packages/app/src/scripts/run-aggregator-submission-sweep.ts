@@ -20,7 +20,7 @@
  * counts and agency ids only, never visit ids or any PHI.
  */
 
-import { createDb } from '@rayhealth/core'
+import { createDb } from '@health/core'
 import { runAggregatorSubmissionSweep } from '../services/aggregator-submission-service.js'
 
 function positiveIntFromEnv(name: string): number | undefined {

@@ -1,6 +1,6 @@
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { CONSENT_VERSION } from '../identity-routes.js';
 import * as s3 from '../../services/s3-storage.js';

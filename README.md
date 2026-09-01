@@ -1,17 +1,17 @@
 <div align="center">
 
-<img src="packages/web/public/brand/rayhealthevv-logo.png" alt="RayHealthEVV" width="460" />
+<img src="packages/web/public/brand/healthevv-logo.png" alt="HealthEVV" width="460" />
 
 <h3>Electronic Visit Verification for home-care agencies</h3>
 
 <p>GPS-verified mobile clock-in &middot; scheduling &amp; compliance &middot; billing &amp; claims &middot; Medicaid aggregator submission</p>
 
 <p>
-  <a href="https://rayhealthevv.com"><strong>rayhealthevv.com&nbsp;&rarr;</strong></a>
+  <a href="https://healthevv.com"><strong>healthevv.com&nbsp;&rarr;</strong></a>
 </p>
 
 <p>
-  <a href="https://github.com/durga710/rayhealth-evv-platform/actions/workflows/ci.yml"><img src="https://github.com/durga710/rayhealth-evv-platform/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://github.com/durga710/health-evv-platform/actions/workflows/ci.yml"><img src="https://github.com/durga710/health-evv-platform/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/license-proprietary-red" alt="License: Proprietary" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB" alt="React" />
@@ -24,7 +24,7 @@
 
 ---
 
-RayHealthEVV is a **21st-Century Cures Act–aligned** Electronic Visit Verification platform for
+HealthEVV is a **21st-Century Cures Act–aligned** Electronic Visit Verification platform for
 home-care agencies. Caregivers clock in and out from a mobile app with GPS geofence verification;
 agencies run scheduling, compliance, billing, and claims from a web console; and verified visits are
 submitted to state Medicaid aggregators (**Sandata**, **HHAeXchange**) — all on an append-only,
@@ -76,7 +76,7 @@ npm run check                   # typecheck · lint · security:scan · all work
 
 ## Architecture
 
-- **Web auth** — HttpOnly `rayhealth_session` cookie + CSRF token. No bearer tokens in browser storage; `scripts/security-surface-scan.ts` fails CI if a `localStorage` session pattern reappears.
+- **Web auth** — HttpOnly `health_session` cookie + CSRF token. No bearer tokens in browser storage; `scripts/security-surface-scan.ts` fails CI if a `localStorage` session pattern reappears.
 - **Mobile auth** — JWT from `/auth/mobile/login`, stored in iOS Keychain / Android Keystore via `expo-secure-store`.
 - **Server auth** — session cookie first, bearer fallback; every protected route is gated by `requireCapability(...)`.
 - **Audit immutability** — `audit_events` is append-only via a mutation-blocking trigger; the retention sweep writes its own `audit_retention_runs` record inside a transaction.
@@ -104,9 +104,9 @@ Shipping to production? Follow [`docs/RUNBOOK_DEPLOY.md`](docs/RUNBOOK_DEPLOY.md
 ## Security
 
 Please **do not** open public issues for vulnerabilities. Report via a
-[private security advisory](https://github.com/durga710/rayhealth-evv-platform/security/advisories/new)
-or email `durga@rayhealthevv.com` with the subject `[SECURITY]`. See [`SECURITY.md`](SECURITY.md).
+[private security advisory](https://github.com/durga710/health-evv-platform/security/advisories/new)
+or email `durga@healthevv.com` with the subject `[SECURITY]`. See [`SECURITY.md`](SECURITY.md).
 
 ## License
 
-Proprietary — © 2026 RayHealth. All rights reserved. See [`LICENSE`](LICENSE).
+Proprietary — © 2026 Health. All rights reserved. See [`LICENSE`](LICENSE).

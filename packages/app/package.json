@@ -1,5 +1,5 @@
 {
-  "name": "@rayhealth/app",
+  "name": "@health/app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,7 +13,7 @@
     "@ai-sdk/amazon-bedrock": "^5.0.31",
     "@aws-sdk/client-rekognition": "^3.1103.0",
     "@aws-sdk/client-sesv2": "^3.1054.0",
-    "@rayhealth/core": "file:../core",
+    "@health/core": "file:../core",
     "@simplewebauthn/server": "^13.3.2",
     "ai": "^7.0.37",
     "bcryptjs": "^3.0.3",

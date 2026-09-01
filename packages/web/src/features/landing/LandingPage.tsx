@@ -6,7 +6,7 @@ import { MetricCard, StatusPill, DataTable, Timeline, TrustBadge, WorkflowSteppe
 import { RayVerifySection } from './RayVerifySection.js';
 
 /* ─────────────────────────────────────────────────────────────
-   RayHealth landing, premium, honest, buyer-conversion page.
+   Health landing, premium, honest, buyer-conversion page.
    Self-contained: the scoped <style> block below is the landing's
    own layout/typography layer, but every color it defines is an
    alias of a shared token from ../../index.css (:root), no brand
@@ -40,7 +40,7 @@ const trustFacts = [
   { value: 'PA DHS-aligned', label: 'Aligned with PA DHS EVV requirements and the Cures Act' },
 ];
 
-// ── Pain → outcome (the "before/after" of running an agency on RayHealth) ──
+// ── Pain → outcome (the "before/after" of running an agency on Health) ──
 const painToOutcome = [
   { label: 'Scheduling & records', before: 'Spreadsheets, sticky notes, tribal knowledge', after: 'One command center, one login' },
   { label: 'Clock-outs', before: 'Missed clock-outs nobody notices until payroll', after: 'Every fallback becomes a same-day exception' },
@@ -86,7 +86,7 @@ const timelineSteps: WorkflowStep[] = [
   { id: 'day3', label: 'Day 3. Authorizations & task codes', description: 'Load authorizations and confirm PA task-code mapping.', status: 'upcoming' },
   { id: 'day4', label: 'Day 4. Caregiver training', description: 'Caregivers complete onboarding and EVV training in the mobile app.', status: 'upcoming' },
   { id: 'day5', label: 'Day 5. Pilot visits', description: 'Run real visits with GPS clock-in before full rollout.', status: 'upcoming' },
-  { id: 'week2', label: 'Week 2. Live rollout', description: 'The full schedule runs on RayHealthEVV.', status: 'upcoming' },
+  { id: 'week2', label: 'Week 2. Live rollout', description: 'The full schedule runs on HealthEVV.', status: 'upcoming' },
 ];
 
 // ── Trust Center teaser items, approved HIPAA phrasing only. ──
@@ -107,11 +107,11 @@ const pricingTiers = [
 
 const faqs = [
   { q: 'Are you HIPAA compliant?', a: 'We build to HIPAA-ready architecture, per-agency data isolation, encryption in transit, and an append-only audit log enforced today. Our operational HIPAA readiness, including vendor business associate agreements, is in progress and published openly on our compliance page, we execute a BAA with every agency before any PHI is processed.' },
-  { q: 'Does RayHealthEVV submit to the Pennsylvania EVV aggregator?', a: 'Visits are captured against the federal six-element schema and mapped for downstream submission through Sandata Alt-EVV and HHAeXchange, the aggregators PA DHS uses.' },
+  { q: 'Does HealthEVV submit to the Pennsylvania EVV aggregator?', a: 'Visits are captured against the federal six-element schema and mapped for downstream submission through Sandata Alt-EVV and HHAeXchange, the aggregators PA DHS uses.' },
   { q: 'What happens if a caregiver has no signal in the home?', a: 'Caregiver clock-in relies on the mobile app’s GPS and connection today. We’re validating full offline capture and a telephony fallback before advertising them as guaranteed in every dead zone, if your caregivers regularly work without signal, that’s one of the first things we test with you during the pilot week.' },
   { q: 'How do we get our data out?', a: 'Exports are a feature, not a hostage negotiation, payroll-ready and claim exports are built in, and your records leave with you if you ever do.' },
   { q: 'How long does implementation take?', a: 'Most agencies import authorizations and onboard their first caregivers within a week, with full rollout by week two. See the timeline above, we handle the data migration with you.' },
-  { q: 'Is RayHealthEVV only for Pennsylvania?', a: 'Today we are purpose-built for Pennsylvania personal-assistance and home-health programs. The compliance core is designed to extend to additional states.' },
+  { q: 'Is HealthEVV only for Pennsylvania?', a: 'Today we are purpose-built for Pennsylvania personal-assistance and home-health programs. The compliance core is designed to extend to additional states.' },
 ];
 
 type TheaterTab = 'command' | 'clockin' | 'exceptions' | 'audit';
@@ -475,7 +475,7 @@ function HeroMock() {
   return (
     <>
       <div className="rh-spotvis" aria-hidden>
-        <span className="rh-vischrome"><span className="t">app.rayhealthevv.com/admin</span></span>
+        <span className="rh-vischrome"><span className="t">app.healthevv.com/admin</span></span>
         <div className="rh-heromock-body">
           <div className="rh-mock-attn-list">
             <div className="attention-card" data-tone="warning">
@@ -668,7 +668,7 @@ export function LandingPage() {
 
       <nav className="rh-nav">
         <div className="rh-navin">
-          <Link to="/" aria-label="RayHealthEVV home"><BrandLogo height={34} /></Link>
+          <Link to="/" aria-label="HealthEVV home"><BrandLogo height={34} /></Link>
           <div className="rh-navmid">
             <Link to="/solutions/scheduling">Scheduling</Link>
             <Link to="/solutions/electronic-visit-verification">EVV</Link>
@@ -798,7 +798,7 @@ export function LandingPage() {
             <div className="rh-cmphd">
               <div className="lbl">&nbsp;</div>
               <div className="old">Before</div>
-              <div className="new">With RayHealthEVV</div>
+              <div className="new">With HealthEVV</div>
             </div>
             {painToOutcome.map((r) => (
               <div className="rh-cmprow" key={r.label}>
@@ -975,7 +975,7 @@ export function LandingPage() {
           <p className="rh-eyelabel rh-rv">Compliance & trust</p>
           <h2 className="rh-h2 rh-rv">Security you can verify. Compliance we won’t overstate.</h2>
           <p className="rh-deck rh-rv">
-            RayHealthEVV is engineered to HIPAA Security Rule controls: per-agency data isolation enforced
+            HealthEVV is engineered to HIPAA Security Rule controls: per-agency data isolation enforced
             on every request, an audit trail that is append-only by database design, revocable mobile
             sessions, and server-side verification of every clock-in. Our operational HIPAA readiness , 
             including vendor business associate agreements, is in progress, and we publish its status
@@ -1041,7 +1041,7 @@ export function LandingPage() {
             <h2>See your agency calm.</h2>
             <p>A focused walkthrough of the admin platform and the caregiver app. Bring a real case, we’ll run it live.</p>
             <div className="rh-herocta">
-              <Link to="/demo" className="rh-btn rh-btn-dark">Book a RayHealth walkthrough</Link>
+              <Link to="/demo" className="rh-btn rh-btn-dark">Book a Health walkthrough</Link>
               <Link to="/resources/audit-checklist" className="rh-btn rh-btn-ghost rh-btn-outline-dark">See PA EVV readiness checklist</Link>
             </div>
           </div>
@@ -1087,7 +1087,7 @@ export function LandingPage() {
           </div>
         </div>
         <div className="rh-footbar">
-          <span>© {new Date().getFullYear()} RayHealthEVV™ · Built in Pennsylvania</span>
+          <span>© {new Date().getFullYear()} HealthEVV™ · Built in Pennsylvania</span>
           <span>HIPAA-ready architecture · 21st Century Cures Act aligned</span>
         </div>
       </footer>

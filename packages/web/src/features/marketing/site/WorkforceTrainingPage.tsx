@@ -3,7 +3,7 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
  * Solutions › Workforce & Training.
- * How RayHealth operates hiring, credentialing, the EVV Academy, and
+ * How Health operates hiring, credentialing, the EVV Academy, and
  * eligibility gating as one connected module wired into scheduling.
  */
 
@@ -39,10 +39,10 @@ const stats = [
 ];
 
 const faqs = [
-  { q: 'What credentials and records does RayHealth track?', a: 'Background checks and clearances (including FBI/state where applicable), TB tests and health records, CPR/first-aid, professional licenses, signed agreements, and any agency-specific document, each with issue and expiration dates.' },
-  { q: 'How does eligibility gating actually work?', a: 'When a coordinator builds the schedule, RayHealth checks the caregiver’s live record. If a required credential is expired or training is overdue, the assignment is blocked with the exact reason, so non-compliant visits never get published.' },
+  { q: 'What credentials and records does Health track?', a: 'Background checks and clearances (including FBI/state where applicable), TB tests and health records, CPR/first-aid, professional licenses, signed agreements, and any agency-specific document, each with issue and expiration dates.' },
+  { q: 'How does eligibility gating actually work?', a: 'When a coordinator builds the schedule, Health checks the caregiver’s live record. If a required credential is expired or training is overdue, the assignment is blocked with the exact reason, so non-compliant visits never get published.' },
   { q: 'Can caregivers complete training on their phones?', a: 'Yes. The EVV Academy runs in the same mobile app caregivers use to clock in, so lessons, quizzes, and certificate renewals happen in the field between visits.' },
-  { q: 'How does this map to Pennsylvania’s training rules?', a: 'RayHealth tracks annual training hours and competencies aligned to PA §52.18, with a per-agency rollup that shows exactly who is current and what is due, ready to export for a DHS review.' },
+  { q: 'How does this map to Pennsylvania’s training rules?', a: 'Health tracks annual training hours and competencies aligned to PA §52.18, with a per-agency rollup that shows exactly who is current and what is due, ready to export for a DHS review.' },
 ];
 
 const Chrome = ({ url }: { url: string }) => (
@@ -68,7 +68,7 @@ export function WorkforceTrainingPage() {
           <span className="mk-eyebrow">Solutions · Workforce &amp; Training</span>
           <h1 className="mk-h1">Hire, credential, and train, without leaving operations.</h1>
           <p className="mk-lead">
-            RayHealth&rsquo;s Workforce &amp; Training module connects recruiting, credentialing, and the EVV Academy
+            Health&rsquo;s Workforce &amp; Training module connects recruiting, credentialing, and the EVV Academy
             to the schedule itself. A caregiver who isn&rsquo;t current simply can&rsquo;t be assigned, so compliance
             is enforced, not chased.
           </p>
@@ -123,7 +123,7 @@ export function WorkforceTrainingPage() {
             <div className="mk-feattext">
               <p className="mk-eylabel">Credential vault</p>
               <h3>Every record, every expiration, watched.</h3>
-              <p>Each caregiver carries a living file. RayHealth flags what&rsquo;s expiring before it becomes a coverage problem, and ties that status straight to scheduling.</p>
+              <p>Each caregiver carries a living file. Health flags what&rsquo;s expiring before it becomes a coverage problem, and ties that status straight to scheduling.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Issue and expiration dates on every credential</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Color-coded status: valid, expiring, expired</li>
@@ -131,7 +131,7 @@ export function WorkforceTrainingPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com · Maria Santos" />
+              <Chrome url="app.healthevv.com · Maria Santos" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 14 }}>
                 {[
                   { n: 'Background check', s: 'Valid', c: 'var(--color-success)', bg: 'var(--color-success-bg)', d: 'Expires Apr 2027' },
@@ -153,7 +153,7 @@ export function WorkforceTrainingPage() {
             <div className="mk-feattext">
               <p className="mk-eylabel">EVV Academy</p>
               <h3>Training that lives where the work does.</h3>
-              <p>Assign a course, watch completion climb, and issue the certificate, all inside RayHealth. Caregivers learn on the same app they clock in with.</p>
+              <p>Assign a course, watch completion climb, and issue the certificate, all inside Health. Caregivers learn on the same app they clock in with.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Lessons, quizzes, and pass thresholds per course</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Automatic certificates and renewal reminders</li>
@@ -192,7 +192,7 @@ export function WorkforceTrainingPage() {
             <div className="mk-feattext">
               <p className="mk-eylabel">Eligibility gating</p>
               <h3>Non-compliant visits never get published.</h3>
-              <p>The schedule and the workforce record are the same source of truth. Try to assign a caregiver who isn&rsquo;t current and RayHealth stops you, with the exact reason and the fix.</p>
+              <p>The schedule and the workforce record are the same source of truth. Try to assign a caregiver who isn&rsquo;t current and Health stops you, with the exact reason and the fix.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Real-time credential &amp; training checks at assignment</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Clear, specific block reasons, not silent failures</li>
@@ -200,7 +200,7 @@ export function WorkforceTrainingPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com · Assign caregiver" />
+              <Chrome url="app.healthevv.com · Assign caregiver" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 12, borderBottom: '1px solid var(--line)' }}>
                   <div style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '.9rem' }}>Wed · 10:00 AM · A. Brooks</div>
@@ -226,7 +226,7 @@ export function WorkforceTrainingPage() {
             <div>
               <p className="mk-eylabel">Pennsylvania-specific</p>
               <h2 className="mk-h2">Built around PA §52.18 training rules.</h2>
-              <p className="mk-deck">Pennsylvania requires ongoing caregiver training and documented competency. RayHealth tracks annual hours, ties completions to each worker, and keeps the evidence audit-ready, so &ldquo;are we compliant?&rdquo; is a dashboard, not a fire drill.</p>
+              <p className="mk-deck">Pennsylvania requires ongoing caregiver training and documented competency. Health tracks annual hours, ties completions to each worker, and keeps the evidence audit-ready, so &ldquo;are we compliant?&rdquo; is a dashboard, not a fire drill.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Annual training hours tracked per caregiver</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>Competency completions stored with dates</li>

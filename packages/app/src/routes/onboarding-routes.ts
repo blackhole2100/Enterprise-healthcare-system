@@ -8,7 +8,7 @@ import {
   OnboardingRepository,
   documentTypeValues,
   type OnboardingInterview,
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 import { aiModel } from '../ai.js';
 import { CURRENT_TERMS_VERSION } from '../terms.js';

@@ -57,7 +57,7 @@ const TRIGGERS = [
         // UPDATE must stay refused even with the flag set — otherwise the
         // sweep gate has widened into an edit path.
         label: 'UPDATE audit_events with sweep flag set (must still refuse)',
-        sql: `SELECT set_config('rayhealth.audit_retention_sweep', 'on', true); UPDATE audit_events SET outcome = 'probe' WHERE id = '${PROBE_UUID}'`,
+        sql: `SELECT set_config('health.audit_retention_sweep', 'on', true); UPDATE audit_events SET outcome = 'probe' WHERE id = '${PROBE_UUID}'`,
         expectedSubstring: 'append-only'
       }
     ]
@@ -86,7 +86,7 @@ const TRIGGERS = [
         // The sweep flag gates only the HOT table's DELETE. The archive is
         // the evidence of record and must refuse DELETE unconditionally.
         label: 'DELETE audit_events_archive with sweep flag set (must still refuse)',
-        sql: `SELECT set_config('rayhealth.audit_retention_sweep', 'on', true); DELETE FROM audit_events_archive WHERE id = '${PROBE_UUID}'`,
+        sql: `SELECT set_config('health.audit_retention_sweep', 'on', true); DELETE FROM audit_events_archive WHERE id = '${PROBE_UUID}'`,
         expectedSubstring: 'append-only'
       }
     ]

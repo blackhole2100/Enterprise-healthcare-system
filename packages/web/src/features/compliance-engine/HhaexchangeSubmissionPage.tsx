@@ -152,7 +152,7 @@ export function HhaexchangeSubmissionPage() {
       dataSources={['agency_hhaexchange_config', 'evv_visits']}
       nextSteps={[
         'Complete HHAeXchange third-party vendor onboarding and obtain the payer-specific PA EDI code table.',
-        'Use the CSV only to review RayHealth identity mappings; it is not the official PA Homecare V5 upload file.',
+        'Use the CSV only to review Health identity mappings; it is not the official PA Homecare V5 upload file.',
       ]}
       related={[{ label: 'EVV Submission. Sandata', to: '/admin/compliance-engine/evv-submission' }, { label: 'Go-Live Checklist', to: '/admin/readiness' }]}
     >

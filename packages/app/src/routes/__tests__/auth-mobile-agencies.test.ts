@@ -1,7 +1,7 @@
 import request from 'supertest';
 import jwt from 'jsonwebtoken';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 

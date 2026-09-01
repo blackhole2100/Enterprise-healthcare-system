@@ -1,7 +1,7 @@
 import type { Knex } from 'knex';
 import type { EvvVisit } from '../domain/evv.js';
 
-/** The two state EVV aggregators RayHealth transmits to. */
+/** The two state EVV aggregators Health transmits to. */
 export type AggregatorKind = 'sandata' | 'hhaexchange';
 
 /**

@@ -4,7 +4,7 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 /**
  * Resources › Checklist: Preparing for a PA DHS audit.
  * A practical, honest checklist of what a Pennsylvania home-care agency should
- * have ready, organized by review area, with a short note on how RayHealth
+ * have ready, organized by review area, with a short note on how Health
  * helps satisfy each one.
  */
 
@@ -13,7 +13,7 @@ interface ChecklistSection {
   blurb: string;
   icon: React.ReactNode;
   items: string[];
-  rayhealth: string;
+  health: string;
 }
 
 const sections: ChecklistSection[] = [
@@ -34,8 +34,8 @@ const sections: ChecklistSection[] = [
       'Incident and complaint logs with resolution records',
       'Organizational chart and governing-body records',
     ],
-    rayhealth:
-      'RayHealth keeps care plans, consents, and visit notes versioned and timestamped, so the documentation behind any visit is retrievable in seconds.',
+    health:
+      'Health keeps care plans, consents, and visit notes versioned and timestamped, so the documentation behind any visit is retrievable in seconds.',
   },
   {
     title: 'EVV records',
@@ -53,8 +53,8 @@ const sections: ChecklistSection[] = [
       'Reconciliation between EVV records and submitted claims',
       'Evidence of aggregator transmission where applicable',
     ],
-    rayhealth:
-      'Every RayHealth visit records the six federal elements with verified location and a tamper-evident edit trail, and reconciles cleanly against the claim.',
+    health:
+      'Every Health visit records the six federal elements with verified location and a tamper-evident edit trail, and reconciles cleanly against the claim.',
   },
   {
     title: 'Credentials & training',
@@ -72,7 +72,7 @@ const sections: ChecklistSection[] = [
       'Annual training hours and competencies documented (PA §52.18)',
       'Signed job descriptions and agency agreements',
     ],
-    rayhealth:
+    health:
       'The workforce module tracks each credential and training requirement with expirations, and eligibility gating blocks assigning anyone who is not current.',
   },
   {
@@ -91,8 +91,8 @@ const sections: ChecklistSection[] = [
       'Documentation supporting every billed unit',
       'Records of denials, adjustments, and resubmissions',
     ],
-    rayhealth:
-      'RayHealth ties claims to authorizations and verified visits, flagging units that exceed authorization before a claim ever goes out.',
+    health:
+      'Health ties claims to authorizations and verified visits, flagging units that exceed authorization before a claim ever goes out.',
   },
   {
     title: 'Privacy & security',
@@ -110,8 +110,8 @@ const sections: ChecklistSection[] = [
       'Business associate agreements (BAAs) with vendors',
       'Breach notification and incident-response procedures',
     ],
-    rayhealth:
-      'RayHealth enforces role-based access and keeps audit logs of PHI access, with HIPAA-aware infrastructure documented for your risk assessment.',
+    health:
+      'Health enforces role-based access and keeps audit logs of PHI access, with HIPAA-aware infrastructure documented for your risk assessment.',
   },
 ];
 
@@ -127,7 +127,7 @@ export function AuditChecklistPage() {
           <p className="mk-lead">
             A practical checklist of what a Pennsylvania home-care agency should have ready before a
             Department of Human Services review &mdash; organized by the areas surveyors actually
-            examine, with how RayHealth answers each one.
+            examine, with how Health answers each one.
           </p>
           <div className="mk-herocta">
             <span className="mk-pill">Checklist</span>
@@ -188,8 +188,8 @@ export function AuditChecklistPage() {
                     color: 'var(--ink-soft)',
                   }}
                 >
-                  <span style={{ fontWeight: 600, color: 'var(--accent-deep)' }}>How RayHealth answers this:</span>{' '}
-                  {s.rayhealth}
+                  <span style={{ fontWeight: 600, color: 'var(--accent-deep)' }}>How Health answers this:</span>{' '}
+                  {s.health}
                 </div>
               </div>
             ))}
@@ -223,7 +223,7 @@ export function AuditChecklistPage() {
                   </>,
                 )}
               </div>
-              <h3>HIPAA at RayHealth</h3>
+              <h3>HIPAA at Health</h3>
               <p>Our approach to PHI, access controls, and the safeguards behind the privacy &amp; security section above.</p>
               <p className="mk-line" style={{ marginTop: 12 }}>Read the HIPAA overview &rarr;</p>
             </Link>
@@ -237,7 +237,7 @@ export function AuditChecklistPage() {
           <div className="mk-callout">
             <h2>Walk into your next audit ready.</h2>
             <p>
-              See how RayHealth keeps care plans, EVV records, credentials, and claims reconciled and
+              See how Health keeps care plans, EVV records, credentials, and claims reconciled and
               retrievable &mdash; so audit prep is a report you run, not a fire drill.
             </p>
             <div className="mk-herocta">

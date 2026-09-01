@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { requireCapability } from '../middleware/require-capability.js';
-import { ClientRepository, clientSchema } from '@rayhealth/core';
+import { ClientRepository, clientSchema } from '@health/core';
 
 const router = Router();
 

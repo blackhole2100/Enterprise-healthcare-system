@@ -6,7 +6,7 @@ import {
   ScheduleRepository,
   TIME_RE,
   assignmentInputSchema,
-} from '@rayhealth/core';
+} from '@health/core';
 import { evaluateAssignmentChecks } from './assignment-checks.js';
 import { safeError } from '../security/safe-log.js';
 import { notifyCaregivers } from '../services/notification-service.js';
@@ -121,7 +121,7 @@ router.post('/', requireCapability('schedule.write'), async (req, res) => {
       caregiverIds: [parsed.data.caregiverId],
       category: 'scheduleChanges',
       title: 'New shift assigned',
-      body: 'A new shift was added to your schedule. Open RayHealth to see the details.',
+      body: 'A new shift was added to your schedule. Open Health to see the details.',
       data: { kind: 'assignment.created', assignmentId: assignment.id },
     });
 
@@ -269,7 +269,7 @@ router.put('/:id', requireCapability('schedule.write'), async (req, res) => {
       caregiverIds: affected,
       category: 'scheduleChanges',
       title: 'Schedule updated',
-      body: 'One of your shifts changed. Open RayHealth to see your current schedule.',
+      body: 'One of your shifts changed. Open Health to see your current schedule.',
       data: { kind: 'assignment.updated', assignmentId },
     });
 
@@ -313,14 +313,14 @@ router.delete('/:id', requireCapability('schedule.write'), async (req, res) => {
         caregiverIds: [doomedCaregiverId],
         category: 'scheduleChanges',
         title: 'Shift cancelled',
-        body: 'A shift was removed from your schedule. Open RayHealth to see your current schedule.',
+        body: 'A shift was removed from your schedule. Open Health to see your current schedule.',
         data: { kind: 'assignment.deleted', assignmentId },
         // The one case worth a text: a caregiver who does not see this may
         // drive to a visit that is no longer theirs. Self-contained wording,
         // since an SMS arrives with no title and no app context.
         alsoSms: true,
         smsBody:
-          'RayHealth: a shift was cancelled from your schedule. Open the RayHealth app to see your current schedule.',
+          'Health: a shift was cancelled from your schedule. Open the Health app to see your current schedule.',
       });
     }
 

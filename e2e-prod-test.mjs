@@ -1,17 +1,17 @@
 /**
- * RayHealth EVV Production E2E Test
+ * Health EVV Production E2E Test
  * Tests all major routes and the staff invite flow
  */
 import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-const BASE_URL = 'https://rayhealth-evv-platform-aocbsz3rb-reyghim1093-5928s-projects.vercel.app';
-const ADMIN_EMAIL = 'admin-fixture@rayhealthevv.local';
+const BASE_URL = 'https://health-evv-platform-aocbsz3rb-reyghim1093-5928s-projects.vercel.app';
+const ADMIN_EMAIL = 'admin-fixture@healthevv.local';
 const ADMIN_PASSWORD = 'TestAdmin2026!';
-const INVITE_EMAIL = 'e2etest@rayhealthevv.local';
+const INVITE_EMAIL = 'e2etest@healthevv.local';
 
-const ARTIFACTS_DIR = '/Users/durgaghimeray/Desktop/rayhealth-evv-clean/e2e-artifacts';
+const ARTIFACTS_DIR = '/Users/durgaghimeray/Desktop/health-evv-clean/e2e-artifacts';
 mkdirSync(ARTIFACTS_DIR, { recursive: true });
 
 const results = [];

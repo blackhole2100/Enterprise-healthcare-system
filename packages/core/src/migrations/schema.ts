@@ -530,7 +530,7 @@ export async function up(knex: Knex): Promise<void> {
         CREATE OR REPLACE FUNCTION audit_events_block_mutation() RETURNS trigger AS $f$
         BEGIN
           IF TG_OP = 'DELETE'
-             AND current_setting('rayhealth.audit_retention_sweep', true) = 'on' THEN
+             AND current_setting('health.audit_retention_sweep', true) = 'on' THEN
             RETURN NULL;
           END IF;
           RAISE EXCEPTION 'audit_events is append-only; UPDATE/DELETE refused';

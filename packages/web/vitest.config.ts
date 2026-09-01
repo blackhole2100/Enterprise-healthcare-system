@@ -3,11 +3,11 @@ import path from 'path';
 
 export default defineConfig({
   // vitest.config.ts fully REPLACES vite.config.ts, it does not merge with it,
-  // so the @rayhealth/core alias has to be repeated here or every test that
+  // so the @health/core alias has to be repeated here or every test that
   // touches the theme resolver fails to resolve it.
   resolve: {
     alias: {
-      '@rayhealth/core': path.resolve(__dirname, '../core/src'),
+      '@health/core': path.resolve(__dirname, '../core/src'),
     },
   },
   test: {

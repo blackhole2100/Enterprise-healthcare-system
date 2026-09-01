@@ -2,7 +2,7 @@
 
 **Authored by Durga Ghimeray**
 
-RayHealth EVV processes data on behalf of home-care agencies, including identifiers that — once real-agency onboarding begins — qualify as Protected Health Information (PHI) under HIPAA. We take security disclosures seriously and respond to every reported issue.
+Health EVV processes data on behalf of home-care agencies, including identifiers that — once real-agency onboarding begins — qualify as Protected Health Information (PHI) under HIPAA. We take security disclosures seriously and respond to every reported issue.
 
 ## Reporting a vulnerability
 
@@ -10,13 +10,13 @@ RayHealth EVV processes data on behalf of home-care agencies, including identifi
 
 Preferred channel — **GitHub private advisory:**
 
-https://github.com/durga710/rayhealth-evv-platform/security/advisories/new
+https://github.com/durga710/health-evv-platform/security/advisories/new
 
 Use this for anything that could be exploited: authentication bypass, broken access control, injection (SQL, command, prompt), cross-site scripting, deserialization, server-side request forgery, audit-trail tampering, PHI exposure, credential leakage in logs or responses, dependency CVEs that affect us, supply-chain compromise, or unsafe defaults.
 
 Fallback if you cannot use a private advisory — **email:**
 
-`durga@rayhealthevv.com` — encrypt with the PGP key published at https://rayhealthevv.com/.well-known/pgp.asc when available. If no PGP key is published yet, send a plain-text email with the subject `[SECURITY]` and we will follow up with a secure channel.
+`durga@healthevv.com` — encrypt with the PGP key published at https://healthevv.com/.well-known/pgp.asc when available. If no PGP key is published yet, send a plain-text email with the subject `[SECURITY]` and we will follow up with a secure channel.
 
 ## What to include
 
@@ -45,7 +45,7 @@ We will keep you informed at each step and coordinate on a public disclosure tim
 
 ### In scope
 
-- The hosted application at https://rayhealthevv.com and any subdomains
+- The hosted application at https://healthevv.com and any subdomains
 - The API surface (every route under `/api`, including unauthenticated routes like `/api/invites/accept/:token`)
 - The Expo / React Native caregiver app in `packages/mobile`
 - Source code in this repository
@@ -54,7 +54,7 @@ We will keep you informed at each step and coordinate on a public disclosure tim
 
 ### Out of scope
 
-- Social engineering of RayHealth staff
+- Social engineering of Health staff
 - Physical attacks against any host or device
 - DoS / DDoS testing (we do not authorize load testing against production)
 - Reports from automated scanners without manual validation
@@ -89,7 +89,7 @@ Staff-invite emails are delivered via Amazon SES using the `@aws-sdk/client-sesv
 3. **Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in the Vercel project env vars.** When either is unset, the invite API still works but falls back to the manual-copy flow (the admin shares the URL by hand). The response field `emailDelivery: 'not_configured'` tells the UI to show the copy-link fallback.
 4. **Set `AWS_SES_REGION`** to the region where your domain is verified (must match the region prefix in the MX `feedback-smtp.<region>.amazonses.com` record).
 5. **Set `EMAIL_FROM`** to a `Display Name <local@verified-domain>` value matching the verified domain.
-6. **Set `INVITE_URL_BASE`** to the production origin so emails contain absolute URLs (e.g. `https://rayhealthevv.com`).
+6. **Set `INVITE_URL_BASE`** to the production origin so emails contain absolute URLs (e.g. `https://healthevv.com`).
 7. **Request production access.** SES starts every new account in sandbox mode (recipients must be verified identities, max 200/day). Submit the "Request production access" form in the SES Account dashboard before going to production. Approval is typically 24–48 hours.
 
 **Residual risk — BAA required for HIPAA:** AWS provides a Business Associate Addendum (BAA) for HIPAA-eligible services including SES. The BAA is signed via AWS Artifact (accept the agreement in the AWS console). Until the BAA is accepted, invite emails should not contain PHI. The current template embeds only the recipient email address, the agency display name, the role, and the invite URL — none of which is PHI — but operators handling PHI must accept the BAA before going to production. This is tracked alongside the other subprocessor BAAs in `docs/compliance/hipaa/`.

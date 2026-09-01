@@ -10,14 +10,14 @@ import { showAppAlert } from '../features/common/alerts/appAlert';
  *   we skip the system prompt to avoid nagging the user.
  * - Shows a plain explainer (`Alert`) before invoking the system prompt so
  *   the user understands why we need POST_NOTIFICATIONS.
- * - Persists the resulting status under `rayhealth_notification_perm_v1`.
+ * - Persists the resulting status under `health_notification_perm_v1`.
  */
 
 // SecureStore key name, not a credential.
 // Built from short tokens so secret scanners don't false-positive on the
 // concatenated literal (entropy heuristic triggers on the whole string).
-// Final runtime value: "rayhealth_notification_perm_v1".
-const PERM_KEY = ['rayhealth', 'notification', 'perm', 'v1'].join('_');
+// Final runtime value: "health_notification_perm_v1".
+const PERM_KEY = ['health', 'notification', 'perm', 'v1'].join('_');
 
 export type PersistedPermStatus = 'granted' | 'denied' | 'undetermined';
 

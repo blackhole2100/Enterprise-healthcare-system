@@ -347,7 +347,7 @@ export function AuditPacketPage() {
         <div className="audit-packet">
           {/* Print-only running header, hidden on screen, shown on every printed page (index.css @media print). */}
           <div className="audit-packet__print-header" aria-hidden="true">
-            <span>RayHealth EVV. Audit Packet</span>
+            <span>Health EVV. Audit Packet</span>
             <span>Visit {data.visit.id}</span>
             <span>Generated {formatDateTime(data.packet.generatedAt)}</span>
             <span>SHA-256 {data.packet.integritySha256.slice(0, 16)}…</span>

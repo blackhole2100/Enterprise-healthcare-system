@@ -55,9 +55,9 @@ const contactIcon = (d: React.ReactNode) => (
 );
 
 /**
- * Public per-agency homepage at rayhealthevv.com/<slug>: the page an agency
+ * Public per-agency homepage at healthevv.com/<slug>: the page an agency
  * shares on job boards and with families. Carries the agency's own warm
- * editorial identity (see public-brand.tsx) rather than RayHealth's admin
+ * editorial identity (see public-brand.tsx) rather than Health's admin
  * chrome, renders the profile with graceful fallbacks, and routes caregivers
  * into the application flow. Unknown slugs bounce home.
  */
@@ -321,7 +321,7 @@ export function AgencyPublicPage() {
         </div>
         <small>
           © {new Date().getFullYear()} {displayName} · Hiring powered by{' '}
-          <Link to="/">RayHealthEVV</Link>
+          <Link to="/">HealthEVV</Link>
         </small>
       </footer>
     </div>

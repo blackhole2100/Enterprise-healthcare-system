@@ -4,7 +4,7 @@ import { randomUUID, timingSafeEqual } from 'node:crypto';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { z } from 'zod';
-import { AgencyRepository, AuditEventRepository, CaregiverRepository, MobileSessionRepository, PasswordResetRepository, SessionRepository, UserAgencyRepository, UserRepository, type NewAuditEvent, type AppRole } from '@rayhealth/core';
+import { AgencyRepository, AuditEventRepository, CaregiverRepository, MobileSessionRepository, PasswordResetRepository, SessionRepository, UserAgencyRepository, UserRepository, type NewAuditEvent, type AppRole } from '@health/core';
 import { authContext } from '../middleware/auth-context.js';
 import { requireCsrf } from '../middleware/csrf.js';
 import { clearSessionCookieOptions, SESSION_COOKIE_NAME, sessionCookieOptions } from '../security/cookies.js';

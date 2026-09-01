@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
- * Platform › RayVerify, the verification / trust engine that powers RayHealthEVV.
+ * Platform › RayVerify, the verification / trust engine that powers HealthEVV.
  *
  * Positioning: what Radar is to Stripe, RayVerify is to EVV. It layers identity,
  * location, device and fraud intelligence on top of every visit and produces an
@@ -81,7 +81,7 @@ interface Step {
 }
 
 const steps: Step[] = [
-  { n: '01', t: 'Capture', b: 'The caregiver clocks in from the RayHealth app. Location, time, device and visit context are captured at the door.' },
+  { n: '01', t: 'Capture', b: 'The caregiver clocks in from the Health app. Location, time, device and visit context are captured at the door.' },
   { n: '02', t: 'Verify', b: 'RayVerify runs each signal against the authorization, the geofence, and the caregiver’s and client’s history.' },
   { n: '03', t: 'Score', b: 'Signals combine into a 0-100 trust score with a human-readable reason for everything that fired.' },
   { n: '04', t: 'Decide', b: 'Clean visits pass straight through; risky ones are flagged for review before they ever reach a claim.' },
@@ -105,10 +105,10 @@ interface Faq {
 }
 
 const faqs: Faq[] = [
-  { q: 'What is RayVerify?', a: 'RayVerify is the verification engine inside RayHealthEVV. Where EVV proves a phone was near an address at a time, RayVerify adds a trust layer, location, identity and fraud intelligence today, with liveness and device trust rolling out, and turns each visit into an explainable trust score with an audit-ready evidence package.' },
+  { q: 'What is RayVerify?', a: 'RayVerify is the verification engine inside HealthEVV. Where EVV proves a phone was near an address at a time, RayVerify adds a trust layer, location, identity and fraud intelligence today, with liveness and device trust rolling out, and turns each visit into an explainable trust score with an audit-ready evidence package.' },
   { q: 'What is live today versus rolling out?', a: 'Live today: GPS geofencing, four fraud-intelligence signals scored on every visit — impossible travel, duplicate visits, geofence anomalies and abnormal-duration outliers — consented selfie identity matching at clock-in, and the evidence package. Rolling out: liveness detection, device-trust scoring and shared-device detection. Identity matching confirms who is in the photo; until liveness ships it does not by itself prove a person was physically present, and we say so rather than let the distinction blur.' },
   { q: 'How is the trust score explainable?', a: 'Every signal that contributes to a visit’s score comes with a plain-English reason, not a black-box number. Reviewers see exactly why a visit was flagged, which is what makes the score defensible in front of an auditor.' },
-  { q: 'Do I need RayVerify to use RayHealthEVV?', a: 'No. GPS-verified EVV works on its own. RayVerify is the trust layer on top, turn it on per agency when you want fraud scoring and verification evidence beyond a basic location ping.' },
+  { q: 'Do I need RayVerify to use HealthEVV?', a: 'No. GPS-verified EVV works on its own. RayVerify is the trust layer on top, turn it on per agency when you want fraud scoring and verification evidence beyond a basic location ping.' },
 ];
 
 const Chrome = ({ url }: { url: string }) => (
@@ -198,7 +198,7 @@ export function RayVerifyPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com &middot; RayVerify · Visit var(--color-success-bg)" />
+              <Chrome url="app.healthevv.com &middot; RayVerify · Visit var(--color-success-bg)" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', paddingBottom: 14, borderBottom: '1px solid var(--line)' }}>
                   <div style={{ width: 64, height: 64, borderRadius: '50%', display: 'grid', placeItems: 'center', flexShrink: 0, background: 'conic-gradient(var(--color-success) 0 96%, var(--color-border) 96% 100%)' }}>

@@ -88,13 +88,13 @@ export default function LoginScreen() {
           <View style={styles.brandBlock}>
             <View style={styles.logoRing}>
               <Image
-                source={require('../../../assets/images/rayhealthevv-mark.png')}
+                source={require('../../../assets/images/healthevv-mark.png')}
                 style={styles.logoImage}
                 resizeMode="contain"
-                accessibilityLabel="RayHealthEVV logo"
+                accessibilityLabel="HealthEVV logo"
               />
             </View>
-            <Text style={styles.appName}>RayHealthEVV™</Text>
+            <Text style={styles.appName}>HealthEVV™</Text>
             <Text style={styles.tagline}>Electronic Visit Verification</Text>
           </View>
 
@@ -195,7 +195,7 @@ export default function LoginScreen() {
               <View style={styles.secureDot} />
               <Text style={styles.secureText}>HIPAA-Secured · PA EVV Compliant</Text>
             </View>
-            <Text style={styles.footerNote}>Admin portal at rayhealthevv.com</Text>
+            <Text style={styles.footerNote}>Admin portal at healthevv.com</Text>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>

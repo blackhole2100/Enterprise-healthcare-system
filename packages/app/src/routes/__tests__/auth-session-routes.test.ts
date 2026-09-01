@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 
@@ -17,7 +17,7 @@ describe('auth session routes', () => {
     const findByEmail = vi.fn().mockResolvedValue({
       id: '00000000-0000-4000-8000-000000000011',
       agencyId: '00000000-0000-4000-8000-000000000012',
-      email: 'admin@rayhealth.example',
+      email: 'admin@health.example',
       passwordHash,
       role: 'admin'
     });
@@ -38,7 +38,7 @@ describe('auth session routes', () => {
 
     const response = await request(createApp())
       .post('/auth/login')
-      .send({ email: 'admin@rayhealth.example', password: 'correct-password' });
+      .send({ email: 'admin@health.example', password: 'correct-password' });
 
     expect(response.status).toBe(200);
     expect(response.body).toMatchObject({
@@ -48,7 +48,7 @@ describe('auth session routes', () => {
     });
     expect(response.body.csrfToken).toEqual(expect.any(String));
     const setCookie = response.headers['set-cookie'] as unknown as string[];
-    expect(setCookie.join(';')).toContain('rayhealth_session=');
+    expect(setCookie.join(';')).toContain('health_session=');
     expect(setCookie.join(';')).toContain('HttpOnly');
   });
 
@@ -56,7 +56,7 @@ describe('auth session routes', () => {
     const findById = vi.fn().mockResolvedValue({
       id: 'user-1',
       agencyId: 'agency-1',
-      email: 'admin@rayhealth.example',
+      email: 'admin@health.example',
       role: 'admin'
     });
     vi.spyOn(core, 'UserRepository').mockImplementation(() => ({ findById }) as unknown as core.UserRepository);

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { notifyCaregivers } from '../notification-service.js';
 import * as pushClient from '../../push/push-client.js';
 import * as smsClient from '../../sms/sms-client.js';
@@ -166,7 +166,7 @@ describe('notifyCaregivers, push channel', () => {
 });
 
 describe('notifyCaregivers, sms channel', () => {
-  const smsInput = { ...baseInput, alsoSms: true, smsBody: 'RayHealth: a shift was cancelled.' };
+  const smsInput = { ...baseInput, alsoSms: true, smsBody: 'Health: a shift was cancelled.' };
 
   it('does not text unless the caller opts in', async () => {
     mockTokens([]);
@@ -211,7 +211,7 @@ describe('notifyCaregivers, sms channel', () => {
 
     expect(send).toHaveBeenCalledWith({
       to: '+14125550123',
-      body: 'RayHealth: a shift was cancelled.',
+      body: 'Health: a shift was cancelled.',
     });
     expect(result.smsSent).toBe(1);
   });

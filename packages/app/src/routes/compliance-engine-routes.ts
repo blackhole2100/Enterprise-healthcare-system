@@ -16,7 +16,7 @@ import {
   paChcMcos,
   paComplianceCredentials,
   paExceptionTypes,
-} from '@rayhealth/core';
+} from '@health/core';
 
 const router = Router();
 

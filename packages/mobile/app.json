@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "RayHealth EVV",
-    "slug": "rayhealth-evv",
+    "name": "Health EVV",
+    "slug": "health-evv",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "rayhealthevv",
+    "scheme": "healthevv",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "bundleIdentifier": "com.rayhealth.evv",
+      "bundleIdentifier": "com.health.evv",
       "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
@@ -92,7 +92,7 @@
       }
     },
     "android": {
-      "package": "com.rayhealth.evv",
+      "package": "com.health.evv",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -133,14 +133,14 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "RayHealthEVV uses your location only while you clock in or out, to verify you are at the client's address for Electronic Visit Verification.",
+          "locationWhenInUsePermission": "HealthEVV uses your location only while you clock in or out, to verify you are at the client's address for Electronic Visit Verification.",
           "isAndroidBackgroundLocationEnabled": false
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "RayHealthEVV uses your camera only to take the identity photo you agreed to, so your agency can confirm it is you clocking in.",
+          "cameraPermission": "HealthEVV uses your camera only to take the identity photo you agreed to, so your agency can confirm it is you clocking in.",
           "recordAudioAndroid": false
         }
       ],

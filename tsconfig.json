@@ -13,9 +13,9 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@rayhealth/core/*": ["packages/core/src/*"],
-      "@rayhealth/app/*": ["packages/app/src/*"],
-      "@rayhealth/web/*": ["packages/web/src/*"]
+      "@health/core/*": ["packages/core/src/*"],
+      "@health/app/*": ["packages/app/src/*"],
+      "@health/web/*": ["packages/web/src/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

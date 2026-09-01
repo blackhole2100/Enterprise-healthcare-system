@@ -59,7 +59,7 @@ export function HeroGraphic() {
       </circle>
 
       <text x="280" y="96" fontFamily="Nunito, sans-serif" fontWeight="900" fontSize="54"
-            fill="white" letterSpacing="-2" opacity="0.97">RayHealth</text>
+            fill="white" letterSpacing="-2" opacity="0.97">Health</text>
 
       <rect x="282" y="108" width="90" height="36" rx="18" fill="url(#banEvv)"/>
       <text x="327" y="132" fontFamily="Nunito, sans-serif" fontWeight="800" fontSize="16"

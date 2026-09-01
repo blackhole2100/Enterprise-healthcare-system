@@ -46,7 +46,7 @@ import {
   type ClaimStatus,
   type Era835Adjustment,
   type Era835ServiceLine,
-} from '@rayhealth/core';
+} from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { assertCronAuthorized } from '../middleware/cron-auth.js';
 import {
@@ -709,7 +709,7 @@ router.post('/remittances/sweep', handleRemittanceSweep);
 //
 // Aggregates over `claim_remittances` (matched or not), so the dashboard is
 // useful the moment an agency posts its first payer 835 — even if nothing
-// else in RayHealth is in use yet. Summary math lives in the pure core
+// else in Health is in use yet. Summary math lives in the pure core
 // service (summarizeDenials); these routes only fetch rows and mutate the
 // worklist columns.
 

@@ -1,4 +1,4 @@
-# RayHealth EVV — First App Store / Play Store Submission
+# Health EVV — First App Store / Play Store Submission
 
 This document tracks the human/account portion of the first release. The
 current Expo/EAS build procedure and privacy declarations live in
@@ -6,7 +6,7 @@ current Expo/EAS build procedure and privacy declarations live in
 
 ## Source status
 
-- Bundle/package ID: `com.rayhealth.evv` on both platforms.
+- Bundle/package ID: `com.health.evv` on both platforms.
 - Store icon: 1024×1024 RGB PNG.
 - Android adaptive and monochrome icons: configured.
 - iOS privacy manifest and export-compliance exemption: configured in Expo.
@@ -20,15 +20,15 @@ Run this before every candidate:
 
 ```bash
 npm run check
-npm run release:check --workspace=@rayhealth/mobile
+npm run release:check --workspace=@health/mobile
 ```
 
 ## Account-owned blockers
 
 - [ ] Apple Developer membership is active.
-- [ ] App Store Connect record exists for `com.rayhealth.evv`.
+- [ ] App Store Connect record exists for `com.health.evv`.
 - [ ] Apple signing is connected in EAS.
-- [ ] Google Play record exists for `com.rayhealth.evv`.
+- [ ] Google Play record exists for `com.health.evv`.
 - [ ] Play App Signing and the first manual `.aab` upload are complete.
 - [ ] EAS project is initialized and its generated project ID is committed.
 - [ ] EAS production variables `EXPO_PUBLIC_API_URL` and
@@ -39,7 +39,7 @@ npm run release:check --workspace=@rayhealth/mobile
 
 ## Reviewer notes
 
-State clearly that RayHealth EVV:
+State clearly that Health EVV:
 
 - requires an account issued by a participating home-care agency;
 - records location only for EVV clock-in/out;

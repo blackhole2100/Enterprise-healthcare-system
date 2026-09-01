@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import Stripe from 'stripe';
-import { AgencyRepository } from '@rayhealth/core';
+import { AgencyRepository } from '@health/core';
 import { authContext } from '../middleware/auth-context.js';
 
 const router = Router();
@@ -75,7 +75,7 @@ router.post('/checkout-session', authContext, async (req, res) => {
 // GET /billing/portal, returns a Stripe Customer Portal URL.
 router.get('/portal', authContext, async (req, res) => {
   const returnUrl = (req.query.returnUrl as string | undefined)
-    ?? `${process.env.APP_URL ?? 'https://rayhealthevv.com'}/admin`;
+    ?? `${process.env.APP_URL ?? 'https://healthevv.com'}/admin`;
 
   try {
     const repo = new AgencyRepository(req.app.get('db'));

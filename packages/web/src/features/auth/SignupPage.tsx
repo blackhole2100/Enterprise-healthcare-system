@@ -101,7 +101,7 @@ export function SignupPage() {
             letterSpacing: '-0.01em',
           }}
         >
-          RayHealth
+          Health
           <span
             style={{
               background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)',

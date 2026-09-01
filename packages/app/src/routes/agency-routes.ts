@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { AgencyRepository, normalizePublicSlug, publicProfileSchema, publicSlugSchema } from '@rayhealth/core';
+import { AgencyRepository, normalizePublicSlug, publicProfileSchema, publicSlugSchema } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 
 const router = Router();

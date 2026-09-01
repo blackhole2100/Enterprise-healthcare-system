@@ -3,7 +3,7 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
  * Platform › AI automation.
- * ACCURATE framing: the RayHealth copilot is a SHIPPED, LIVE feature, a
+ * ACCURATE framing: the Health copilot is a SHIPPED, LIVE feature, a
  * Claude-powered conversational assistant for admins and coordinators. It
  * runs human-in-the-loop by design: the model only *proposes* a structured
  * action; a person reviews and confirms before anything happens. Today it can
@@ -162,7 +162,7 @@ const SuggestBadge = () => (
 function CopilotVisual() {
   return (
     <div className="mk-visual">
-      <Chrome url="app.rayhealthevv.com · Copilot" />
+      <Chrome url="app.healthevv.com · Copilot" />
       <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16, display: 'flex', flexDirection: 'column', gap: 12 }}>
         {/* User question */}
         <div style={{ alignSelf: 'flex-end', maxWidth: '85%', background: 'var(--accent)', color: 'var(--color-surface)', borderRadius: '12px 12px 4px 12px', padding: '9px 12px', fontSize: '.85rem', lineHeight: 1.5 }}>
@@ -223,7 +223,7 @@ export function AiAutomationPage() {
           </div>
           <h1 className="mk-h1">An AI copilot that proposes. Your team approves.</h1>
           <p className="mk-lead">
-            RayHealth&rsquo;s copilot is live in the app today. Ask it in plain language and it answers,
+            Health&rsquo;s copilot is live in the app today. Ask it in plain language and it answers,
             grounded in your agency&rsquo;s caregivers and courses, then proposes a structured action for a
             person to review. It&rsquo;s <strong>human-in-the-loop by design</strong>: the AI never acts on its
             own, and every interaction is audit-logged. Powered by Claude on Amazon Bedrock.

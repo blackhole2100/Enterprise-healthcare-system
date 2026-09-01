@@ -10,7 +10,7 @@ import {
   buildCommandCenterAttention,
   buildBriefingPrompt,
   deriveTodayVisitStatus,
-} from '@rayhealth/core';
+} from '@health/core';
 import { askAI, isAIConfigured } from '../ai.js';
 import { safeError } from '../security/safe-log.js';
 

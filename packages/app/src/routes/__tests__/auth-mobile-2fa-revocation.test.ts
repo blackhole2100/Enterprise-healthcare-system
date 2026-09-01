@@ -2,7 +2,7 @@ import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 
@@ -20,7 +20,7 @@ function mockUserByEmail(overrides: Record<string, unknown> = {}) {
   const findByEmail = vi.fn().mockResolvedValue({
     id: userId,
     agencyId,
-    email: 'cg@rayhealth.example',
+    email: 'cg@health.example',
     passwordHash,
     role: 'caregiver',
     caregiverId: undefined,
@@ -46,7 +46,7 @@ describe('POST /auth/mobile/login. TOTP second factor (finding #1)', () => {
 
     const res = await request(createApp())
       .post('/auth/mobile/login')
-      .send({ email: 'cg@rayhealth.example', password: PASSWORD });
+      .send({ email: 'cg@health.example', password: PASSWORD });
 
     expect(res.status).toBe(200);
     expect(res.body.twoFactorRequired).toBe(true);
@@ -60,7 +60,7 @@ describe('POST /auth/mobile/login. TOTP second factor (finding #1)', () => {
 
     const res = await request(createApp())
       .post('/auth/mobile/login')
-      .send({ email: 'cg@rayhealth.example', password: PASSWORD });
+      .send({ email: 'cg@health.example', password: PASSWORD });
 
     expect(res.status).toBe(200);
     expect(res.body.token).toBeTruthy();

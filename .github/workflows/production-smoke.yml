@@ -2,7 +2,7 @@ name: production-smoke
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency:
@@ -18,14 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      RAYHEALTH_PROD_ORIGIN: ${{ vars.RAYHEALTH_PROD_ORIGIN }}
+      Health_PROD_ORIGIN: ${{ vars.Health_PROD_ORIGIN }}
     steps:
       - name: Probe liveness, database, and audit health
         shell: bash
         run: |
           set -euo pipefail
 
-          origin="${RAYHEALTH_PROD_ORIGIN:-https://rayhealthevv.com}"
+          origin="${Health_PROD_ORIGIN:-https://healthevv.com}"
           origin="${origin%/}"
 
           # Each probe gets three attempts with backoff. The first request after

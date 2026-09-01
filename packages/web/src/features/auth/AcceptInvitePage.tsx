@@ -154,7 +154,7 @@ export function AcceptInvitePage() {
           letterSpacing: '-0.01em',
         }}
       >
-        RayHealth
+        Health
         <span
           style={{
             background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%)',
@@ -176,13 +176,13 @@ export function AcceptInvitePage() {
           Set up your care account.
         </h1>
         <p style={{ margin: 0, color: 'var(--color-border-strong)', fontSize: '1rem', lineHeight: 1.6 }}>
-          You've been invited to join your agency on RayHealthEVV™. Create your password to finish setting up your account.
+          You've been invited to join your agency on HealthEVV™. Create your password to finish setting up your account.
         </p>
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
           {[
             'Password must be at least 12 characters.',
             'This link is single-use and expires after acceptance.',
-            'After setup, sign in at rayhealthevv.com/login.',
+            'After setup, sign in at healthevv.com/login.',
           ].map((point) => (
             <li key={point} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', color: 'var(--color-text-subtle)', fontSize: '0.9rem', lineHeight: 1.5 }}>
               <CheckIcon />

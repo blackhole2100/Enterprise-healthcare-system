@@ -96,7 +96,7 @@ describe('twilio send', () => {
       .mockResolvedValue({ ok: true, status: 201, json: async () => ({ sid: 'SM123' }) });
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await createSmsClient().send({ to: '+14125550123', body: 'RayHealth: hello' });
+    const result = await createSmsClient().send({ to: '+14125550123', body: 'Health: hello' });
 
     expect(result).toEqual({ ok: true, id: 'SM123' });
     const [url, init] = fetchMock.mock.calls[0] as [string, { headers: Record<string, string>; body: string }];
@@ -105,7 +105,7 @@ describe('twilio send', () => {
     const form = new URLSearchParams(init.body);
     expect(form.get('To')).toBe('+14125550123');
     expect(form.get('From')).toBe('+14125550000');
-    expect(form.get('Body')).toBe('RayHealth: hello');
+    expect(form.get('Body')).toBe('Health: hello');
   });
 
   it('marks a 4xx as not retryable, since it will fail identically', async () => {

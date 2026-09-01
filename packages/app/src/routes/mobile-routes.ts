@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { ScheduleRepository } from '@rayhealth/core';
+import { ScheduleRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 

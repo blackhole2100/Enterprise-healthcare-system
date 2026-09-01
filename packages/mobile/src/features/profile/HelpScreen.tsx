@@ -45,8 +45,8 @@ interface HelpSection {
   blocks: HelpBlock[];
 }
 
-// Condensed from the RayHealthEVV™ Mobile User Guide.
-// © 2026 RayHealthEVV LLC. All Rights Reserved.
+// Condensed from the HealthEVV™ Mobile User Guide.
+// © 2026 HealthEVV LLC. All Rights Reserved.
 // Section photography: Unsplash (free commercial license, no attribution required).
 const HELP_SECTIONS: HelpSection[] = [
   {
@@ -60,7 +60,7 @@ const HELP_SECTIONS: HelpSection[] = [
     blocks: [
       {
         text:
-          'If your RayHealthEVV ID is linked to multiple agencies, you will be prompted to select an agency after signing in.',
+          'If your HealthEVV ID is linked to multiple agencies, you will be prompted to select an agency after signing in.',
       },
       {
         heading: 'The selected agency determines what you see',
@@ -328,13 +328,13 @@ const HELP_SECTIONS: HelpSection[] = [
         heading: 'Linked agencies',
         icon: 'git-network-outline',
         text:
-          'You may work for multiple agencies using a single RayHealthEVV ID. All connected agencies are listed under Me → Linked agencies, where you can switch which agency you are working in.',
+          'You may work for multiple agencies using a single HealthEVV ID. All connected agencies are listed under Me → Linked agencies, where you can switch which agency you are working in.',
       },
       {
         heading: 'Disconnecting & reconnecting',
         icon: 'refresh-outline',
         text:
-          'After disconnecting from an agency you lose access to it, future schedules and messages from that agency no longer appear. To reconnect, contact the agency and provide your RayHealthEVV ID; once approved, access is automatically restored.',
+          'After disconnecting from an agency you lose access to it, future schedules and messages from that agency no longer appear. To reconnect, contact the agency and provide your HealthEVV ID; once approved, access is automatically restored.',
       },
       {
         heading: 'Password',
@@ -355,7 +355,7 @@ const HELP_SECTIONS: HelpSection[] = [
       {
         bullets: [
           'For assistance with your account, schedules, or visit issues, contact your agency administrator',
-          'For software support, contact RayHealthEVV Support',
+          'For software support, contact HealthEVV Support',
         ],
       },
     ],
@@ -431,8 +431,8 @@ export default function HelpScreen() {
   const effectiveExpanded = query.trim() && visible.length === 1 ? visible[0].key : expanded;
 
   const openSupportEmail = () => {
-    Linking.openURL('mailto:support@rayhealthevv.com?subject=RayHealthEVV%20Support').catch(() => {
-      showAppAlert('Support', 'Email us at support@rayhealthevv.com', undefined, {
+    Linking.openURL('mailto:support@healthevv.com?subject=HealthEVV%20Support').catch(() => {
+      showAppAlert('Support', 'Email us at support@healthevv.com', undefined, {
         variant: 'info',
         icon: 'help-buoy-outline',
       });
@@ -463,7 +463,7 @@ export default function HelpScreen() {
               <Ionicons name="book" size={12} color={colors.onGradient} />
               <Text style={styles.heroPillText}>User Guide</Text>
             </View>
-            <Text style={styles.heroTitle}>RayHealthEVV™ Mobile</Text>
+            <Text style={styles.heroTitle}>HealthEVV™ Mobile</Text>
             <Text style={styles.heroSub}>
               Everything you need to verify visits, manage your schedule, and stay connected with
               your agencies.
@@ -551,13 +551,13 @@ export default function HelpScreen() {
           <Text style={styles.supportTitle}>Still need help?</Text>
           <Text style={styles.supportText}>
             For account, schedule, or visit questions, contact your agency administrator. For
-            software issues, reach RayHealthEVV Support.
+            software issues, reach HealthEVV Support.
           </Text>
           <Pressable
             onPress={openSupportEmail}
             style={({ pressed }) => [styles.supportBtn, pressed && { opacity: 0.85 }]}
             accessibilityRole="button"
-            accessibilityLabel="Email RayHealthEVV support"
+            accessibilityLabel="Email HealthEVV support"
           >
             <Ionicons name="mail-outline" size={17} color="#fff" />
             <Text style={styles.supportBtnText}>Email Support</Text>
@@ -565,7 +565,7 @@ export default function HelpScreen() {
         </View>
 
         <Text style={styles.footer}>
-          RayHealthEVV™ v{version}{'\n'}Copyright © 2026 RayHealthEVV LLC. All Rights Reserved.
+          HealthEVV™ v{version}{'\n'}Copyright © 2026 HealthEVV LLC. All Rights Reserved.
         </Text>
       </ScrollView>
     </View>

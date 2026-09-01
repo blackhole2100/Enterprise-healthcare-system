@@ -154,7 +154,7 @@ export function StaffPage() {
   useEffect(() => { loadStaff(); }, [loadStaff]);
 
   const focusInvite   = () => document.getElementById('email')?.focus();
-  const fillSampleData = () => { setEmail('caregiver+sample@rayhealth.test'); setRole('caregiver'); };
+  const fillSampleData = () => { setEmail('caregiver+sample@health.test'); setRole('caregiver'); };
 
   // ── Create invite ────────────────────────────────────────────────
   const handleInvite = async (e: React.FormEvent) => {

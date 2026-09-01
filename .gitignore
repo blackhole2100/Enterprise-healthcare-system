@@ -6,7 +6,7 @@ node_modules/
 dist/
 **/dist/
 # No dist is committed. Vercel's build now compiles the workspace deps itself
-# (buildCommand runs `turbo build` for @rayhealth/web + @rayhealth/app and
+# (buildCommand runs `turbo build` for @health/web + @health/app and
 # their dependencies), so core/app/web dist are all produced at deploy time.
 .turbo/
 **/.turbo/

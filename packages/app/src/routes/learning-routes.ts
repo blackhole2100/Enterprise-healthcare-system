@@ -1,7 +1,7 @@
 import { Router, type Request, type Response } from 'express';
 import type { Knex } from 'knex';
 import { z } from 'zod';
-import { LearningRepository } from '@rayhealth/core';
+import { LearningRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 
 const router = Router();

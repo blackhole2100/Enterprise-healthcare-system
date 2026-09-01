@@ -43,4 +43,4 @@ assignees: durga710
 
 ## Security-sensitive?
 
-If this bug could be exploited (auth bypass, data leak, injection, privilege escalation, brute-force vector), **do not file it as a public issue.** Email durga@rayhealthevv.com or follow the disclosure process in `SECURITY.md`.
+If this bug could be exploited (auth bypass, data leak, injection, privilege escalation, brute-force vector), **do not file it as a public issue.** Email durga@healthevv.com or follow the disclosure process in `SECURITY.md`.

@@ -13,10 +13,10 @@ describe('TrustCenterPage', () => {
     );
   }
 
-  it('renders the hero heading "RayHealthEVV Trust Center"', () => {
+  it('renders the hero heading "HealthEVV Trust Center"', () => {
     renderPage();
     expect(
-      screen.getByRole('heading', { name: /RayHealthEVV Trust Center/i, level: 1 })
+      screen.getByRole('heading', { name: /HealthEVV Trust Center/i, level: 1 })
     ).toBeInTheDocument();
   });
 

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import {
   AGGREGATOR_SWEEP_ACTOR_ID,
   runAggregatorSubmissionSweep,

@@ -11,7 +11,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@rayhealth/core': path.resolve(__dirname, '../core/src'),
+      '@health/core': path.resolve(__dirname, '../core/src'),
     },
     dedupe: ['react', 'react-dom'],
   },

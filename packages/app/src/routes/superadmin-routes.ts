@@ -33,7 +33,7 @@ import {
   PlatformCredentialRepository,
   SUPER_ADMIN_ACTOR_ID,
   type AgencyReviewStatus,
-} from '@rayhealth/core';
+} from '@health/core';
 import { requirePlatformAdmin } from '../middleware/require-platform-admin.js';
 import { safeError } from '../security/safe-log.js';
 import {
@@ -56,9 +56,9 @@ const reviewSchema = z.object({
 // ── WebAuthn (Face ID / device biometric) 2FA config ──────────────────────────
 // RP ID must equal the site's registrable domain; origin is the full URL the
 // browser shows. Defaults target production; override per-env for previews/dev.
-const RP_ID = process.env.WEBAUTHN_RP_ID || 'rayhealthevv.com';
-const RP_ORIGIN = process.env.WEBAUTHN_ORIGIN || 'https://rayhealthevv.com';
-const RP_NAME = 'RayHealth Platform';
+const RP_ID = process.env.WEBAUTHN_RP_ID || 'healthevv.com';
+const RP_ORIGIN = process.env.WEBAUTHN_ORIGIN || 'https://healthevv.com';
+const RP_NAME = 'Health Platform';
 
 const b64uToBytes = (s: string): Uint8Array<ArrayBuffer> => {
   const buf = Buffer.from(s, 'base64url');

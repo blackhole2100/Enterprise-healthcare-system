@@ -1,6 +1,6 @@
 {
-  "name": "RayHealth EVV",
-  "short_name": "RayHealth",
+  "name": "Health EVV",
+  "short_name": "Health",
   "description": "Pennsylvania-ready electronic visit verification + a Compliance Engine for audit defense, exception resolution, authorization oversight, and credential management.",
   "id": "/",
   "scope": "/",

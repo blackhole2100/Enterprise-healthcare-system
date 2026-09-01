@@ -2,10 +2,10 @@
 
 **Version:** 1.0
 **Effective:** 2026-05-09
-**Owner:** RayHealth EVV Security Officer
+**Owner:** Health EVV Security Officer
 **Cross-references:** `SECURITY_POLICY.md` §5.2; `INCIDENT_RESPONSE.md` §8
 
-This document explains *how* RayHealth EVV prevents one home-care
+This document explains *how* Health EVV prevents one home-care
 agency from seeing another agency's data — the single most important
 control in any multi-tenant healthcare platform. It is the engineering
 reference behind the policy claim that "every PHI query is scoped by
@@ -20,7 +20,7 @@ deviations.
 
 ## 1. The Trust Boundary
 
-Every authenticated request to the RayHealth API carries a server-issued
+Every authenticated request to the Health API carries a server-issued
 credential that establishes which agency the user belongs to. There are
 exactly two credential types:
 

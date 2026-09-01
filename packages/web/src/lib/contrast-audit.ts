@@ -19,7 +19,7 @@
  *   window.__contrastAudit()            // -> Offender[], also console.table'd
  *   http://localhost:5173/admin?contrast=1   // outlines offenders in the page
  */
-import { contrastRatio, parseCssColor, type Rgb } from '@rayhealth/core/domain/theme-resolver.js';
+import { contrastRatio, parseCssColor, type Rgb } from '@health/core/domain/theme-resolver.js';
 
 export interface Offender {
   ratio: number;

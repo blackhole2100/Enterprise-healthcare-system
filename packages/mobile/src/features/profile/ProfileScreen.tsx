@@ -111,8 +111,8 @@ export default function ProfileScreen() {
     confirmEmail({
       title: 'Contact Support',
       message: 'Our support team is ready to help. Reach us by email and we will get back to you.',
-      email: 'support@rayhealthevv.com',
-      subject: 'RayHealthEVV Support',
+      email: 'support@healthevv.com',
+      subject: 'HealthEVV Support',
       icon: 'help-buoy-outline',
     });
   };
@@ -120,21 +120,21 @@ export default function ProfileScreen() {
   const openPrivacyPolicy = () => {
     confirmWebLink({
       title: 'Privacy policy',
-      message: 'Our privacy policy is available on the RayHealthEVV website. It explains how we protect and handle your data.',
-      url: 'https://rayhealthevv.com/privacy',
+      message: 'Our privacy policy is available on the HealthEVV website. It explains how we protect and handle your data.',
+      url: 'https://healthevv.com/privacy',
       icon: 'shield-checkmark-outline',
     });
   };
 
   const showAbout = () => {
     showAppAlert(
-      'RayHealthEVV',
+      'HealthEVV',
       `Version ${version}. Electronic Visit Verification for home care, built for Pennsylvania agencies and caregivers. Learn more on our website.`,
       [{ text: 'Close', style: 'cancel' }],
       {
         variant: 'info',
         icon: 'information-circle-outline',
-        link: { label: 'rayhealthevv.com', onPress: () => void openInAppBrowser('https://rayhealthevv.com') },
+        link: { label: 'healthevv.com', onPress: () => void openInAppBrowser('https://healthevv.com') },
       },
     );
   };
@@ -252,21 +252,21 @@ export default function ProfileScreen() {
             icon="book-outline"
             tint={colors.cyan}
             title="Help & User Guide"
-            subtitle="How to use RayHealthEVV"
+            subtitle="How to use HealthEVV"
             onPress={() => router.push('/help')}
           />
           <Row
             icon="help-buoy-outline"
             tint={colors.amber}
             title="Contact Support"
-            subtitle="Email RayHealthEVV support"
+            subtitle="Email HealthEVV support"
             onPress={openSupport}
           />
           <Row
             icon="shield-checkmark-outline"
             tint={colors.success}
             title="Privacy policy"
-            subtitle="How RayHealthEVV handles your data"
+            subtitle="How HealthEVV handles your data"
             onPress={openPrivacyPolicy}
           />
           <Row
@@ -287,7 +287,7 @@ export default function ProfileScreen() {
           <Text style={styles.logoutText}>Log out</Text>
         </Pressable>
 
-        <Text style={styles.footer}>RayHealthEVV™ · HIPAA-secured</Text>
+        <Text style={styles.footer}>HealthEVV™ · HIPAA-secured</Text>
       </ScrollView>
     </View>
   );

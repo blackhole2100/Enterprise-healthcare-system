@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createApp } from '../../app.js';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 
 beforeAll(() => setTestJwtSecret());

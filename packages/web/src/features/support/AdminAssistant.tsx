@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { postJson } from '../../lib/api-client.js';
 
-const SESSION_KEY = 'rayhealth_admin_assistant_session';
+const SESSION_KEY = 'health_admin_assistant_session';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -11,7 +11,7 @@ interface ChatMessage {
 const greeting: ChatMessage = {
   role: 'assistant',
   content:
-    "Hi. I'm RayHealthOps. I can answer operational questions about your agency: visit counts, open exceptions, expiring credentials, and so on. What would you like to look at?"
+    "Hi. I'm HealthOps. I can answer operational questions about your agency: visit counts, open exceptions, expiring credentials, and so on. What would you like to look at?"
 };
 
 const SUGGESTIONS = [
@@ -112,7 +112,7 @@ export function AdminAssistant() {
       {open && (
         <div
           role="dialog"
-          aria-label="RayHealthOps admin assistant"
+          aria-label="HealthOps admin assistant"
           style={{
             position: 'fixed',
             right: '1.5rem',
@@ -138,7 +138,7 @@ export function AdminAssistant() {
               gap: '0.5rem'
             }}
           >
-            <span style={{ fontSize: '1rem', fontWeight: 800 }}>RayHealthOps</span>
+            <span style={{ fontSize: '1rem', fontWeight: 800 }}>HealthOps</span>
             <span style={{ fontSize: '0.7rem', opacity: 0.7, marginLeft: 'auto' }}>
               your agency · read-only
             </span>

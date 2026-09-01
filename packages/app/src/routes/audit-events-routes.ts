@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { z } from 'zod';
-import { AuditEventRepository, auditEventTypes, auditOutcomes } from '@rayhealth/core';
+import { AuditEventRepository, auditEventTypes, auditOutcomes } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 
 const router = Router();

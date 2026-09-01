@@ -3,7 +3,7 @@
 **Authored by Durga Ghimeray**
 
 **Purpose:** Each vendor below processes electronic Protected Health
-Information (ePHI) on RayHealth EVV's behalf. Under HIPAA §164.308(b)(1),
+Information (ePHI) on Health EVV's behalf. Under HIPAA §164.308(b)(1),
 every such "business associate" must sign a written BAA before live PHI
 flows through their systems. This document holds drafted request emails —
 copy, fill in your title/contact info, send.
@@ -31,7 +31,7 @@ date in this checklist and update `SECURITY_POLICY.md` §10.
 
 > **Authorship note.** Ported from a predecessor codebase on 2026-05-08
 > and adapted to match the current production deployment:
-> Vercel project `rayhealth-evv-platform-app`, Neon project
+> Vercel project `health-evv-platform-app`, Neon project
 > `late-art-87716813`, Cloudflare DNS in front of Vercel, AWS Bedrock
 > for AI inference.
 
@@ -41,12 +41,12 @@ date in this checklist and update `SECURITY_POLICY.md` §10.
 
 **Recipient:** `compliance@vercel.com`
 **Cc:** `support@vercel.com`
-**Subject:** BAA request — RayHealth EVV (production hosting on Vercel)
+**Subject:** BAA request — Health EVV (production hosting on Vercel)
 
 ```
 Hi Vercel team,
 
-I'm writing on behalf of RayHealth EVV (rayhealthevv.com), a home-care
+I'm writing on behalf of Health EVV (healthevv.com), a home-care
 operations platform that handles electronic Protected Health Information
 (ePHI) for U.S. home-care agencies and their caregivers.
 
@@ -62,13 +62,13 @@ Could you please:
 3. Note any infrastructure changes required (e.g., enabling PHI-mode
    regions, secure log routing) once the BAA is in place
 
-Vercel project: rayhealth-evv-platform-app (project ID prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG)
-Production domain: rayhealthevv.com
+Vercel project: health-evv-platform-app (project ID prj_Y0bFZJZND68I4eBeBfE2oqCzo5OG)
+Production domain: healthevv.com
 Account email: reyghim1093@gmail.com
 
 Thanks,
 [Your name]
-[Your title — e.g., Founder, RayHealth EVV]
+[Your title — e.g., Founder, Health EVV]
 [Phone, optional]
 ```
 
@@ -108,7 +108,7 @@ Account email: reyghim1093@gmail.com
 
 Thanks,
 [Your name]
-[Your title — e.g., Founder, RayHealth EVV]
+[Your title — e.g., Founder, Health EVV]
 ```
 
 **Current official position:** Neon documents HIPAA as an add-on to the Scale
@@ -130,7 +130,7 @@ official Google Cloud privacy/compliance console flow and retain the accepted
 agreement plus covered-service list.
 
 1. Open: <https://console.cloud.google.com>
-2. Top nav → switch to the project that hosts your Firebase: **rayhealthevv**
+2. Top nav → switch to the project that hosts your Firebase: **healthevv**
 3. Open the current **Privacy compliance and records** / legal-compliance area
 4. Review and accept the **Business Associate Agreement** if the account is eligible
 5. The acceptance flow walks through:
@@ -147,14 +147,14 @@ usually means the project type is set wrong), email
 `gcp-baa-support@google.com` with:
 
 ```
-Subject: Cannot accept BAA — RayHealth EVV / project rayhealthevv
+Subject: Cannot accept BAA — Health EVV / project healthevv
 
 Hi Google Cloud compliance,
 
 I'm trying to accept the Business Associate Agreement for our Google
 Cloud project but the Compliance section doesn't show the BAA option.
 
-Project ID: rayhealthevv
+Project ID: healthevv
 Account email: reyghim1093@gmail.com
 Services under review: Google Maps SDK for Android; Expo notification delivery
 
@@ -163,7 +163,7 @@ what project configuration is required?
 
 Thanks,
 [Your name]
-[Your title — e.g., Founder, RayHealth EVV]
+[Your title — e.g., Founder, Health EVV]
 ```
 
 ---
@@ -172,12 +172,12 @@ Thanks,
 
 **Recipient:** `support@resend.com`
 **Cc:** Use the in-app help chat at <https://resend.com/help> if email is slow
-**Subject:** BAA request — RayHealth EVV (transactional email through Resend)
+**Subject:** BAA request — Health EVV (transactional email through Resend)
 
 ```
 Hi Resend team,
 
-RayHealth EVV (rayhealthevv.com) uses Resend for transactional email —
+Health EVV (healthevv.com) uses Resend for transactional email —
 caregiver invitations, password resets, agency notifications. Some of
 these emails reference patient/client identifiers, so they fall under
 HIPAA's ePHI scope.
@@ -195,14 +195,14 @@ Could you please:
    route through a HIPAA-tier IP pool?
 
 Resend account email: reyghim1093@gmail.com
-Sending domain: send.rayhealthevv.com (DNS verified)
+Sending domain: send.healthevv.com (DNS verified)
 
 Thanks,
 [Your name]
-[Your title — e.g., Founder, RayHealth EVV]
+[Your title — e.g., Founder, Health EVV]
 ```
 
-**Required evidence:** RayHealth has no current public Resend source proving a
+**Required evidence:** Health has no current public Resend source proving a
 BAA-eligible tier. Obtain written plan eligibility and an executed BAA directly
 from Resend. Until then, keep PHI/client identifiers out of Resend messages or
 use a separately approved provider.
@@ -237,18 +237,18 @@ the contractual protection has to be in place.
 
 ## 6. Cloudflare (applicability review required)
 
-Cloudflare sits in front of Vercel for DNS and TLS termination. RayHealth
+Cloudflare sits in front of Vercel for DNS and TLS termination. Health
 **does not** use Cloudflare features that retain customer content
 (no Workers KV, R2, D1, Stream, Images, or Cloudflare Workers running
 custom code). Cloudflare's role is limited to:
 
-- DNS resolution for `rayhealthevv.com`
+- DNS resolution for `healthevv.com`
 - TLS termination (Universal SSL) and re-encryption to the Vercel origin
 - WAF / bot-management rules (operating on metadata, not PHI payloads)
 
 HHS limits the conduit exception to transmission-only services with only
 transient storage. Because Cloudflare terminates TLS and may apply WAF/logging
-features, RayHealth must document the actual configuration and obtain a written
+features, Health must document the actual configuration and obtain a written
 applicability decision; this file no longer makes a categorical no-BAA claim.
 
 The following features clearly require a new review before use with ePHI:
@@ -283,11 +283,11 @@ Healthcare/Optum, Waystar, Office Ally). Once selected, request the BAA and
 companion guide:
 
 ```
-Subject: BAA + 837P/835 companion guide request — RayHealth EVV
+Subject: BAA + 837P/835 companion guide request — Health EVV
 
 Hi [Clearinghouse] onboarding team,
 
-RayHealth EVV (rayhealthevv.com) is a home-care EVV and billing platform.
+Health EVV (healthevv.com) is a home-care EVV and billing platform.
 We intend to submit 837P professional claims and retrieve 835 remittance
 advice through your clearinghouse on behalf of enrolled home-care agencies.
 Because 837P transactions contain electronic Protected Health Information,
@@ -303,7 +303,7 @@ Account/contact: reyghim1093@gmail.com
 
 Thanks,
 [Your name]
-[Your title — e.g., Founder, RayHealth EVV]
+[Your title — e.g., Founder, Health EVV]
 ```
 
 **Required evidence before go-live:** executed BAA ID/date recorded in the
@@ -334,7 +334,7 @@ moves off the sandbox transport). AWS and Neon are active.
 You don't need to wait for these — if a vendor asks any of them, here's
 the honest answer based on the current architecture:
 
-- **Subprocessors:** RayHealth EVV processes PHI through these
+- **Subprocessors:** Health EVV processes PHI through these
   subprocessors: Vercel (compute), Neon (Postgres), Google Firebase
   (push notifications), Resend (email), AWS Bedrock (AI inference), and —
   once an agency enables a live transport — the selected claims
@@ -353,7 +353,7 @@ the honest answer based on the current architecture:
   and for vendor-stored content. The exact verification status is
   tracked in `ENCRYPTION_VERIFICATION.md`.
 - **Encryption in transit:** TLS 1.2+ everywhere; verified by HSTS in
-  the rayhealthevv.com production deployment (response header
+  the healthevv.com production deployment (response header
   `strict-transport-security: max-age=15552000; includeSubDomains`).
 - **Audit logging:** Application-level audit trail in the `audit_events`
   table, made append-only at the database layer via the

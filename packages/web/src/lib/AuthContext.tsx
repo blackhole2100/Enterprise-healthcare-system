@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { getCsrfToken, setCsrfToken } from './session-state.js';
 // Deep import, NOT the package barrel: the barrel re-exports every repository
 // and would pull knex, pg, and ssh2-sftp-client into the browser bundle.
-import { AGENCY_THEME_VARIABLES, resolveAgencyTheme } from '@rayhealth/core/domain/theme-resolver.js';
+import { AGENCY_THEME_VARIABLES, resolveAgencyTheme } from '@health/core/domain/theme-resolver.js';
 
 const API_BASE = (import.meta as unknown as { env: Record<string, string> }).env?.VITE_API_URL ?? '/api';
 

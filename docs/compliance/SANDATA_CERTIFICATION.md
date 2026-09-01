@@ -23,7 +23,7 @@ is required before any Medicaid-funded visit data we submit counts toward state 
 
 All six CURES Act mandatory data elements must be captured and transmitted:
 
-| # | Element | Where captured in RayHealth | Status |
+| # | Element | Where captured in Health | Status |
 |---|---------|----------------------------|--------|
 | 1 | Type of service (HCPCS code) | `evv_visits.service_code` | captured at clock-in |
 | 2 | Individual receiving service | `evv_visits.client_id` → `clients` table | present |

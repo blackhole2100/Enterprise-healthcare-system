@@ -101,7 +101,7 @@ describe('createEmailClient', () => {
     expect(input.Destination?.ToAddresses).toEqual(['caregiver@example.test']);
 
     const simple = input.Content?.Simple;
-    expect(simple?.Subject?.Data).toBe("You're invited to join Keystone Home Care on RayHealth EVV");
+    expect(simple?.Subject?.Data).toBe("You're invited to join Keystone Home Care on Health EVV");
     expect(simple?.Subject?.Charset).toBe('UTF-8');
     expect(simple?.Body?.Html?.Data).toContain('https://app.example/accept-invite?token=abc');
     expect(simple?.Body?.Text?.Data).toContain('https://app.example/accept-invite?token=abc');
@@ -130,7 +130,7 @@ describe('createEmailClient', () => {
     });
 
     const command = sendSpy.mock.calls[0]?.[0] as SendEmailCommand;
-    expect(command.input.FromEmailAddress).toBe('RayHealth <onboarding@www.rayhealthevv.com>');
+    expect(command.input.FromEmailAddress).toBe('Health <onboarding@www.healthevv.com>');
   });
 
   it('returns ok:false with an error category when SES throws a known error', async () => {
@@ -205,10 +205,10 @@ describe('createEmailClient', () => {
 
 describe('buildInviteUrl', () => {
   it('prefers INVITE_URL_BASE when set', () => {
-    process.env.INVITE_URL_BASE = 'https://rayhealthevv.com';
+    process.env.INVITE_URL_BASE = 'https://healthevv.com';
     process.env.APP_URL = 'https://other.example';
     expect(buildInviteUrl('abc-123')).toBe(
-      'https://rayhealthevv.com/accept-invite?token=abc-123',
+      'https://healthevv.com/accept-invite?token=abc-123',
     );
   });
 
@@ -225,8 +225,8 @@ describe('buildInviteUrl', () => {
   });
 
   it('strips trailing slashes from the base', () => {
-    process.env.INVITE_URL_BASE = 'https://rayhealthevv.com///';
-    expect(buildInviteUrl('id')).toBe('https://rayhealthevv.com/accept-invite?token=id');
+    process.env.INVITE_URL_BASE = 'https://healthevv.com///';
+    expect(buildInviteUrl('id')).toBe('https://healthevv.com/accept-invite?token=id');
   });
 
   it('URL-encodes the invite id', () => {

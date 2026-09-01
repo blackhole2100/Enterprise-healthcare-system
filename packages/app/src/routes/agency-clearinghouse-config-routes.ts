@@ -17,7 +17,7 @@ import {
   isBlockedOutboundHost,
   isSafeOutboundUrl,
   type PartialClearinghouseConfig,
-} from '@rayhealth/core'
+} from '@health/core'
 import { requireCapability } from '../middleware/require-capability.js'
 import { buildTransportForAgency } from '../services/clearinghouse-service.js'
 

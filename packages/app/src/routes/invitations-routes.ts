@@ -6,7 +6,7 @@ import {
   UserAgencyRepository,
   UserRepository,
   type NewAuditEvent
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 const router = Router();
@@ -261,8 +261,8 @@ router.post('/accept', async (req, res) => {
       userId: result.user.id,
       linkedExistingAccount: result.linkedExistingAccount,
       message: result.linkedExistingAccount
-        ? 'This agency is now connected to your existing RayHealthEVV account. Sign in with your usual credentials.'
-        : `Welcome to ${result.invite.role === 'caregiver' ? 'the team' : 'RayHealth EVV'}.`
+        ? 'This agency is now connected to your existing HealthEVV account. Sign in with your usual credentials.'
+        : `Welcome to ${result.invite.role === 'caregiver' ? 'the team' : 'Health EVV'}.`
     });
   } catch (err: unknown) {
     const status = (err as { status?: number })?.status ?? 500;

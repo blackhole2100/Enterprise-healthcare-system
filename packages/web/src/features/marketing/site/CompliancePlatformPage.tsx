@@ -3,20 +3,20 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
  * Platform › Compliance & audit.
- * LIVE capability. RayHealth records a tamper-evident audit trail and enforces
+ * LIVE capability. Health records a tamper-evident audit trail and enforces
  * EVV compliance against the frameworks Pennsylvania home-care agencies answer
  * to: the 21st Century Cures Act, PA DHS / PROMISe, HIPAA, and Sandata
  * aggregator submission. This page describes shipped behavior.
  */
 
 const frameworks = [
-  { t: '21st Century Cures Act', b: 'Federal EVV mandate. RayHealth captures all six required elements on every visit, type of service, individual receiving it, the date, the location, the caregiver, and the begin/end times.',
+  { t: '21st Century Cures Act', b: 'Federal EVV mandate. Health captures all six required elements on every visit, type of service, individual receiving it, the date, the location, the caregiver, and the begin/end times.',
     i: mkic(<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></>) },
   { t: 'PA DHS / PROMISe', b: 'Built for Pennsylvania. Visit and service data is structured to line up with DHS expectations and the PROMISe claim world your billing flows through.',
     i: mkic(<><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M8 14h6" /></>) },
   { t: 'HIPAA safeguards', b: 'PHI is scoped per agency, sessions use HttpOnly cookies, passwords are hashed with bcrypt, and state-changing requests carry CSRF protection, privacy and security by construction.',
     i: mkic(<><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></>) },
-  { t: 'Sandata aggregator mapping', b: 'Pennsylvania routes EVV through the Sandata aggregator. RayHealth maps visit records to the aggregator’s expected format so submissions go out structured the way the state ingests them.',
+  { t: 'Sandata aggregator mapping', b: 'Pennsylvania routes EVV through the Sandata aggregator. Health maps visit records to the aggregator’s expected format so submissions go out structured the way the state ingests them.',
     i: mkic(<><circle cx="12" cy="12" r="3" /><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" /></>) },
 ] as const;
 
@@ -36,8 +36,8 @@ const stats = [
 
 const faqs = [
   { q: 'Is the audit trail and EVV compliance live today?', a: 'Yes. Tamper-evident audit logging and EVV compliance are shipped and in use. Every visit captures the six federal EVV elements, and actions on records are written to an append-only audit trail with the actor and a timestamp.' },
-  { q: 'How does RayHealth protect PHI under HIPAA?', a: 'PHI is scoped per agency so one agency can never see another’s data, sessions run on HttpOnly cookies to keep tokens out of JavaScript, passwords are hashed with bcrypt, and state-changing requests are CSRF-protected. These are live safeguards, not roadmap items.' },
-  { q: 'How do you handle Pennsylvania’s Sandata aggregator?', a: 'Pennsylvania routes EVV data through the Sandata aggregator. RayHealth maps each visit record to the aggregator’s expected structure so submissions are formatted the way the state ingests them, rather than left for staff to reshape by hand.' },
+  { q: 'How does Health protect PHI under HIPAA?', a: 'PHI is scoped per agency so one agency can never see another’s data, sessions run on HttpOnly cookies to keep tokens out of JavaScript, passwords are hashed with bcrypt, and state-changing requests are CSRF-protected. These are live safeguards, not roadmap items.' },
+  { q: 'How do you handle Pennsylvania’s Sandata aggregator?', a: 'Pennsylvania routes EVV data through the Sandata aggregator. Health maps each visit record to the aggregator’s expected structure so submissions are formatted the way the state ingests them, rather than left for staff to reshape by hand.' },
   { q: 'What makes the audit trail “tamper-evident”?', a: 'The trail is append-only: actions are recorded in sequence with their actor and timestamp, and history isn’t silently overwritten. When a record changes, the change is logged alongside what came before, so a reviewer sees the full chain, not just the latest state.' },
 ] as const;
 
@@ -71,7 +71,7 @@ export function CompliancePlatformPage() {
           <span className="mk-eyebrow">Platform · Compliance</span>
           <h1 className="mk-h1">Compliance you can prove, not just promise.</h1>
           <p className="mk-lead">
-            RayHealth records a tamper-evident audit trail and enforces EVV compliance against the frameworks
+            Health records a tamper-evident audit trail and enforces EVV compliance against the frameworks
             Pennsylvania home-care agencies actually answer to. When a reviewer asks you to prove a visit happened,
             the evidence is already there, captured, scoped, and exportable. This is live today.
           </p>
@@ -90,7 +90,7 @@ export function CompliancePlatformPage() {
         <div className="mk-wrap">
           <p className="mk-eylabel">The frameworks you answer to</p>
           <h2 className="mk-h2">Built around the rules that govern PA home care.</h2>
-          <p className="mk-deck">RayHealth isn&rsquo;t compliance theater bolted on after the fact, these requirements shape how visits are captured, stored, and submitted.</p>
+          <p className="mk-deck">Health isn&rsquo;t compliance theater bolted on after the fact, these requirements shape how visits are captured, stored, and submitted.</p>
           <div className="mk-grid cols2">
             {frameworks.map((f) => (
               <div className="mk-card" key={f.t}>
@@ -112,7 +112,7 @@ export function CompliancePlatformPage() {
               <p className="mk-eylabel">Tamper-evident audit log</p>
               <h3>Every action, in order, with a name on it.</h3>
               <p>
-                RayHealth writes an append-only record of what happened to each visit, who clocked in, who edited a
+                Health writes an append-only record of what happened to each visit, who clocked in, who edited a
                 time, who approved it, and when it went to the aggregator. History isn&rsquo;t silently overwritten,
                 so the chain reads as evidence a reviewer can trust.
               </p>
@@ -123,7 +123,7 @@ export function CompliancePlatformPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com · Audit trail · visit #48217" />
+              <Chrome url="app.healthevv.com · Audit trail · visit #48217" />
               <div style={{ background: 'var(--color-text)', border: '1px solid var(--line)', borderRadius: 12, padding: 14, fontFamily: 'ui-monospace,SFMono-Regular,Menlo,monospace' }}>
                 {logRows.map((r, i) => (
                   <div key={r.ts} style={{ display: 'flex', alignItems: 'center', gap: '.6rem', padding: '9px 2px', borderTop: i ? '1px solid rgba(255,255,255,.08)' : 'none' }}>
@@ -143,7 +143,7 @@ export function CompliancePlatformPage() {
               <p className="mk-eylabel">21st Century Cures Act</p>
               <h3>All six EVV elements, on every visit.</h3>
               <p>
-                The federal mandate names six things every electronic visit must record. RayHealth captures all of
+                The federal mandate names six things every electronic visit must record. Health captures all of
                 them automatically at clock-in and clock-out, so a verified visit is complete by construction, not
                 by a coordinator remembering to fill in a field.
               </p>
@@ -180,7 +180,7 @@ export function CompliancePlatformPage() {
       <section className="mk-sec">
         <div className="mk-wrap">
           <p className="mk-eylabel">How it operates</p>
-          <h2 className="mk-h2">How an audit goes with RayHealth.</h2>
+          <h2 className="mk-h2">How an audit goes with Health.</h2>
           <p className="mk-deck">When the request for evidence lands, the work is mostly already done, because every visit was captured cleanly the first time.</p>
           <div className="mk-steps">
             {auditSteps.map((s) => (

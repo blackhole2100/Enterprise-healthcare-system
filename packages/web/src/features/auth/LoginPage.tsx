@@ -133,7 +133,7 @@ export function LoginPage() {
           }}
         >
           <BrandLogo variant="mark" height={30} alt="" />
-          RayHealth
+          Health
           <span
             style={{
               background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',

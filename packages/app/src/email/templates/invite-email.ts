@@ -73,17 +73,17 @@ export function renderInviteEmail(fields: InviteEmailFields): InviteEmailPayload
   const roleBlurb = ROLE_BLURBS[role.toLowerCase()] ?? 'access the platform';
   const expires = formatExpiration(fields.expiresAt);
   const invitedByName = fields.invitedByName?.trim();
-  const support = fields.supportEmail?.trim() || 'support@rayhealthevv.com';
+  const support = fields.supportEmail?.trim() || 'support@healthevv.com';
 
-  const subject = `You're invited to join ${agencyName} on RayHealth EVV`;
+  const subject = `You're invited to join ${agencyName} on Health EVV`;
 
   // ---------- Plain text ----------
   const textLines = [
     `Hi ${fields.to},`,
     '',
     invitedByName
-      ? `${invitedByName} has invited you to join ${agencyName} on RayHealth EVV as a ${role}.`
-      : `You've been invited to join ${agencyName} on RayHealth EVV as a ${role}.`,
+      ? `${invitedByName} has invited you to join ${agencyName} on Health EVV as a ${role}.`
+      : `You've been invited to join ${agencyName} on Health EVV as a ${role}.`,
     '',
     `As a ${role}, you'll be able to ${roleBlurb}.`,
     '',
@@ -96,7 +96,7 @@ export function renderInviteEmail(fields: InviteEmailFields): InviteEmailPayload
     '',
     `Questions? Reach us at ${support}.`,
     '',
-    ',  The RayHealth EVV team'
+    ',  The Health EVV team'
   ];
   const text = textLines.join('\n');
 
@@ -125,7 +125,7 @@ export function renderInviteEmail(fields: InviteEmailFields): InviteEmailPayload
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,23,42,0.08);">
         <tr>
           <td style="background-color:#0b2a4a;padding:32px 32px 28px;color:#ffffff;">
-            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">RayHealth EVV</div>
+            <div style="font-size:24px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;">Health EVV</div>
             <div style="margin-top:6px;font-size:14px;color:#fb923c;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;">Staff invitation</div>
           </td>
         </tr>
@@ -136,7 +136,7 @@ export function renderInviteEmail(fields: InviteEmailFields): InviteEmailPayload
               ${safeInvitedBy
                 ? `<strong>${safeInvitedBy}</strong> has invited you to join`
                 : `You've been invited to join`}
-              <strong>${safeAgency}</strong> on RayHealth EVV as a <strong>${safeRole}</strong>.
+              <strong>${safeAgency}</strong> on Health EVV as a <strong>${safeRole}</strong>.
             </p>
             <p style="margin:0 0 24px;font-size:16px;line-height:1.55;color:#334155;">
               As a ${safeRole}, you'll be able to ${safeRoleBlurb}.

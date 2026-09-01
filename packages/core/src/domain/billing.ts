@@ -11,7 +11,7 @@ import { paServiceCodes } from '../config/pennsylvania.js';
  * product: a claim line should only exist behind a verified visit.
  *
  * Money is stored in integer cents to avoid float drift. Charge amounts are
- * OPTIONAL (default 0 / "unpriced"): RayHealth is the verification + claim
+ * OPTIONAL (default 0 / "unpriced"): Health is the verification + claim
  * assembly layer, and the payer fee schedule determines the paid amount, so we
  * never invent dollar rates. Units (HCPCS units of measure) are always
  * computed and validated.

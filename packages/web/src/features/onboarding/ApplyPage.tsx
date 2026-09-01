@@ -179,7 +179,7 @@ export function ApplyPage() {
           </ol>
 
           <p style={{ marginTop: '2.4rem', fontSize: '0.76rem', color: 'var(--pub-faint)', letterSpacing: '0.04em' }}>
-            Pennsylvania · Direct care employment · Hiring powered by RayHealthEVV™
+            Pennsylvania · Direct care employment · Hiring powered by HealthEVV™
           </p>
         </aside>
 

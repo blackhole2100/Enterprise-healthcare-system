@@ -3,7 +3,7 @@ import { SiteLayout, mkic, MK_CHECK } from './SiteLayout.js';
 
 /**
  * /launch, rebuilt on the shared SiteLayout (teal/orange brand). The
- * "RayHealthEVV™ is live" launch / what's-new narrative. Live capabilities
+ * "HealthEVV™ is live" launch / what's-new narrative. Live capabilities
  * use teal check tiles; roadmap items carry an orange "Roadmap" pill so we
  * tell agencies straight what runs in production today vs. what's committed.
  */
@@ -28,7 +28,7 @@ const roadmapItems: readonly string[] = [
   'Billing readiness, claim-blocker detection before submission',
   'Payroll readiness, pay-period approvals, exports, authorized provider handoff',
   'Quality assurance, audits, corrective actions, documentation review',
-  'RayHealthEVV™ Academy, caregiver lessons, quizzes, certificate renewals',
+  'HealthEVV™ Academy, caregiver lessons, quizzes, certificate renewals',
   'Family portal, calm, real-time visibility, no alarm-bell alerts',
 ] as const;
 
@@ -39,9 +39,9 @@ export function LaunchPage() {
         <div className="mk-hero-grid" aria-hidden />
         <div className="mk-heroin">
           <span className="mk-eyebrow">Launch</span>
-          <h1 className="mk-h1">RayHealthEVV™ is live, care, finally on the same page.</h1>
+          <h1 className="mk-h1">HealthEVV™ is live, care, finally on the same page.</h1>
           <p className="mk-lead">
-            Today we're launching <strong>RayHealthEVV™</strong>, an operations-grade home care
+            Today we're launching <strong>HealthEVV™</strong>, an operations-grade home care
             platform that brings scheduling, EVV, billing readiness, payroll, caregiver training,
             and family visibility into one calm workspace.
           </p>
@@ -136,7 +136,7 @@ export function LaunchPage() {
               Every visit is GPS-verified. Every clock event is timestamped and append-only. Every
               PHI access lands in a tamper-resistant audit_events row. State-aggregator export work
               (Sandata, HHAeXchange) is in flight against the existing Cures-Act data model.
-              RayHealthEVV™ is <strong>21st Cures Act-ready by design</strong>, not as a quarterly
+              HealthEVV™ is <strong>21st Cures Act-ready by design</strong>, not as a quarterly
               scramble.
             </p>
             <h2>Built for the people doing the work</h2>
@@ -170,7 +170,7 @@ export function LaunchPage() {
       <section className="mk-sec tight">
         <div className="mk-wrap">
           <div className="mk-callout">
-            <h2>Welcome to RayHealthEVV™.</h2>
+            <h2>Welcome to HealthEVV™.</h2>
             <p>Care, finally on the same page.</p>
             <div className="mk-herocta">
               <Link to="/contact" className="mk-btn mk-white">Book an agency demo</Link>

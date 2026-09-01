@@ -4,12 +4,12 @@ import { join, relative } from 'node:path';
 const ROOT = process.cwd();
 const SCAN_DIRS = ['packages/web/src', 'packages/mobile/src'];
 const bannedPatterns = [
-  { pattern: /rayhealth_token/g, message: 'browser JWT storage key must not be present' },
-  // Match both `rayhealth_foo` and `rayhealth.foo` separator styles so an
+  { pattern: /health_token/g, message: 'browser JWT storage key must not be present' },
+  // Match both `health_foo` and `health.foo` separator styles so an
   // attacker (or careless contributor) can't dodge the rule by swapping
   // the underscore for a dot.
-  { pattern: /localStorage\.setItem\(['"]rayhealth[._]/g, message: 'auth state must not be persisted to localStorage' },
-  { pattern: /sessionStorage\.setItem\(['"]rayhealth[._]/g, message: 'auth state must not be persisted to sessionStorage' },
+  { pattern: /localStorage\.setItem\(['"]health[._]/g, message: 'auth state must not be persisted to localStorage' },
+  { pattern: /sessionStorage\.setItem\(['"]health[._]/g, message: 'auth state must not be persisted to sessionStorage' },
   { pattern: /Authorization['"]?\s*:\s*`Bearer \$\{token\}`/g, message: 'web client must not attach browser bearer tokens' }
 ];
 

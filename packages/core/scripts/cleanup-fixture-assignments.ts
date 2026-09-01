@@ -15,11 +15,11 @@
  *   → evv_visits → assignments.
  *
  * SAFETY GUARD. refuses to run against the prod default branch unless
- * RAYHEALTH_ALLOW_PROD_FIXTURE_CLEANUP=1 is set (same shape as the seeder).
+ * Health_ALLOW_PROD_FIXTURE_CLEANUP=1 is set (same shape as the seeder).
  *
  * Usage:
  *   export DATABASE_URL="postgres://...?sslmode=require"
- *   # prod default branch also needs:  export RAYHEALTH_ALLOW_PROD_FIXTURE_CLEANUP=1
+ *   # prod default branch also needs:  export Health_ALLOW_PROD_FIXTURE_CLEANUP=1
  *   npx tsx packages/core/scripts/cleanup-fixture-assignments.ts
  */
 import knex, { type Knex } from 'knex';
@@ -46,14 +46,14 @@ function assertNonProd(): void {
   } catch {
     throw new Error('DATABASE_URL is not a valid URL.');
   }
-  const allowProdOverride = process.env.RAYHEALTH_ALLOW_PROD_FIXTURE_CLEANUP === '1';
+  const allowProdOverride = process.env.Health_ALLOW_PROD_FIXTURE_CLEANUP === '1';
   const looksLikeProdHost = parsed.hostname === PROD_PROXY_HOST;
   const hasBranchParam = parsed.searchParams.has('branch');
   if (looksLikeProdHost && !hasBranchParam && !allowProdOverride) {
     throw new Error(
       `Refusing to clean up: DATABASE_URL points at ${PROD_PROXY_HOST} ` +
         'without a `branch=` param. Run against a Neon branch, or set ' +
-        'RAYHEALTH_ALLOW_PROD_FIXTURE_CLEANUP=1 to override.'
+        'Health_ALLOW_PROD_FIXTURE_CLEANUP=1 to override.'
     );
   }
 }

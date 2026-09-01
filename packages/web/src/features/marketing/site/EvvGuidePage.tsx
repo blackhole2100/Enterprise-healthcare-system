@@ -144,9 +144,9 @@ export function EvvGuidePage() {
               ))}
             </ul>
 
-            <h2>How RayHealth handles it</h2>
+            <h2>How Health handles it</h2>
             <p>
-              RayHealth captures all six required elements at the moment of care, the caregiver clocks in and
+              Health captures all six required elements at the moment of care, the caregiver clocks in and
               out from the field, with location and time recorded, and keeps that verified visit tied to the
               authorization behind it. Because scheduling, verification, and billing live in one system, the
               visit that&rsquo;s captured is the visit that gets billed, and the data is formatted to flow to the
@@ -154,7 +154,7 @@ export function EvvGuidePage() {
             </p>
             <p>
               For a deeper look at how verification works inside the platform, see
-              {' '}<Link to="/solutions/electronic-visit-verification" className="mk-line">RayHealth&rsquo;s EVV solution →</Link>{' '}
+              {' '}<Link to="/solutions/electronic-visit-verification" className="mk-line">Health&rsquo;s EVV solution →</Link>{' '}
               and the
               {' '}<Link to="/resources/task-codes" className="mk-line">task code reference →</Link>{' '}
               for matching services to what was authorized.
@@ -174,7 +174,7 @@ export function EvvGuidePage() {
           <div className="mk-callout">
             <h2>Turn EVV from a chore into a clean claim.</h2>
             <p>
-              See how RayHealth captures all six elements in the field and carries them straight through to a
+              See how Health captures all six elements in the field and carries them straight through to a
               defensible, PROMISe-ready claim.
             </p>
             <div className="mk-herocta">

@@ -6,7 +6,7 @@ import {
   EvvRepository,
   paCredentialTypes,
   paCredentialStatuses,
-} from '@rayhealth/core';
+} from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 import { z } from 'zod';

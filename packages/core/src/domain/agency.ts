@@ -44,7 +44,7 @@ export type Agency = z.infer<typeof agencySchema>;
 /**
  * Path segments the public agency page must never claim: every top-level SPA
  * route and API prefix. A slug colliding with one of these would shadow the
- * real page (rayhealthevv.com/<slug> is a catch-all route).
+ * real page (healthevv.com/<slug> is a catch-all route).
  */
 export const RESERVED_PUBLIC_SLUGS = new Set([
   'api', 'admin', 'apply', 'applicant', 'interview', 'portal', 'login', 'signup', 'logout',

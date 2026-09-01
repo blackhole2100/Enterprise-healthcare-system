@@ -7,14 +7,14 @@
 # script to isolate connectivity / auth / SSL issues.
 #
 # Usage:
-#   bash "/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh/scripts/neon-connection-test.sh"
+#   bash "/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh/scripts/neon-connection-test.sh"
 
 set -eo pipefail
 
-SOURCE="/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh"
+SOURCE="/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh"
 
 echo "==================================================="
-echo " RayHealth — Neon connection sanity check"
+echo " Health — Neon connection sanity check"
 echo "==================================================="
 echo ""
 echo "This will:"

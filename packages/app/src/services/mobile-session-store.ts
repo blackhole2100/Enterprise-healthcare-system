@@ -1,5 +1,5 @@
 import type { Request } from 'express'
-import { MobileSessionRepository } from '@rayhealth/core'
+import { MobileSessionRepository } from '@health/core'
 
 export type MobileSessionStore = Pick<
   MobileSessionRepository,

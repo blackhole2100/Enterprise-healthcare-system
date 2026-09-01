@@ -34,7 +34,7 @@ import {
   type ImportAuthorizationRow,
   type ImportVisitRow,
   type RowResult,
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 const router = Router();
@@ -174,7 +174,7 @@ router.get('/:entity/template.csv', (req: Request, res: Response) => {
   if (!entity) return;
   const header = IMPORT_TEMPLATES[entity].join(',') + '\n';
   res.setHeader('content-type', 'text/csv; charset=utf-8');
-  res.setHeader('content-disposition', `attachment; filename="rayhealth-import-${entity}-template.csv"`);
+  res.setHeader('content-disposition', `attachment; filename="health-import-${entity}-template.csv"`);
   res.send(header);
 });
 

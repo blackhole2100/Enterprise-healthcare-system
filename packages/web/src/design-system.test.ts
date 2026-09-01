@@ -9,7 +9,7 @@ import {
   contrastRatio,
   parseCssColor,
   type Rgb,
-} from '@rayhealth/core/domain/theme-resolver.js';
+} from '@health/core/domain/theme-resolver.js';
 
 const srcDirectory = resolve(process.cwd(), 'src');
 const colorLiteralPattern = /#[\da-f]{3,4}\b|#[\da-f]{6}(?:[\da-f]{2})?\b/gi;
@@ -81,7 +81,7 @@ function sourceFiles(directory: string): string[] {
   });
 }
 
-describe('RayHealth visual system', () => {
+describe('Health visual system', () => {
   it('defines one bold, accessible brand contract for every surface', () => {
     expect(css).toContain('--color-on-brand:');
     expect(css).toContain('--color-text-on-dark:');

@@ -6,14 +6,14 @@
 # headaches, no placeholder mistakes), then applies the 8 dated migrations.
 #
 # Usage:
-#   bash "/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh/scripts/run-migrations-prompted.sh"
+#   bash "/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh/scripts/run-migrations-prompted.sh"
 
 set -eo pipefail
 
-SOURCE="/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh"
+SOURCE="/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh"
 
 echo "==================================================="
-echo " RayHealth — Apply migrations to Neon"
+echo " Health — Apply migrations to Neon"
 echo "==================================================="
 echo ""
 echo "Get your connection string from:"

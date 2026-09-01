@@ -3,7 +3,7 @@ import { z } from 'zod';
 import bcrypt from 'bcryptjs';
 import { generateSecret, generateURI, verifySync } from 'otplib';
 import QRCode from 'qrcode';
-import { SessionRepository } from '@rayhealth/core';
+import { SessionRepository } from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 /**
@@ -14,7 +14,7 @@ import { safeError } from '../security/safe-log.js';
  */
 const router = Router();
 
-const TOTP_ISSUER = 'RayHealthEVV';
+const TOTP_ISSUER = 'HealthEVV';
 const BACKUP_CODE_COUNT = 10;
 
 const notificationPrefsSchema = z
@@ -313,7 +313,7 @@ router.get('/export', async (req, res) => {
       training,
     };
 
-    res.setHeader('Content-Disposition', 'attachment; filename="rayhealth-data-export.json"');
+    res.setHeader('Content-Disposition', 'attachment; filename="health-data-export.json"');
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(exportPayload, null, 2));
   } catch (err) {

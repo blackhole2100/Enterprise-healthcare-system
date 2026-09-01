@@ -1,4 +1,4 @@
-# RayHealth EVV — Encryption Verification Status
+# Health EVV — Encryption Verification Status
 
 **Version:** 1.1
 **Effective:** 2026-07-12
@@ -17,7 +17,7 @@ every PHI field has application-layer encryption.
 | Other Postgres fields | Neon-managed storage encryption | Vendor-asserted; collect current contractual/security evidence |
 | Application secrets | Environment variables on deployment platforms; repository security scan rejects selected secret surfaces | Source/process control; platform configuration evidence required |
 | Mobile credential | Expo SecureStore in `packages/mobile/src/lib/AuthContext.tsx`; deleted on logout/401; bearer token has server-side `jti` revocation | Verified in source and API/mobile tests |
-| Offline EVV queue | AsyncStorage store `rayhealth.evv-offline-queue.v1` in `packages/mobile/src/lib/offline-queue.ts`, protected by OS file-based encryption (iOS Data Protection / Android FBE); FIFO ordered replay with local-visit-id remapping and `clientEventId` server-side idempotency; definitively rejected punches capped at 20 in a failures list | Verified in source and tests |
+| Offline EVV queue | AsyncStorage store `health.evv-offline-queue.v1` in `packages/mobile/src/lib/offline-queue.ts`, protected by OS file-based encryption (iOS Data Protection / Android FBE); FIFO ordered replay with local-visit-id remapping and `clientEventId` server-side idempotency; definitively rejected punches capped at 20 in a failures list | Verified in source and tests |
 | Offline schedule cache | Expo SecureStore adapter (`packages/mobile/src/lib/secure-store.ts`) requesting `AFTER_FIRST_UNLOCK_THIS_DEVICE_ONLY`; maximum 100 assignments; scoped by user/agency; removed on logout/401 | Verified in source and tests |
 | Clearinghouse claim transport | 837P transmitted over SFTP (SSH) or HTTPS only, SSRF-guarded in `clearinghouse-transport.ts`; per-agency credentials sealed with AES-256-GCM (`cell-cipher.ts`, write-only, never logged); the credential-free sandbox transport is the default; the 835 ledger persists filename + sha256 + counts, not raw remittance content | Verified in source and tests; live clearinghouse BAA + companion guide pending |
 | AWS Bedrock transport/storage | AWS SDK TLS path; Bedrock-managed service encryption | Code path verified; storage vendor-asserted; BAA recorded active 2026-05-08 and needs annual evidence |
@@ -39,7 +39,7 @@ the platform as application-encrypting every field.
 ## Mobile storage behavior
 
 The customer mobile app is the Expo project in `packages/mobile` with bundle
-and package ID `com.rayhealth.evv`. There is no separate production Capacitor
+and package ID `com.health.evv`. There is no separate production Capacitor
 app in this repository's release path.
 
 The offline queue contains only the evidence needed to replay clock-in/out:
@@ -67,11 +67,11 @@ tradeoff tracked in `RISK_REGISTER.md`, not a claim of zero residual device risk
 
 ## Communication rules
 
-- Say: “RayHealth uses TLS, vendor-managed storage encryption, and
+- Say: “Health uses TLS, vendor-managed storage encryption, and
   application-layer AES-256-GCM for Medicaid IDs and caregiver NPIs.”
 - Say: “Mobile credentials and bounded offline EVV data use OS-protected Expo
   SecureStore, with server-side token revocation.”
-- Do not say all PHI is application-encrypted, that RayHealth is “HIPAA
+- Do not say all PHI is application-encrypted, that Health is “HIPAA
   certified,” or that source inspection proves a vendor's live configuration.
 
 ## Review log

@@ -24,7 +24,7 @@
  * authenticates. See push-client.ts and sms-client.ts.
  */
 import type { Knex } from 'knex';
-import { PushTokenRepository } from '@rayhealth/core';
+import { PushTokenRepository } from '@health/core';
 import { getPushClient, type PushSendResult } from '../push/push-client.js';
 import { getSmsClient, toE164 } from '../sms/sms-client.js';
 import { safeError } from '../security/safe-log.js';

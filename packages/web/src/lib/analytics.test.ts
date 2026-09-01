@@ -21,12 +21,12 @@ describe('analytics privacy gate', () => {
   });
 
   it('drops analytics events for authenticated, id-bearing paths', () => {
-    const event = { url: 'https://app.rayhealthevv.com/admin/audit-packet/visit-9f3a' };
+    const event = { url: 'https://app.healthevv.com/admin/audit-packet/visit-9f3a' };
     expect(dropAuthenticatedEvents(event)).toBeNull();
   });
 
   it('passes through analytics events for public marketing paths', () => {
-    const event = { url: 'https://www.rayhealthevv.com/pricing' };
+    const event = { url: 'https://www.healthevv.com/pricing' };
     expect(dropAuthenticatedEvents(event)).toBe(event);
   });
 

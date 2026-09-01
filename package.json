@@ -1,5 +1,5 @@
 {
-  "name": "rayhealth-fresh",
+  "name": "health-fresh",
   "private": true,
   "type": "module",
   "packageManager": "npm@10.8.2",
@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "postinstall": "patch-package",
-    "mobile": "npm run start --workspace=@rayhealth/mobile -- --port 8083",
+    "mobile": "npm run start --workspace=@health/mobile -- --port 8083",
     "start": "npm run mobile",
     "build": "turbo build",
     "test": "turbo test",
@@ -18,7 +18,7 @@
     "css:scan": "node --import tsx scripts/css-contract-scan.ts",
     "sql:scan": "bash scripts/check-no-string-sql.sh",
     "check": "bash scripts/check.sh",
-    "db:migrate": "npm run db:migrate --workspace=@rayhealth/core",
+    "db:migrate": "npm run db:migrate --workspace=@health/core",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down"
   },

@@ -188,7 +188,7 @@ export function TrustCenterPage() {
         <div className="mk-hero-grid" aria-hidden />
         <div className="mk-heroin">
           <span className="mk-eyebrow">Trust</span>
-          <h1 className="mk-h1">RayHealthEVV Trust Center</h1>
+          <h1 className="mk-h1">HealthEVV Trust Center</h1>
           <p className="mk-lead">
             Built for homecare operators who need security, accountability, and
             audit-ready workflows. Every claim below follows one pattern, the
@@ -215,7 +215,7 @@ export function TrustCenterPage() {
             {/* 2. Current readiness status */}
             <SectionCard title="Current readiness status" bordered>
               <p style={{ margin: 0, lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-                RayHealthEVV is built with <strong>HIPAA-grade architectural
+                HealthEVV is built with <strong>HIPAA-grade architectural
                 controls</strong>, encryption in transit, per-agency data
                 isolation, an append-only audit trail, and revocable sessions , 
                 that are implemented and running today. Our{' '}
@@ -356,10 +356,10 @@ export function TrustCenterPage() {
                 same channel.
               </p>
               <p style={{ margin: 'var(--space-4) 0 0', lineHeight: 1.8, color: 'var(--color-text-secondary)' }}>
-                Privacy / Security Officer. RayHealthEVV™
+                Privacy / Security Officer. HealthEVV™
                 <br />
-                <a href="mailto:security@rayhealthevv.com" style={{ color: 'var(--color-primary-dark)', fontWeight: 600 }}>
-                  security@rayhealthevv.com
+                <a href="mailto:security@healthevv.com" style={{ color: 'var(--color-primary-dark)', fontWeight: 600 }}>
+                  security@healthevv.com
                 </a>
                 <br />
                 Or via <Link to="/contact" style={{ color: 'var(--color-primary-dark)', fontWeight: 600 }}>/contact</Link>{' '}

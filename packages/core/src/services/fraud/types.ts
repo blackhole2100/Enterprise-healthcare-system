@@ -1,7 +1,7 @@
 /**
  * Native visit fraud-scoring engine.
  *
- * Ported from the standalone RayVerify service's detector design so RayHealthEVV
+ * Ported from the standalone RayVerify service's detector design so HealthEVV
  * can score visits on the data it already stores — no external service, no new
  * PHI leaving the tenant. Each detector is a PURE function of a
  * `VisitFeatureContext` (assembled once, by the context builder) so detectors

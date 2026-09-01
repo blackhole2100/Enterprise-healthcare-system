@@ -17,7 +17,7 @@ import { Platform } from 'react-native';
  * useEffect interval + Haptics.notificationAsync, see that file.
  */
 
-const SCHEDULED_IDS_KEY = 'rayhealth_scheduled_shift_alerts_v1';
+const SCHEDULED_IDS_KEY = 'health_scheduled_shift_alerts_v1';
 // v2: Android channels are immutable after creation, so switching the sound
 // from the default ping to the bundled alarm chime (and moving playback onto
 // the ALARM audio stream) requires a new channel ID. The v1 channel is

@@ -7,7 +7,7 @@ import { PLATFORM_COOKIE_NAME, readCookie } from '../security/cookies.js';
  * agency tenancy with a JWT carrying `scope:'platform'` (issued by the WebAuthn
  * verify endpoints).
  *
- * The token is delivered primarily in an httpOnly `rayhealth_platform` cookie so
+ * The token is delivered primarily in an httpOnly `health_platform` cookie so
  * it never lives in JS-readable storage (XSS cannot exfiltrate the highest-
  * privilege credential in the system). SameSite=strict on that cookie is the
  * CSRF defense. A Bearer Authorization header is still accepted as a fallback

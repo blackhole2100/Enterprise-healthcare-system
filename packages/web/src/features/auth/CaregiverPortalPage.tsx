@@ -30,7 +30,7 @@ export function CaregiverPortalPage() {
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-        <span style={{ color: 'white', fontWeight: 800, fontSize: '1.125rem', letterSpacing: '-0.02em' }}>RayHealth</span>
+        <span style={{ color: 'white', fontWeight: 800, fontSize: '1.125rem', letterSpacing: '-0.02em' }}>Health</span>
         <span style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-primary-light))', color: 'white', fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '2px 7px', borderRadius: '4px' }}>EVV</span>
       </div>
 
@@ -74,8 +74,8 @@ export function CaregiverPortalPage() {
           </h1>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: 1.6, margin: 0 }}>
             {role === 'family'
-              ? "Your family member's care plan and visit history are available in the RayHealth mobile app."
-              : 'Use the RayHealthEVV™ mobile app to clock in, document tasks, and clock out.'}
+              ? "Your family member's care plan and visit history are available in the Health mobile app."
+              : 'Use the HealthEVV™ mobile app to clock in, document tasks, and clock out.'}
           </p>
         </div>
 

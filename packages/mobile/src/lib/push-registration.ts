@@ -22,8 +22,8 @@ import { secureKvStore as SecureStore } from './secure-store';
 
 // SecureStore key name, not a credential. Built from short tokens so secret
 // scanners don't false-positive on the concatenated literal.
-// Final runtime value: "rayhealth_push_token_v1".
-const PUSH_TOKEN_KEY = ['rayhealth', 'push', 'token', 'v1'].join('_');
+// Final runtime value: "health_push_token_v1".
+const PUSH_TOKEN_KEY = ['health', 'push', 'token', 'v1'].join('_');
 
 /**
  * Expo needs the EAS project id to mint a push token in a production build.

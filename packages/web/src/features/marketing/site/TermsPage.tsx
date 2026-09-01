@@ -39,9 +39,9 @@ export function TermsPage() {
 
             <p className="lead">
               These Terms of Service (the &ldquo;Terms&rdquo;) govern your access
-              to and use of RayHealthEVV&trade;, a HIPAA-aware Electronic Visit
+              to and use of HealthEVV&trade;, a HIPAA-aware Electronic Visit
               Verification (EVV) and home-care operations platform (the
-              &ldquo;Service&rdquo;) operated by RayHealthEVV (&ldquo;we,&rdquo;
+              &ldquo;Service&rdquo;) operated by HealthEVV (&ldquo;we,&rdquo;
               &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By creating an account,
               submitting a job application through an agency that uses the
               Service, or otherwise using the Service, you agree to these Terms.
@@ -61,7 +61,7 @@ export function TermsPage() {
 
             <h2>2. The Service we provide</h2>
             <p>
-              RayHealthEVV provides scheduling, electronic visit verification
+              HealthEVV provides scheduling, electronic visit verification
               (clock-in/clock-out with GPS verification required by the 21st
               Century Cures Act), compliance exports to state aggregators,
               billing and payroll support, workforce training, and related
@@ -81,8 +81,8 @@ export function TermsPage() {
               </li>
               <li>
                 Notify us promptly at{' '}
-                <a href="mailto:security@rayhealthevv.com">
-                  security@rayhealthevv.com
+                <a href="mailto:security@healthevv.com">
+                  security@healthevv.com
                 </a>{' '}
                 if you suspect unauthorized access.
               </li>
@@ -161,7 +161,7 @@ export function TermsPage() {
               The Service relies on subprocessors (for example, our cloud, AI,
               database, email, and notification providers) listed in our{' '}
               <Link to="/privacy">Privacy Policy</Link>. Your use of those
-              underlying services through RayHealthEVV is also subject to their
+              underlying services through HealthEVV is also subject to their
               respective terms.
             </p>
 
@@ -229,9 +229,9 @@ export function TermsPage() {
               }}
             >
               <p style={{ margin: 0, lineHeight: 1.7 }}>
-                RayHealthEVV&trade;
+                HealthEVV&trade;
                 <br />
-                <a href="mailto:legal@rayhealthevv.com">legal@rayhealthevv.com</a>
+                <a href="mailto:legal@healthevv.com">legal@healthevv.com</a>
                 <br />
                 Or via <Link to="/contact">/contact</Link>.
               </p>

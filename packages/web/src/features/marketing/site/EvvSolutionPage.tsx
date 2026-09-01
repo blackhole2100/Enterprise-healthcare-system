@@ -75,10 +75,10 @@ interface Faq {
 }
 
 const faqs: Faq[] = [
-  { q: 'What are the six federal EVV data elements?', a: 'The 21st Century Cures Act requires every EVV visit to capture: the type of service, the individual receiving the service, the individual providing the service, the date of service, the location of service, and the time the service begins and ends. RayHealth captures all six on every clock-in and clock-out.' },
+  { q: 'What are the six federal EVV data elements?', a: 'The 21st Century Cures Act requires every EVV visit to capture: the type of service, the individual receiving the service, the individual providing the service, the date of service, the location of service, and the time the service begins and ends. Health captures all six on every clock-in and clock-out.' },
   { q: 'What happens when there’s no cell signal at the home?', a: 'The visit is captured on the device, including GPS location at clock-in and clock-out, and syncs automatically once connectivity returns. For homes without a smartphone, caregivers can verify by phone using the telephony/IVR fallback from the client’s landline.' },
-  { q: 'How does RayHealth keep records tamper-evident?', a: 'Once a visit is verified it’s locked, and any later correction is recorded with who made the change, what changed, and when. That edit history travels with the visit, so the record stays defensible in an audit.' },
-  { q: 'How does this work with Pennsylvania’s aggregator?', a: 'Pennsylvania uses the Sandata state aggregator for EVV. RayHealth maps verified visits to the data format the aggregator expects so they flow toward billing without manual re-entry. Confirm your program’s current submission requirements with PA DHS.' },
+  { q: 'How does Health keep records tamper-evident?', a: 'Once a visit is verified it’s locked, and any later correction is recorded with who made the change, what changed, and when. That edit history travels with the visit, so the record stays defensible in an audit.' },
+  { q: 'How does this work with Pennsylvania’s aggregator?', a: 'Pennsylvania uses the Sandata state aggregator for EVV. Health maps verified visits to the data format the aggregator expects so they flow toward billing without manual re-entry. Confirm your program’s current submission requirements with PA DHS.' },
 ];
 
 const Chrome = ({ url }: { url: string }) => (
@@ -117,7 +117,7 @@ export function EvvSolutionPage() {
           <span className="mk-eyebrow">Solutions &middot; EVV</span>
           <h1 className="mk-h1">Electronic visit verification that holds up to an audit.</h1>
           <p className="mk-lead">
-            RayHealth verifies every visit at the door &mdash; GPS at clock-in and clock-out, all six federal data
+            Health verifies every visit at the door &mdash; GPS at clock-in and clock-out, all six federal data
             elements captured automatically, offline and telephony fallbacks for tough homes, and tamper-evident
             records that map to Pennsylvania&rsquo;s Sandata aggregator.
           </p>
@@ -133,7 +133,7 @@ export function EvvSolutionPage() {
         <div className="mk-wrap">
           <p className="mk-eylabel">Verification, end to end</p>
           <h2 className="mk-h2">Capture the visit the way the rules require.</h2>
-          <p className="mk-deck">EVV isn&rsquo;t a checkbox after the fact. RayHealth captures each visit as it happens, even when the home has no signal, and keeps the record defensible.</p>
+          <p className="mk-deck">EVV isn&rsquo;t a checkbox after the fact. Health captures each visit as it happens, even when the home has no signal, and keeps the record defensible.</p>
           <div className="mk-grid">
             {pillars.map((p) => (
               <div className="mk-card" key={p.t}>
@@ -151,7 +151,7 @@ export function EvvSolutionPage() {
         <div className="mk-wrap">
           <p className="mk-eylabel">21st Century Cures Act</p>
           <h2 className="mk-h2">The six federal EVV data elements.</h2>
-          <p className="mk-deck">Federal law requires every EVV visit to capture these six elements. RayHealth records all six on each clock-in and clock-out, no manual entry, no gaps.</p>
+          <p className="mk-deck">Federal law requires every EVV visit to capture these six elements. Health records all six on each clock-in and clock-out, no manual entry, no gaps.</p>
           <div className="mk-grid cols3">
             {elements.map((e) => (
               <div className="mk-card" key={e.n}>
@@ -172,7 +172,7 @@ export function EvvSolutionPage() {
             <div className="mk-feattext">
               <p className="mk-eylabel">GPS verification</p>
               <h3>Location captured at the door, not the desk.</h3>
-              <p>When a caregiver clocks in, RayHealth captures GPS location and the timestamp on the spot. Every required element is checked off as the visit happens, so verification is built in, not reconstructed.</p>
+              <p>When a caregiver clocks in, Health captures GPS location and the timestamp on the spot. Every required element is checked off as the visit happens, so verification is built in, not reconstructed.</p>
               <ul className="mk-checks">
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>GPS location at both clock-in and clock-out</li>
                 <li><span className="mk-ck">{mkic(MK_CHECK)}</span>All six federal elements captured automatically</li>
@@ -180,7 +180,7 @@ export function EvvSolutionPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="RayHealth mobile &middot; Visit verified" />
+              <Chrome url="Health mobile &middot; Visit verified" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 14 }}>
                 {/* map box with a pin */}
                 <div style={{ position: 'relative', height: 132, borderRadius: 10, overflow: 'hidden', border: '1px solid var(--line)', background: 'linear-gradient(135deg,var(--color-success-bg),var(--color-success-bg))' }}>
@@ -219,7 +219,7 @@ export function EvvSolutionPage() {
               </ul>
             </div>
             <div className="mk-visual">
-              <Chrome url="app.rayhealthevv.com &middot; Visit var(--color-success-bg)" />
+              <Chrome url="app.healthevv.com &middot; Visit var(--color-success-bg)" />
               <div style={{ background: 'var(--paper)', border: '1px solid var(--line)', borderRadius: 12, padding: 16 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 12, borderBottom: '1px solid var(--line)' }}>
                   <div style={{ fontWeight: 600, color: 'var(--ink)', fontSize: '.9rem' }}>Visit verified &amp; locked</div>

@@ -86,7 +86,7 @@ export function validateMobileReleaseReadiness(
   if (!input.apiClientSource.includes('process.env.EXPO_PUBLIC_API_URL')) {
     errors.push('The mobile API client does not consume EXPO_PUBLIC_API_URL from EAS.');
   }
-  if (!input.profileSource.includes('https://rayhealthevv.com/privacy')) {
+  if (!input.profileSource.includes('https://healthevv.com/privacy')) {
     errors.push('The mobile profile does not expose the public privacy policy.');
   }
   for (const profileName of ['development', 'preview', 'production']) {
@@ -116,9 +116,9 @@ export function validateMobileReleaseReadiness(
     errors.push('App Store description and keywords must be versioned in store.config.json.');
   }
   for (const [field, expected] of [
-    ['privacyPolicyUrl', 'https://rayhealthevv.com/privacy'],
-    ['supportUrl', 'https://rayhealthevv.com/contact'],
-    ['marketingUrl', 'https://rayhealthevv.com'],
+    ['privacyPolicyUrl', 'https://healthevv.com/privacy'],
+    ['supportUrl', 'https://healthevv.com/contact'],
+    ['marketingUrl', 'https://healthevv.com'],
   ] as const) {
     if (englishStoreInfo[field] !== expected) errors.push(`App Store ${field} must be ${expected}.`);
   }

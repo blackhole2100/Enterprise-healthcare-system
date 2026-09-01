@@ -1,9 +1,9 @@
-// Vercel serverless entry. Loads the compiled @rayhealth/app once at module
+// Vercel serverless entry. Loads the compiled @health/app once at module
 // init and delegates each request to it. Any boot failure is caught and
 // returned as a 500 with the real error message — beats silent FUNCTION_INVOCATION_FAILED.
 //
 // File is .js + ESM because root package.json has "type":"module". Importing
-// the compiled dist directly (not via @rayhealth/app package name) so Vercel's
+// the compiled dist directly (not via @health/app package name) so Vercel's
 // ncc bundler walks the import graph reliably even without workspace symlinks.
 
 let app;

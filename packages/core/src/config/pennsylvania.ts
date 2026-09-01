@@ -10,7 +10,7 @@ export const paCaregiverStatuses = ['active', 'inactive', 'suspended'] as const;
  * personal-care and home-health visit (Section 12006). PA aggregators
  * (HHAeXchange, Sandata) all submit these fields.
  *
- * Mapping in RayHealth:
+ * Mapping in Health:
  *   1. service-type   → evv_visits.service_code     (P2-R4a)
  *   2. beneficiary    → evv_visits.client_id        (P2-R4a)
  *   3. date           → evv_visits.clock_in_time (date portion)
@@ -34,7 +34,7 @@ export type CuresActDataPoint = typeof curesActEvvDataPoints[number];
 export const paAggregators = ['hhaexchange', 'sandata'] as const;
 export type PaAggregator = typeof paAggregators[number];
 
-/** Pennsylvania PCS / HCPCS service codes RayHealth supports for billing + Cures-Act #1. */
+/** Pennsylvania PCS / HCPCS service codes Health supports for billing + Cures-Act #1. */
 export const paServiceCodes = [
   'T1019', // Personal care services, per 15 minutes
   'S5125', // Attendant care services, per 15 minutes
@@ -51,7 +51,7 @@ export type PaServiceCode = typeof paServiceCodes[number];
  *   - T1021 is billed per-visit (encoded as 0 → one unit per completed visit,
  *     independent of duration).
  *
- * These are HCPCS units of measure, not dollar rates. RayHealth is the
+ * These are HCPCS units of measure, not dollar rates. Health is the
  * verification + claim-assembly layer; the payer's fee schedule determines the
  * paid amount per unit, so we deliberately do NOT hardcode dollar rates here.
  */

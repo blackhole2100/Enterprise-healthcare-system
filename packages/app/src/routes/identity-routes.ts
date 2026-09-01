@@ -20,7 +20,7 @@
 import { Router, type Request, type Response } from 'express';
 import type { Knex } from 'knex';
 import { z } from 'zod';
-import { IdentityRepository } from '@rayhealth/core';
+import { IdentityRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 import { S3StorageService } from '../services/s3-storage.js';
@@ -38,7 +38,7 @@ const router = Router();
  */
 export const CONSENT_VERSION = '2026-08-04.1';
 export const CONSENT_TEXT = [
-  'I agree that RayHealth may collect and store a photograph of my face, and',
+  'I agree that Health may collect and store a photograph of my face, and',
   'compare photographs taken when I clock in against it, to confirm that I am',
   'the person working the visit.',
   '',
@@ -46,7 +46,7 @@ export const CONSENT_TEXT = [
   'never sold or shared for advertising, and are deleted when I withdraw this',
   'agreement or when my account is closed.',
   '',
-  'I can withdraw this agreement at any time in the RayHealth app, and my',
+  'I can withdraw this agreement at any time in the Health app, and my',
   'stored photograph will be deleted.',
 ].join(' ');
 

@@ -99,7 +99,7 @@ const ADMIN_ROLES = new Set(['admin', 'coordinator']);
 /**
  * Branded loading state shown while a lazily-loaded route chunk is fetched.
  * Centered, fixed min-height to avoid layout shift, small teal spinner using the
- * RayHealth brand color. Respects prefers-reduced-motion (no spin when reduced).
+ * Health brand color. Respects prefers-reduced-motion (no spin when reduced).
  */
 function RouteFallback() {
   return (
@@ -389,7 +389,7 @@ function AdminLayout() {
   const closeNav = () => setNavOpen(false);
 
   const roleLabel = user?.role ?? 'signed in';
-  const brandName = user?.agencyTheme?.logoText ?? 'RayHealth';
+  const brandName = user?.agencyTheme?.logoText ?? 'Health';
   const displayName = [user?.firstName, user?.lastName].filter(Boolean).join(' ') || user?.email || roleLabel;
   const initial = displayName.slice(0, 1).toUpperCase() || '?';
 
@@ -623,7 +623,7 @@ export function App() {
         </Route>
       </Route>
       
-        {/* Public per-agency hiring pages (rayhealthevv.com/<slug>). MUST stay
+        {/* Public per-agency hiring pages (healthevv.com/<slug>). MUST stay
             last: any unmatched single-segment path is treated as a possible
             agency slug; unknown slugs redirect home from inside the page. */}
         <Route path="/:slug/apply" element={<ApplyPage />} />

@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 /**
  * RayVerify, the "trust engine" band on the landing page.
  *
- * Positioned as the verification layer that powers RayHealthEVV (Stripe → Radar).
+ * Positioned as the verification layer that powers HealthEVV (Stripe → Radar).
  * A dark premium section with a scroll-animated verification pipeline. Copy is
  * deliberately scoped to what is true today: GPS geofencing and fraud
  * intelligence are LIVE; identity / liveness / device-trust are flagged as
@@ -135,7 +135,7 @@ export function RayVerifySection() {
           <span className="rvfy-eyebrow"><span className="rvfy-pip" />Powered by RayVerify</span>
           <h2 className="rvfy-title">Every visit. <span className="rvfy-em">Verified.</span></h2>
           <p className="rvfy-deck">
-            Home care deserves more than a GPS ping. RayVerify is the trust engine inside RayHealthEVV,
+            Home care deserves more than a GPS ping. RayVerify is the trust engine inside HealthEVV,
             layering identity, location, device, and fraud intelligence so you know the right caregiver
             delivered the right care, at the right place.
           </p>

@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import apiClient from './api-client';
 import { OfflineEvvQueue, type PersistedQueueState, type QueueStorage } from './offline-queue-core';
 
-const STORAGE_KEY = 'rayhealth.evv-offline-queue.v1';
+const STORAGE_KEY = 'health.evv-offline-queue.v1';
 
 const storage: QueueStorage = {
   async load(): Promise<PersistedQueueState | null> {

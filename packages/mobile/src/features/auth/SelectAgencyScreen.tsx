@@ -163,7 +163,7 @@ export default function SelectAgencyScreen() {
           <Text style={styles.heroSub}>
             {isSwitch
               ? 'Choose which agency to work in. Your schedule, messages, and patients will update to match.'
-              : `Your RayHealthEVV ID is linked to ${sorted.length || 'multiple'} agencies. Pick the one you're working for right now.`}
+              : `Your HealthEVV ID is linked to ${sorted.length || 'multiple'} agencies. Pick the one you're working for right now.`}
           </Text>
         </Animated.View>
 

@@ -2,7 +2,7 @@
 
 **State Code**: PA
 **Last Updated**: 2025-11-05
-**Verified By**: RayHealth Compliance Team
+**Verified By**: Health Compliance Team
 **Next Review Date**: 2026-02-05
 
 ## Table of Contents
@@ -662,5 +662,5 @@ Pennsylvania home healthcare compliance is characterized by:
 - Sandata Technologies: https://www.sandata.com/
 - 21st Century Cures Act: https://www.congress.gov/bill/114th-congress/house-bill/34
 
-**RayHealth EVV** - Your Ideal CRM
+**Health EVV** - Your Ideal CRM
 Maintained by Durga

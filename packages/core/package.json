@@ -1,5 +1,5 @@
 {
-  "name": "@rayhealth/core",
+  "name": "@health/core",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",

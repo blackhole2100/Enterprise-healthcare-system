@@ -7,7 +7,7 @@ import { authContext } from './middleware/auth-context.js';
 import { requireCapability } from './middleware/require-capability.js';
 import { auditLog } from './middleware/audit-log.js';
 import { requireCsrf } from './middleware/csrf.js';
-import { createDb } from '@rayhealth/core';
+import { createDb } from '@health/core';
 
 import authRoutes from './routes/auth-routes.js';
 import healthRoutes, { healthLimiter } from './routes/health-routes.js';
@@ -314,7 +314,7 @@ export function createApp(options: { mobileSessionStore?: MobileSessionStore } =
     app.use(`${prefix}/marketing`, marketingLimiter, marketingRoutes);
     app.use(`${prefix}/onboarding/apply`, onboardingApplyLimiter);
     app.use(`${prefix}/onboarding`, onboardingLimiter, onboardingRoutes);
-    // Public marketing-site support chat ("RayHealthAssist"). Mounted before
+    // Public marketing-site support chat ("HealthAssist"). Mounted before
     // authContext so the anonymous widget reaches it without a session; behind
     // its own tighter rate limit since each turn calls a paid model.
     app.use(`${prefix}/support`, supportChatLimiter, supportRoutes);

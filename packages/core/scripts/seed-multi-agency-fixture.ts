@@ -16,18 +16,18 @@
  * All identifiers are deterministic. reruns upsert in place.
  *
  * SAFETY GUARD. refuses to run against the prod default branch unless
- * RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1 is set (same contract as the other
+ * Health_ALLOW_PROD_FIXTURE_SEED=1 is set (same contract as the other
  * fixture seeders).
  *
  * Usage:
  *   export DATABASE_URL="postgres://...?sslmode=require"
- *   # prod also needs:  export RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1
+ *   # prod also needs:  export Health_ALLOW_PROD_FIXTURE_SEED=1
  *   npx tsx packages/core/scripts/seed-multi-agency-fixture.ts
  */
 import knex from 'knex';
 
 const FIXTURE_USER = '00000000-0000-4000-8000-000000000003';
-const FIXTURE_EMAIL = 'test-caregiver-fixture@rayhealthevv.local';
+const FIXTURE_EMAIL = 'test-caregiver-fixture@healthevv.local';
 
 const SUNRISE_AGENCY = 'e1c4a7e3-1cad-4001-8e0a-000000000001';
 const SUNRISE_CG = '00000000-0000-4000-8000-000000000002';
@@ -127,9 +127,9 @@ function assertNonProd(): void {
   let parsed: URL;
   try { parsed = new URL(url.replace(/^postgres(ql)?:\/\//, 'http://')); }
   catch { throw new Error('DATABASE_URL is not a valid URL.'); }
-  const allow = process.env.RAYHEALTH_ALLOW_PROD_FIXTURE_SEED === '1';
+  const allow = process.env.Health_ALLOW_PROD_FIXTURE_SEED === '1';
   if (parsed.hostname === PROD_PROXY_HOST && !parsed.searchParams.has('branch') && !allow) {
-    throw new Error('Refusing to seed prod default branch without RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1.');
+    throw new Error('Refusing to seed prod default branch without Health_ALLOW_PROD_FIXTURE_SEED=1.');
   }
 }
 

@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { createApp } from '../../app.js';
 import type { MobileSessionStore } from '../../services/mobile-session-store.js';
 import { makeToken, setTestJwtSecret, TEST_MOBILE_JTI } from './test-helpers.js';
@@ -43,7 +43,7 @@ function mockProfile(): void {
         findById: vi.fn().mockResolvedValue({
           id: userId,
           agencyId,
-          email: 'caregiver@rayhealth.example',
+          email: 'caregiver@health.example',
           role: 'caregiver',
           caregiverId,
         }),
@@ -85,7 +85,7 @@ describe('mobile session lifecycle', () => {
           findByEmail: vi.fn().mockResolvedValue({
             id: userId,
             agencyId,
-            email: 'caregiver@rayhealth.example',
+            email: 'caregiver@health.example',
             passwordHash,
             role: 'caregiver',
             caregiverId,
@@ -96,7 +96,7 @@ describe('mobile session lifecycle', () => {
       () => ({ listActiveForUser: vi.fn().mockResolvedValue([]) }) as unknown as core.UserAgencyRepository,
     );
     vi.spyOn(core, 'AgencyRepository').mockImplementation(
-      () => ({ findById: vi.fn().mockResolvedValue({ id: agencyId, name: 'Ray Home Care' }) }) as unknown as core.AgencyRepository,
+      () => ({ findById: vi.fn().mockResolvedValue({ id: agencyId, name: 'Home Care' }) }) as unknown as core.AgencyRepository,
     );
     const create = vi.fn().mockImplementation(async (input) => ({
       id: '00000000-0000-4000-8000-000000000084',
@@ -107,7 +107,7 @@ describe('mobile session lifecycle', () => {
 
     const response = await request(createApp({ mobileSessionStore }))
       .post('/auth/mobile/login')
-      .send({ email: 'caregiver@rayhealth.example', password: 'correct-password' });
+      .send({ email: 'caregiver@health.example', password: 'correct-password' });
 
     expect(response.status).toBe(200);
     const claims = jwt.decode(response.body.token) as { jti?: string };

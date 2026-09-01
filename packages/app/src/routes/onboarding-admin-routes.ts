@@ -8,7 +8,7 @@ import {
   applicantStatusValues,
   documentTypeValues,
   documentStatusValues,
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 const router = Router();

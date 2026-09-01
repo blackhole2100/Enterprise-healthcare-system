@@ -3,7 +3,7 @@ import { SiteLayout } from './SiteLayout.js';
 
 /**
  * /ads, rebuilt on the shared SiteLayout (teal/orange brand). Showcase of
- * the RayHealthEVV™ ad creative in every delivered aspect ratio (square,
+ * the HealthEVV™ ad creative in every delivered aspect ratio (square,
  * vertical, landscape) so the team can preview, grab a direct link, or
  * download for a given placement.
  *
@@ -36,14 +36,14 @@ const campaigns: readonly AdCampaign[] = [
       {
         label: 'Square',
         ratioHint: '1:1 · feed',
-        src: '/ads/RayHealthEVV_ad_square.mp4',
+        src: '/ads/HealthEVV_ad_square.mp4',
         aspect: '1 / 1',
         maxWidth: '420px',
       },
       {
         label: 'Vertical',
         ratioHint: '9:16 · stories / reels',
-        src: '/ads/RayHealthEVV_ad_vertical.mp4',
+        src: '/ads/HealthEVV_ad_vertical.mp4',
         aspect: '9 / 16',
         maxWidth: '300px',
       },
@@ -56,14 +56,14 @@ const campaigns: readonly AdCampaign[] = [
       {
         label: 'Landscape',
         ratioHint: '16:9 · youtube / web',
-        src: '/ads/RayHealthEVV_ad2_landscape.mp4',
+        src: '/ads/HealthEVV_ad2_landscape.mp4',
         aspect: '16 / 9',
         maxWidth: '640px',
       },
       {
         label: 'Vertical',
         ratioHint: '9:16 · stories / reels',
-        src: '/ads/RayHealthEVV_ad2_vertical.mp4',
+        src: '/ads/HealthEVV_ad2_vertical.mp4',
         aspect: '9 / 16',
         maxWidth: '300px',
       },
@@ -132,7 +132,7 @@ export function AdsPage() {
         <div className="mk-hero-grid" aria-hidden />
         <div className="mk-heroin">
           <span className="mk-eyebrow">Ad creative</span>
-          <h1 className="mk-h1">RayHealthEVV™ ads, every format, ready to ship.</h1>
+          <h1 className="mk-h1">HealthEVV™ ads, every format, ready to ship.</h1>
           <p className="mk-lead">
             Preview the current ad creative in each delivered aspect ratio. Use the square and
             landscape cuts for feeds and web pre-roll, the vertical cuts for Stories, Reels, and

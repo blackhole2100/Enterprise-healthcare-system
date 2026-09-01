@@ -14,7 +14,7 @@ import { StyleSheet, Text, View, type StyleProp, type ViewStyle } from 'react-na
 
 export const WebView = ({ style }: { style?: StyleProp<ViewStyle>; [key: string]: unknown }) => (
   <View style={[styles.fallback, style]}>
-    <Text style={styles.text}>Training videos are available in the RayHealth mobile app.</Text>
+    <Text style={styles.text}>Training videos are available in the Health mobile app.</Text>
   </View>
 );
 

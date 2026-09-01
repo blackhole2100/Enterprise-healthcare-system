@@ -24,7 +24,7 @@ describe('DenialDashboardPage', () => {
     renderPage();
     expect(screen.getByText(/No platform switch required/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/no claims need to be generated in RayHealth/i)
+      screen.getByText(/no claims need to be generated in Health/i)
     ).toBeInTheDocument();
   });
 

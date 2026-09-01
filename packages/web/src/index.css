@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RayHealth EVV design system
+   Health EVV design system
    One teal + orange visual language for public, admin, and caregiver pages.
    ========================================================================== */
 
@@ -1689,7 +1689,7 @@ button:disabled {
   .no-print,
   [aria-label='Open assistant'],
   [aria-label='Close assistant'],
-  [aria-label='RayHealthOps admin assistant'] {
+  [aria-label='HealthOps admin assistant'] {
     display: none !important;
   }
 

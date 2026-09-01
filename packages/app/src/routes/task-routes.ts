@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { requireCapability } from '../middleware/require-capability.js';
-import { paTasks } from '@rayhealth/core';
+import { paTasks } from '@health/core';
 
 const router = Router();
 

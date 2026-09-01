@@ -28,12 +28,12 @@
  * Rerun any day to re-center the dataset on that day.
  *
  * SAFETY GUARD: refuses the prod default branch unless
- * RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1 (dataset lives in fixture agencies
+ * Health_ALLOW_PROD_FIXTURE_SEED=1 (dataset lives in fixture agencies
  * only; the override is expected for the App Store fixture account).
  *
  * Usage (PowerShell):
  *   $env:DATABASE_URL = "postgres://...?sslmode=require"
- *   $env:RAYHEALTH_ALLOW_PROD_FIXTURE_SEED = "1"
+ *   $env:Health_ALLOW_PROD_FIXTURE_SEED = "1"
  *   npx tsx packages/core/scripts/seed-month-fixture.ts
  */
 import knex, { type Knex } from 'knex';
@@ -114,9 +114,9 @@ function assertNonProd(): void {
   let parsed: URL;
   try { parsed = new URL(url.replace(/^postgres(ql)?:\/\//, 'http://')); }
   catch { throw new Error('DATABASE_URL is not a valid URL.'); }
-  const allow = process.env.RAYHEALTH_ALLOW_PROD_FIXTURE_SEED === '1';
+  const allow = process.env.Health_ALLOW_PROD_FIXTURE_SEED === '1';
   if (parsed.hostname.endsWith(PROD_PROXY_HOST) && !parsed.searchParams.has('branch') && !allow) {
-    throw new Error('Refusing to reseed prod default branch without RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1.');
+    throw new Error('Refusing to reseed prod default branch without Health_ALLOW_PROD_FIXTURE_SEED=1.');
   }
 }
 

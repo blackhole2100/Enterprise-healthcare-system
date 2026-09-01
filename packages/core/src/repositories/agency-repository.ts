@@ -20,7 +20,7 @@ function parseProfile(raw: unknown): PublicProfile | null {
  * Salvages field by field rather than rejecting the whole object the way
  * `parseProfile` does: a typo in one hex should not cost an agency its brand
  * name and tagline. Anything that fails validation is dropped, and the resolver
- * falls back to the RayHealth default for that slot. Read-time normalization is
+ * falls back to the Health default for that slot. Read-time normalization is
  * what lets rows written before the schema was tightened keep working.
  */
 function parseTheme(raw: unknown): AgencyTheme | null {

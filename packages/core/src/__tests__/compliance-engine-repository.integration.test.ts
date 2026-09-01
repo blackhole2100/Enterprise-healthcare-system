@@ -25,7 +25,7 @@ import * as addOfflineEvvMetadata from '../migrations/2026-07-12-add-offline-evv
  * Gated on TEST_DATABASE_URL so the suite is skipped when no disposable
  * database is available. CI provides one via a postgres service container;
  * locally, `docker compose up -d postgres` and
- * `TEST_DATABASE_URL=postgres://postgres:postgres@localhost:5432/rayhealth`
+ * `TEST_DATABASE_URL=postgres://postgres:postgres@localhost:5432/health`
  * runs them. Never point this at a shared or production database: the suite
  * writes fixture rows (it never deletes, and every row carries fresh UUIDs,
  * but it is still test data).

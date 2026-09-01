@@ -158,7 +158,7 @@ export function SettingsPage() {
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url; a.download = 'rayhealth-data-export.json'; a.click();
+      a.href = url; a.download = 'health-data-export.json'; a.click();
       URL.revokeObjectURL(url);
     } catch { flash('Export failed'); }
   };

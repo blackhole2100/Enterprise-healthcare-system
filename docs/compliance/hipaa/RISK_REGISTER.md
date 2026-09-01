@@ -1,4 +1,4 @@
-# RayHealth EVV — Security and Privacy Risk Register
+# Health EVV — Security and Privacy Risk Register
 
 **Version:** 1.1
 **Assessment date:** 2026-07-16
@@ -7,7 +7,7 @@
 and within 30 days of a material architecture or vendor change
 
 This register records known security, privacy, availability, and compliance
-risks for the RayHealth platform. It is an operational input to the HIPAA
+risks for the Health platform. It is an operational input to the HIPAA
 Security Rule risk-analysis process; it is not a certification or legal opinion.
 
 Scores use likelihood × impact on a 1–5 scale. Review Low (1–4), Moderate
@@ -26,7 +26,7 @@ non-sensitive evidence ID here.
 | R-007 | A vulnerability remains undetected without an independent penetration test | 3 | 4 | CI, CodeQL, dependency review, secret scan, unit/integration tests | Schedule an independent authenticated multi-tenant and mobile/API assessment before broad production rollout | Security Officer | Open |
 | R-008 | Transactional email or push content discloses PHI unnecessarily | 3 | 4 | Push design prohibits PHI payloads; notification cleanup on logout; drafted vendor BAA steps | Minimize all templates, test redaction, execute applicable BAA, and review payload samples quarterly | Privacy Officer | Open |
 | R-009 | An uncertified HHAeXchange or clearinghouse payload is treated as production-ready | 2 | 5 | UI/docs label HHA output as a mapping preview; production config defaults disabled | Obtain vendor-issued specs, payer code tables, issued integration credentials, certification and UAT evidence, and selected clearinghouse companion guide | Product / Engineering | Externally blocked |
-| R-010 | Public product claims describe controls or features that are not implemented | 3 | 4 | 12 | Some pages distinguish roadmap features; release checks prevent selected placeholders; the RayVerify "fraud intelligence — live" claim is now backed by the native fraud-scoring engine (four real signals: impossible-travel, duplicate-visit, geofence-anomaly, abnormal-duration) and marketing was scoped to exactly those, with identity/liveness/device-trust/shared-device labeled "rolling out" | Reconcile the remaining telephony/IVR copy to its real basis (a telephony-fallback exception classification + Sandata field mapping, not a RayHealth-operated IVR line); finish the family/certification claim sweep | Product | In progress — fraud reconciled; telephony/IVR + family pending |
+| R-010 | Public product claims describe controls or features that are not implemented | 3 | 4 | 12 | Some pages distinguish roadmap features; release checks prevent selected placeholders; the RayVerify "fraud intelligence — live" claim is now backed by the native fraud-scoring engine (four real signals: impossible-travel, duplicate-visit, geofence-anomaly, abnormal-duration) and marketing was scoped to exactly those, with identity/liveness/device-trust/shared-device labeled "rolling out" | Reconcile the remaining telephony/IVR copy to its real basis (a telephony-fallback exception classification + Sandata field mapping, not a Health-operated IVR line); finish the family/certification claim sweep | Product | In progress — fraud reconciled; telephony/IVR + family pending |
 | R-011 | Client ePHI in an 837P claim reaches an external clearinghouse before a BAA is executed, or travels over an unverified transport | 3 | 5 | 15 | Sandbox transport (no network, no real credentials) is the default and the integration is disabled per agency until explicitly configured; real SFTP/HTTPS transports validate the endpoint against SSRF host rules at construction and call time (`clearinghouse-transport.ts`), REST is HTTPS-only and an SFTP host may not resolve to a private address; per-agency credentials are sealed with AES-256-GCM (`cell-cipher.ts`, write-only, never returned or logged); upstream error bodies are never reflected; the 835 ledger stores filename + content sha256 + counts only, not raw remittance text | Execute a BAA with the selected clearinghouse and obtain its companion guide, payer code tables, and UAT evidence before enabling any non-sandbox transport with production ePHI; add the clearinghouse to the subprocessor inventory (see R-001) and record the vault evidence ID | Privacy Officer / Engineering | Source controls verified; sandbox-only until clearinghouse BAA + certification |
 
 ## Review procedure

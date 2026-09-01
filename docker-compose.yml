@@ -1,14 +1,14 @@
-version: '3.9'
+version: "3.9"
 
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: rayhealth-db
+    container_name: health-db
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: rayhealth
+      POSTGRES_DB: health
     ports:
       - "5432:5432"
     volumes:
@@ -21,7 +21,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: rayhealth-redis
+    container_name: health-redis
     restart: unless-stopped
     command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
     ports:

@@ -13,7 +13,7 @@
  *      (`c-5.us-east-1.aws.neon.tech` for project late-art-87716813)
  *   2. AND `DATABASE_URL` doesn't contain `branch=` in its query string
  *      (Neon branch URLs always include `branch=<id>`)
- *   3. AND `RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1` is NOT set
+ *   3. AND `Health_ALLOW_PROD_FIXTURE_SEED=1` is NOT set
  *
  * Usage (against a Neon branch):
  *   export DATABASE_URL="postgres://...?sslmode=require&branch=br-cool-name-123"
@@ -35,9 +35,9 @@ const TEST_TEMPLATE_ID = '00000000-0000-4000-8000-000000000004';
 const TEST_ASSIGNMENT_ID = '00000000-0000-4000-8000-000000000005';
 const TEST_ADMIN_USER_ID = '00000000-0000-4000-8000-000000000006';
 
-const TEST_CAREGIVER_EMAIL = 'test-caregiver-fixture@rayhealthevv.local';
+const TEST_CAREGIVER_EMAIL = 'test-caregiver-fixture@healthevv.local';
 const TEST_CAREGIVER_PASSWORD = 'Test123!Demo';
-const TEST_ADMIN_EMAIL = 'admin-fixture@rayhealthevv.local';
+const TEST_ADMIN_EMAIL = 'admin-fixture@healthevv.local';
 const TEST_ADMIN_PASSWORD = 'TestAdmin2026!';
 
 const PROD_PROXY_HOST = 'c-5.us-east-1.aws.neon.tech';
@@ -53,14 +53,14 @@ function assertNonProd(): void {
   } catch {
     throw new Error('DATABASE_URL is not a valid URL.');
   }
-  const allowProdOverride = process.env.RAYHEALTH_ALLOW_PROD_FIXTURE_SEED === '1';
+  const allowProdOverride = process.env.Health_ALLOW_PROD_FIXTURE_SEED === '1';
   const looksLikeProdHost = parsed.hostname === PROD_PROXY_HOST;
   const hasBranchParam = parsed.searchParams.has('branch');
   if (looksLikeProdHost && !hasBranchParam && !allowProdOverride) {
     throw new Error(
       `Refusing to seed: DATABASE_URL points at ${PROD_PROXY_HOST} ` +
         'without a `branch=` param. Run against a Neon branch, or set ' +
-        'RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1 to override (do not.)'
+        'Health_ALLOW_PROD_FIXTURE_SEED=1 to override (do not.)'
     );
   }
 }

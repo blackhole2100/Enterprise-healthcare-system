@@ -13,7 +13,7 @@ import { abnormalDurationDetector } from './detectors/abnormal-duration.js';
 import { fuse, type CompositeScore } from './scoring.js';
 import type { Detector, DetectionResult, VisitFeatureContext } from './types.js';
 
-/** The detectors that run on data RayHealthEVV already stores. Order is stable. */
+/** The detectors that run on data HealthEVV already stores. Order is stable. */
 export const DETECTORS: readonly Detector[] = [
   impossibleTravelDetector,
   duplicateVisitDetector,

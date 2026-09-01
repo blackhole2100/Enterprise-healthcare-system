@@ -6,7 +6,7 @@
  * ---------------
  * The web app used to override exactly three variables (`--color-primary`,
  * `--color-primary-bg`, `--color-primary-dark`) and leave everything else at
- * the RayHealth defaults. That left `--color-on-brand` pinned to white forever,
+ * the Health defaults. That left `--color-on-brand` pinned to white forever,
  * so a pale agency brand color produced white-on-pale text app-wide; it left
  * `--color-accent` at the stock orange even though agencies can supply one; and
  * it left a dozen `rgba(16, 116, 128, ...)` teal values that could never follow
@@ -24,7 +24,7 @@
  * built out of numbers, so no caller-supplied text can reach the CSSOM.
  *
  * This module must stay dependency-free. The web bundle deep-imports it as
- * `@rayhealth/core/domain/theme-resolver.js` precisely so it does not drag the
+ * `@health/core/domain/theme-resolver.js` precisely so it does not drag the
  * core barrel (knex, pg, ssh2-sftp-client) into the browser.
  */
 
@@ -56,7 +56,7 @@ export const AA_TEXT = 4.5;
 /** WCAG AA for non-text affordances: focus rings, borders that carry meaning. */
 export const AA_NON_TEXT = 3;
 
-/** RayHealth defaults, and the fallback for any field that fails to parse. */
+/** Health defaults, and the fallback for any field that fails to parse. */
 const DEFAULT_PRIMARY = '#107480';
 const DEFAULT_ACCENT = '#C94E0E';
 
@@ -314,7 +314,7 @@ function readColor(
   notes.push({
     field,
     kind: 'rejected',
-    detail: 'not a hex or rgb() color; using the RayHealth default',
+    detail: 'not a hex or rgb() color; using the Health default',
   });
   return parseCssColor(fallback) as Rgb;
 }

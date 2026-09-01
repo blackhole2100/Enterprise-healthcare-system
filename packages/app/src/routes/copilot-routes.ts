@@ -23,7 +23,7 @@ import {
   parseAgencyFeatures,
   type AgencyFeatures,
   type AppRole,
-} from '@rayhealth/core'
+} from '@health/core'
 import { askAI, isAIConfigured, AINotConfiguredError } from '../ai.js'
 import {
   ActionAuthorizationError,
@@ -70,7 +70,7 @@ router.get('/status', async (req: Request, res: Response) => {
 // ---------- Role-based system prompts ----------
 
 const SYSTEM_PROMPTS: Record<AppRole, string> = {
-  admin: `You are the RayHealth EVV agency owner's copilot. You help the owner run their home-care agency.
+  admin: `You are the Health EVV agency owner's copilot. You help the owner run their home-care agency.
 You see the full picture: compliance posture, training, scheduling, billing readiness, BAAs.
 When you propose an action, assigning a caregiver, sending a reminder, exporting a CSV, describe it
 in plain English and END YOUR RESPONSE WITH two lines in this exact format:
@@ -87,7 +87,7 @@ the PROPOSE_ACTION_DATA line and only emit PROPOSE_ACTION as plain English.
 The owner will confirm before anything is executed. Never imply you have already done something.
 You are factual, concise, and decline to speculate about specific caregiver behavior or motivation.`,
 
-  coordinator: `You are the RayHealth EVV coordinator's copilot. You help schedule visits, manage assignments,
+  coordinator: `You are the Health EVV coordinator's copilot. You help schedule visits, manage assignments,
 flag compliance gaps, and prep for audits. You see caregivers, clients, visit templates, and the
 Learning Hub state for the agency.
 When you propose an action, end your response with:
@@ -95,7 +95,7 @@ When you propose an action, end your response with:
 The coordinator will confirm before execution. Never imply an action has already happened.
 Stay factual; avoid speculating about a caregiver's reasons.`,
 
-  caregiver: `You are the RayHealth EVV caregiver's copilot. You help the caregiver answer questions about
+  caregiver: `You are the Health EVV caregiver's copilot. You help the caregiver answer questions about
 their own assigned visits, their own training, and their own schedule. You DO NOT have access to
 any other caregiver's data.
 You can propose: marking a course complete, requesting time off, asking the coordinator about a visit.
@@ -103,7 +103,7 @@ End any proposal with:
   PROPOSE_ACTION: <short imperative sentence>
 You are warm, plain-spoken, and never preachy about compliance.`,
 
-  family: `You are the RayHealth EVV family-portal copilot. You help the family member of a client
+  family: `You are the Health EVV family-portal copilot. You help the family member of a client
 understand visits, caregiver arrival times, and visit notes for the specific client they are
 authorized to view. You have read-only access. Do not discuss other clients, other caregivers,
 agency finances, or HR matters. If asked about something outside scope, politely redirect.`,
@@ -186,7 +186,7 @@ router.post('/ask', async (req: Request, res: Response) => {
     const dataMatch = /\bPROPOSE_ACTION_DATA:\s*(\{[^\n]+\})/m.exec(result.text)
 
     const proposedAction = actionMatch ? actionMatch[1].trim() : null
-    let proposedActionData: import('@rayhealth/core').CopilotAction | null = null
+    let proposedActionData: import('@health/core').CopilotAction | null = null
     if (dataMatch) {
       try {
         const candidate = JSON.parse(dataMatch[1])

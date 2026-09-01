@@ -15,11 +15,11 @@
  * cleanup-fixture-assignments.ts first for an exactly-this set.
  *
  * SAFETY GUARD. refuses to run against the prod default branch unless
- * RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1 is set.
+ * Health_ALLOW_PROD_FIXTURE_SEED=1 is set.
  *
  * Usage:
  *   export DATABASE_URL="postgres://...?sslmode=require"
- *   # prod also needs:  export RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1
+ *   # prod also needs:  export Health_ALLOW_PROD_FIXTURE_SEED=1
  *   npx tsx packages/core/scripts/seed-fixture-schedule.ts
  */
 import knex from 'knex';
@@ -79,9 +79,9 @@ function assertNonProd(): void {
   let parsed: URL;
   try { parsed = new URL(url.replace(/^postgres(ql)?:\/\//, 'http://')); }
   catch { throw new Error('DATABASE_URL is not a valid URL.'); }
-  const allow = process.env.RAYHEALTH_ALLOW_PROD_FIXTURE_SEED === '1';
+  const allow = process.env.Health_ALLOW_PROD_FIXTURE_SEED === '1';
   if (parsed.hostname === PROD_PROXY_HOST && !parsed.searchParams.has('branch') && !allow) {
-    throw new Error(`Refusing to seed prod default branch without RAYHEALTH_ALLOW_PROD_FIXTURE_SEED=1.`);
+    throw new Error(`Refusing to seed prod default branch without Health_ALLOW_PROD_FIXTURE_SEED=1.`);
   }
 }
 

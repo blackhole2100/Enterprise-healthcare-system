@@ -1,4 +1,4 @@
-name: Create RayHealth production builds
+name: Create Health production builds
 
 jobs:
   build_android:

@@ -1,4 +1,4 @@
-# RayHealth EVV Mobile — EAS Release Runbook
+# Health EVV Mobile — EAS Release Runbook
 
 The mobile app is an Expo SDK 54 managed project in `packages/mobile`. This is
 the operational path for producing signed iOS and Android store binaries.
@@ -9,7 +9,7 @@ From the repository root:
 
 ```bash
 npm run check
-npm run release:check --workspace=@rayhealth/mobile
+npm run release:check --workspace=@health/mobile
 ```
 
 The second command verifies identifiers, privacy declarations, EAS profiles,
@@ -19,8 +19,8 @@ prints the remaining account-owned steps.
 ## One-time account setup
 
 1. Join the Apple Developer Program and create an App Store Connect record for
-   bundle ID `com.rayhealth.evv`.
-2. Create the Google Play app with package `com.rayhealth.evv`, enable Play App
+   bundle ID `com.health.evv`.
+2. Create the Google Play app with package `com.health.evv`, enable Play App
    Signing, and complete the first Android upload manually (required before API
    submissions).
 3. From `packages/mobile`, authenticate and link the Expo project:
@@ -34,7 +34,7 @@ prints the remaining account-owned steps.
    credentials.
 4. In the EAS project, configure the production environment:
 
-   - `EXPO_PUBLIC_API_URL=https://rayhealthevv.com` as plain text.
+   - `EXPO_PUBLIC_API_URL=https://healthevv.com` as plain text.
    - `GOOGLE_MAPS_ANDROID_API_KEY` as sensitive, restricted in Google Cloud to
      the Android package/signing certificate and Maps SDK for Android.
 5. Configure Apple signing through `npx eas-cli@latest credentials --platform ios`.
@@ -57,8 +57,8 @@ App Store Connect and Google Play answers must match actual behavior:
 - Health/care-task outcomes: collected, linked, app functionality.
 - Encryption: standard TLS/keychain/keystore use; iOS declares
   `ITSAppUsesNonExemptEncryption=false` for the export-compliance exemption.
-- Privacy policy: `https://rayhealthevv.com/privacy`.
-- Support: `https://rayhealthevv.com/contact`.
+- Privacy policy: `https://healthevv.com/privacy`.
+- Support: `https://healthevv.com/contact`.
 
 The same privacy-policy link is available inside the app under Profile.
 

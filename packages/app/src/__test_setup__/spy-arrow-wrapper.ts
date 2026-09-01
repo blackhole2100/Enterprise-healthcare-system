@@ -17,7 +17,7 @@
  * `.prototype` property in modern JS engines.
  */
 import { vi } from 'vitest';
-import { MobileSessionRepository } from '@rayhealth/core';
+import { MobileSessionRepository } from '@health/core';
 
 /**
  * authContext now requires every mobile bearer token to carry a `jti` backed by

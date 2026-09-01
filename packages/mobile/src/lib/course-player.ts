@@ -8,7 +8,7 @@
  *
  * The shapes mirror the server's CourseModules (packages/core/src/domain/
  * learning.ts), declared locally per the mobile convention of not importing
- * @rayhealth/core.
+ * @health/core.
  */
 
 import { emptyAnswers } from './quiz';

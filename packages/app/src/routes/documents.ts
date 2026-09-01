@@ -25,7 +25,7 @@
  */
 import { Router, type Request, type Response } from 'express';
 import multer from 'multer';
-import { AuditEventRepository, ClientRepository } from '@rayhealth/core';
+import { AuditEventRepository, ClientRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { S3StorageService } from '../services/s3-storage.js';
 import { safeError } from '../security/safe-log.js';

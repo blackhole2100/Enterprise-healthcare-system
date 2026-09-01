@@ -13,7 +13,7 @@
 
 import { Router, type Request, type Response } from 'express'
 import type { Knex } from 'knex'
-import { hasCapability, runAuditRetentionSweep, PA_RETENTION_YEARS } from '@rayhealth/core'
+import { hasCapability, runAuditRetentionSweep, PA_RETENTION_YEARS } from '@health/core'
 import { requireCapability } from '../middleware/require-capability.js'
 import { assertCronAuthorized } from '../middleware/cron-auth.js'
 

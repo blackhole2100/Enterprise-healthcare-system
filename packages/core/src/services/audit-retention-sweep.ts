@@ -126,7 +126,7 @@ interface ChunkResult {
 /**
  * Process one chunk inside a single transaction. The append-only trigger on
  * `audit_events` allows DELETE (and only DELETE) when the transaction-local
- * `rayhealth.audit_retention_sweep` setting is 'on' — see the trigger
+ * `health.audit_retention_sweep` setting is 'on' — see the trigger
  * definition in migrations/schema.ts. set_config(..., is_local => true)
  * reverts on commit/rollback, so the gate never outlives this transaction.
  *
@@ -136,7 +136,7 @@ interface ChunkResult {
  */
 async function processOneChunk(db: Knex, cutoff: Date, limit: number): Promise<ChunkResult> {
   return db.transaction(async (trx) => {
-    await trx.raw("SELECT set_config('rayhealth.audit_retention_sweep', 'on', true)")
+    await trx.raw("SELECT set_config('health.audit_retention_sweep', 'on', true)")
 
     // Lock the candidate rows so a concurrent sweep can't double-archive.
     const candidates = (await trx('audit_events')

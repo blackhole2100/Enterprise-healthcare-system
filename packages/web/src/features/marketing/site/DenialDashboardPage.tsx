@@ -12,7 +12,7 @@ const STEPS = [
   {
     n: '01',
     title: 'Post your 835s',
-    body: 'Upload the electronic remittance files your payers or clearinghouse already produce — or connect the clearinghouse once and RayHealth pulls them automatically every six hours.',
+    body: 'Upload the electronic remittance files your payers or clearinghouse already produce — or connect the clearinghouse once and Health pulls them automatically every six hours.',
   },
   {
     n: '02',
@@ -27,7 +27,7 @@ const STEPS = [
 ];
 
 const CHECKS = [
-  'Works from your remittance files alone — no claims need to be generated in RayHealth',
+  'Works from your remittance files alone — no claims need to be generated in Health',
   'Every CARC/RARC code translated to plain English and ranked by dollars',
   'Aging view so a 60-day-old denial cannot hide',
   'Worklist status and notes, with every change in a tamper-evident audit trail',
@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     q: 'Is there a long-term contract?',
-    a: 'No. RayHealth is month-to-month. Start with denials, stay because it works.',
+    a: 'No. Health is month-to-month. Start with denials, stay because it works.',
   },
 ];
 
@@ -63,7 +63,7 @@ export function DenialDashboardPage() {
           <h1 className="mk-h1">See your denials. Keep your system.</h1>
           <p className="mk-lead">
             Your payers already tell you exactly why every claim was denied or shaved — in 835
-            files nobody reads. Post them to RayHealth and get a live denial dashboard and a
+            files nobody reads. Post them to Health and get a live denial dashboard and a
             worklist that tracks every dollar to resolution. No platform switch required.
           </p>
           <div className="mk-herocta">

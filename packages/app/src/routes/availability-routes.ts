@@ -14,7 +14,7 @@
 import { Router, type Request, type Response } from 'express';
 import type { Knex } from 'knex';
 import { z } from 'zod';
-import { AvailabilityRepository } from '@rayhealth/core';
+import { AvailabilityRepository } from '@health/core';
 import { requireCapability } from '../middleware/require-capability.js';
 import { safeError } from '../security/safe-log.js';
 import { notifyCaregivers } from '../services/notification-service.js';
@@ -196,7 +196,7 @@ router.patch(
         caregiverIds: [updated.caregiverId],
         category: 'scheduleChanges',
         title: 'Time off updated',
-        body: 'Your agency answered a time off request. Open RayHealth to see the details.',
+        body: 'Your agency answered a time off request. Open Health to see the details.',
         data: { kind: 'timeOff.reviewed', requestId: updated.id },
       });
 

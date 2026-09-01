@@ -24,7 +24,7 @@ const MULTIPLIERS: Record<TextSizePreset, number> = {
   xlarge: 1.3,
 };
 
-export const TEXT_SIZE_KEY = 'rayhealth.lessonTextSize';
+export const TEXT_SIZE_KEY = 'health.lessonTextSize';
 
 export function readingStyle(
   baseFontSize: number,

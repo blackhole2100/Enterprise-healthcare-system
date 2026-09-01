@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 import { createApp } from '../../app.js';
-import * as core from '@rayhealth/core';
+import * as core from '@health/core';
 import { S3StorageService } from '../../services/s3-storage.js';
 import { makeToken, setTestJwtSecret } from './test-helpers.js';
 

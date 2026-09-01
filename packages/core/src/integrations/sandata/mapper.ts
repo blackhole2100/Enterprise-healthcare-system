@@ -1,5 +1,5 @@
 /**
- * RayHealth domain → Sandata Alt EVV wire mapping.
+ * Health domain → Sandata Alt EVV wire mapping.
  *
  * Pure functions: a domain entity + its per-record SequenceID in, a Sandata
  * wire record out. No I/O, no clock access. Timestamps are emitted as the

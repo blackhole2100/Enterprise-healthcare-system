@@ -34,7 +34,7 @@ import {
   type AggregatorSubmitResult,
   type ExportVisitRow,
   type VisitSubmission,
-} from '@rayhealth/core';
+} from '@health/core';
 import { safeError } from '../security/safe-log.js';
 
 /**

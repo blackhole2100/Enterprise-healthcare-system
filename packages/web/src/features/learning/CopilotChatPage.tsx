@@ -23,7 +23,7 @@ interface CopilotStatus {
   aiConfigured: boolean;
 }
 
-// Mirror of CopilotAction shapes from @rayhealth/core. Inlined here to avoid
+// Mirror of CopilotAction shapes from @health/core. Inlined here to avoid
 // pulling the core package into the web build for one Zod schema; if these
 // drift, the /execute call will return 400 and surface the mismatch.
 type CopilotActionData =

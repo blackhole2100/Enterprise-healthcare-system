@@ -178,7 +178,7 @@ export default function CourseVideo({ videoUrl, onEvent }: Props) {
   return (
     <View style={styles.frame}>
       <WebView
-        source={{ html, baseUrl: 'https://rayhealthevv.com' }}
+        source={{ html, baseUrl: 'https://healthevv.com' }}
         originWhitelist={['*']}
         style={styles.webview}
         onMessage={(e) => {

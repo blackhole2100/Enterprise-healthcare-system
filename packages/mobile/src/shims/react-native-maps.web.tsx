@@ -26,7 +26,7 @@ const MapView = forwardRef<MapHandle, { style?: StyleProp<ViewStyle>; children?:
     useImperativeHandle(ref, () => ({ fitToCoordinates: () => {}, animateToRegion: () => {} }));
     return (
       <View style={[styles.fallback, style]}>
-        <Text style={styles.text}>Interactive map is available in the RayHealth mobile app.</Text>
+        <Text style={styles.text}>Interactive map is available in the Health mobile app.</Text>
         {children}
       </View>
     );

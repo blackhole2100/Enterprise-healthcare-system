@@ -1,4 +1,4 @@
-# RayHealth EVV — Control Evidence Register
+# Health EVV — Control Evidence Register
 
 **Version:** 1.1
 **Effective:** 2026-07-16

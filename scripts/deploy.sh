@@ -11,11 +11,11 @@
 # Each phase prompts before running so you can sanity-check or skip.
 #
 # Run from anywhere:
-#   bash "/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh/scripts/deploy.sh"
+#   bash "/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh/scripts/deploy.sh"
 
 set -eo pipefail
 
-SOURCE="/Users/durgaghimeray/Desktop/rayhealthevv-fresh/rayhealth-fresh"
+SOURCE="/Users/durgaghimeray/Desktop/healthevv-fresh/health-fresh"
 
 confirm() {
   local prompt="$1"
@@ -28,7 +28,7 @@ confirm() {
 }
 
 echo "==================================================="
-echo " RayHealth EVV — Deploy"
+echo " Health EVV — Deploy"
 echo "==================================================="
 echo ""
 echo "This will:"
@@ -122,26 +122,26 @@ echo " Deploy phases complete — smoke test next"
 echo "==================================================="
 echo ""
 echo "Watch the Vercel build at:"
-echo "  https://vercel.com/dashboard → RayHealth project → Deployments"
+echo "  https://vercel.com/dashboard → Health project → Deployments"
 echo ""
 echo "Once it's green, try these in a new terminal:"
 echo ""
 echo "  # Health check (no auth)"
-echo "  curl -s https://rayhealthevv.com/api/healthz"
+echo "  curl -s https://healthevv.com/api/healthz"
 echo ""
 echo "  # Security headers present?"
-echo "  curl -sI https://rayhealthevv.com/api/healthz"
+echo "  curl -sI https://healthevv.com/api/healthz"
 echo "  # expect: strict-transport-security, x-frame-options: DENY, content-security-policy"
 echo ""
 echo "  # Fixture caregiver login (regression)"
 echo "  curl -s -X POST -H 'Content-Type: application/json' \\"
-echo "    -d '{\"email\":\"test-caregiver-fixture@rayhealthevv.local\",\"password\":\"Test123!Demo\"}' \\"
-echo "    https://rayhealthevv.com/api/auth/mobile/login"
+echo "    -d '{\"email\":\"test-caregiver-fixture@healthevv.local\",\"password\":\"Test123!Demo\"}' \\"
+echo "    https://healthevv.com/api/auth/mobile/login"
 echo ""
 echo "  # New admin surfaces"
-echo "  open https://rayhealthevv.com/admin/settings              # Sandata + HHAeXchange admin"
-echo "  open https://rayhealthevv.com/admin/corrections           # VMUR review queue"
-echo "  open https://rayhealthevv.com/admin/corrections/tracking  # VMUR history"
+echo "  open https://healthevv.com/admin/settings              # Sandata + HHAeXchange admin"
+echo "  open https://healthevv.com/admin/corrections           # VMUR review queue"
+echo "  open https://healthevv.com/admin/corrections/tracking  # VMUR history"
 echo ""
 echo "Heads up: HIPAA-mode work (Neon HIPAA, Vercel BAA, signed risk analysis,"
 echo "cyber liability, pen test) is intentionally deferred per your decision."
