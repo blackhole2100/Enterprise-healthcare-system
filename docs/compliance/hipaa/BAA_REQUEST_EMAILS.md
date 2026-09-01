@@ -1,6 +1,6 @@
 # HIPAA Business Associate Agreement (BAA) Request Emails
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 **Purpose:** Each vendor below processes electronic Protected Health
 Information (ePHI) on Health EVV's behalf. Under HIPAA §164.308(b)(1),

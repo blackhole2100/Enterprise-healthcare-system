@@ -4,14 +4,14 @@ import { BrandLogo } from '../../components/brand/BrandLogo.js';
 import { tint } from '../../lib/color.js';
 
 /**
- * Hidden platform super-admin command center for Durga Ghimeray (Founder & CEO).
+ * Hidden platform super-admin command center for Kevin (Founder & CEO).
  * Not linked from any nav. Password + device-biometric (WebAuthn) login, then a
  * cross-agency monitoring console. The platform token (scope:'platform') is held
  * ONLY in an httpOnly cookie set by the server, never in JS-readable storage , 
  * so an XSS anywhere in the SPA cannot exfiltrate it.
  */
 
-const CEO_NAME = 'Durga Ghimeray';
+const CEO_NAME = 'Kevin';
 const CEO_TITLE = 'Founder & CEO';
 const CEO_INITIALS = 'DG';
 

@@ -1,10 +1,10 @@
 # HealthEVV™ Elite Multi-Agent Implementation Plan
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 Repository: `https://github.com/blackhole2100/health-evv-platform`
 Product: **HealthEVV™**
-Founder / Author: **Durga Ghimeray**
+Founder / Author: **Kevin**
 
 ---
 
@@ -12,7 +12,7 @@ Founder / Author: **Durga Ghimeray**
 
 Every final document, implementation report, planning file, changelog, product strategy note, generated internal `.md` file, README update, sprint report, QA report, and agent report must include:
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 Do not over-insert author credit inside every source-code function. Add it naturally in docs, reports, planning files, product artifacts, and generated markdown files.
 
@@ -154,7 +154,7 @@ All agents must follow these rules:
 23. Add tests for meaningful changes.
 24. Keep UI premium, calm, and readable.
 25. Use plain language that homecare owners understand.
-26. Keep all generated docs authored by Durga Ghimeray.
+26. Keep all generated docs authored by Kevin.
 
 ---
 
@@ -316,7 +316,7 @@ Run agents in this exact order:
 
 ---
 
-_(Full agent briefs 01–11, sidebar cleanup, prioritized features, copy/UI direction, quality gate, and report formats are as specified in the master brief provided by Durga Ghimeray.)_
+_(Full agent briefs 01–11, sidebar cleanup, prioritized features, copy/UI direction, quality gate, and report formats are as specified in the master brief provided by Kevin.)_
 
 ---
 
@@ -332,7 +332,7 @@ Create:
 
 The report must be concise, specific, and include:
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 After Agent 01 finishes, stop and wait for instruction to continue with Agent 00.
 

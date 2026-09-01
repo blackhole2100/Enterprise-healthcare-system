@@ -1,6 +1,6 @@
 # Health EVV — Disaster Recovery Runbook
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 **Version:** 1.0
 **Effective:** 2026-05-09

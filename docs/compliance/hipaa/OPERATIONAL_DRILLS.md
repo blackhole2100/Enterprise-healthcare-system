@@ -1,6 +1,6 @@
 # Health EVV Operational Drill Templates
 
-**Authored by Durga Ghimeray**
+**Authored by Kevin**
 
 **Effective:** 2026-07-08
 **Owner:** Health EVV Privacy / Security Officer
